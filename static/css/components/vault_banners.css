@@ -1,2 +1,43 @@
-#vault-banners { border: 3px dashed limegreen; }
+/* vault_banners.css */
+
+/* hide native scrollbar */
+#vault-banners ul.no-scrollbar::-webkit-scrollbar { display: none; }
+#vault-banners ul.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* scroll-snap container */
+#vault-banners ul {
+  scroll-snap-type: x mandatory;
+  padding-bottom: 0.5rem; /* give room for snap */
+}
+
+/* tilt container perspective */
+.tilt-container {
+  perspective: 1000px;
+}
+
+/* ensure images fill & round */
+.tilt-img {
+  width: 100%;
+  height: 14rem; /* match your design */
+  object-fit: cover;
+  border-radius: 1rem;
+  will-change: transform;
+}
+
+/* prev/next buttons */
+#bannerPrev,
+#bannerNext {
+  font-size: 1.5rem;
+  line-height: 1;
+  user-select: none;
+}
+
+/* dots */
+#bannerDots button {
+  opacity: 0.5;
+  transition: opacity 0.2s;
+}
+#bannerDots button.bg-orangeLuxe {
+  opacity: 1;
+}
 

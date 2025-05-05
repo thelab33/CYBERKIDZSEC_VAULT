@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* bring in any custom component sheets last, eg: */
+/* @import "components/hero.css"; */
+
+@import "components/header.css";
+@import "components/skip_nav.css";
+@import "components/hero.css";
