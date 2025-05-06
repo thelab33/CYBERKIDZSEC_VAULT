@@ -1,0 +1,56 @@
+/* ──────────────────────────────────────────────
+   🧪 BUTTONS — CYBERKIDZSEC ⚡ ELITE STYLES
+────────────────────────────────────────────── */
+
+.btn {
+  @apply inline-flex items-center justify-center gap-2
+         font-semibold text-sm uppercase tracking-wide
+         px-4 py-2 rounded-lg transition-all duration-200;
+  text-decoration: none;
+  line-height: 1.25;
+}
+
+.btn:hover {
+  @apply hover-lift;
+}
+
+.btn--primary {
+  @apply bg-orange-500 text-white border border-orange-500;
+}
+
+.btn--primary:hover {
+  @apply bg-orange-400 border-orange-400 text-black;
+}
+
+.btn--secondary {
+  @apply bg-zinc-800 text-white border border-zinc-700;
+}
+
+.btn--secondary:hover {
+  @apply bg-zinc-700 border-zinc-600 text-orange-300;
+}
+
+.btn--outline {
+  @apply bg-transparent text-orange-400 border border-orange-400;
+}
+
+.btn--outline:hover {
+  @apply bg-orange-400 text-black;
+}
+
+.btn--solid {
+  @apply bg-green-500 text-black font-bold border border-green-500;
+}
+
+.btn--solid:hover {
+  @apply bg-green-400 text-white;
+}
+
+/* Neon-style optional enhancement */
+.neon-button {
+  @apply border-2 rounded-lg font-semibold transition;
+  text-shadow:
+    0 0 4px var(--orange),
+    0 0 8px var(--orange-luxe-light);
+}
+

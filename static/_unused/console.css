@@ -1,0 +1,27 @@
+/* components/console.css — Warp Loader Styles */
+
+#vault-loader {
+  @apply fixed inset-0 z-50 flex flex-col items-center justify-center
+         bg-gradient-to-b from-black via-zinc-900 to-zinc-950
+         backdrop-blur-md transition-opacity duration-700 opacity-100;
+}
+
+#vault-loader .loader-dots .dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 9999px;
+  animation: bounce 0.9s infinite ease-in-out;
+}
+#vault-loader .loader-dots .dot:nth-child(2) { animation-delay: 0.2s; }
+#vault-loader .loader-dots .dot:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); opacity: 0.5; }
+  50%      { transform: translateY(-8px); opacity: 1; }
+}
+
+.skip-nav-overlay {
+  @apply sr-only focus-within:not-sr-only absolute top-0 left-0
+         bg-zinc-900 text-orange-300 px-4 py-2 rounded-b shadow-md z-[9999];
+}
+

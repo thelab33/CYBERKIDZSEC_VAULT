@@ -1,5 +1,58 @@
-/* 🎯 Auto-generated: sections/featured_reports.css */
+/* static/css/sections/featured_reports.css */
 
-.featured_reports {
-  /* Add styles here */
+.featured-reports {
+  @apply relative isolate py-20 px-4 sm:px-6 lg:px-8 rounded-2xl border border-orangeLuxe/25 shadow-2xl backdrop-blur-lg;
+  background: linear-gradient(to bottom right, #0f0c29, #302b63, #24243e);
 }
+
+.featured-aurora {
+  @apply absolute -inset-20 opacity-10;
+  background: conic-gradient(at top right, #ff7f00 0%, #ff00e0 45%, transparent 70%);
+  will-change: transform;
+}
+
+.featured-title {
+  @apply text-4xl sm:text-5xl font-extrabold tracking-tight text-transparent bg-clip-text animate-pulse-glow;
+  background-image: linear-gradient(to right, var(--orange), #ec4899, #d946ef);
+}
+
+.featured-subtitle {
+  @apply mx-auto max-w-2xl text-sm sm:text-base font-mono text-orangeLuxe-light/80;
+}
+
+.featured-grid {
+  @apply relative z-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3;
+}
+
+.report-card {
+  @apply h-full p-0 overflow-hidden bg-gradient-to-br from-cyberNightGlow to-zinc-900/90 border border-orangeLuxe/20 rounded-xl shadow-lg transition-shadow group-hover:shadow-orangeLuxe/40;
+}
+
+.report-image-container {
+  @apply relative h-40 overflow-hidden;
+}
+
+.report-image {
+  @apply w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out;
+}
+
+.report-body {
+  @apply p-6 space-y-2;
+}
+
+.report-title {
+  @apply text-lg font-semibold text-orangeLuxe-light group-hover:text-orangeLuxe transition-colors;
+}
+
+.report-summary {
+  @apply text-xs text-orangeLuxe-light/70 font-mono line-clamp-3;
+}
+
+.report-tags {
+  @apply flex flex-wrap gap-1.5 text-[10px] uppercase font-semibold;
+}
+
+.report-tag {
+  @apply bg-orangeLuxe/10 text-orangeLuxe-light px-2 py-0.5 rounded-full;
+}
+

@@ -1,56 +1,61 @@
 {# templates/components/vault_overview.html #}
-<section
-  id="vault-overview"
-  class="section-container my-24 space-y-12"
-  data-aos="fade-up"
->
-  {# — Vault XP Bar — #}
-  <div aria-label="Vault XP Status" class="mx-auto max-w-lg space-y-2">
+<section id="vault-overview" data-aos="fade-up">
+  <!-- Vault XP Bar -->
+  <div class="vault-xp-status" aria-label="Vault XP Status">
     <p class="text-sm text-orange-300 font-mono tracking-widest uppercase">
       Operative Level: {{ operative_level }}
     </p>
     <div class="relative bg-zinc-800 rounded-full h-4 overflow-hidden">
       <progress
         id="vaultXpProgress"
-        class="absolute inset-0 w-full h-full appearance-none"
         value="{{ vault_xp_percentage }}"
         max="100"
         aria-describedby="vaultXpText"
       ></progress>
-      <div
-        id="vaultXpFill"
-        class="h-4 bg-gradient-to-r from-orangeLuxe to-emeraldLuxe transition-all duration-700 ease-out"
-      ></div>
+      <div id="vaultXpFill"></div>
     </div>
-    <p
-      id="vaultXpText"
-      role="status"
-      class="text-center text-xs text-orange-400 font-mono tracking-wide"
-    >
+    <p id="vaultXpText" role="status">
       Vault Operational Status: <span id="vaultXpNum">0</span>%
     </p>
   </div>
 
-  {# — Vault Banners — #}
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-8 px-6">
+  <!-- Vault Banners -->
+  <div class="vault-banner-grid">
     {% set banners = [
       ('images/og/main_vault_banner.png', 'Main Vault Banner'),
       ('images/og/hacker_underground_banner.png', 'Hacker Underground Banner'),
       ('images/og/zero_day_archive_banner.png', 'Zero-Day Archive Banner')
     ] %}
     {% for src, alt in banners %}
-      <figure
-        class="overflow-hidden rounded-2xl shadow-lg group hover:shadow-orangeLuxe/30 transition-all duration-300"
-      >
+      <figure class="vault-banner">
         <img
           src="{{ url_for('static', filename=src) }}"
           alt="{{ alt }}"
           loading="lazy"
-          class="w-full h-48 object-cover rounded-xl group-hover:scale-105 transition-transform duration-500 ease-out"
         />
         <figcaption class="sr-only">{{ alt }}</figcaption>
       </figure>
     {% endfor %}
   </div>
 </section>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const target = parseInt("{{ vault_xp_percentage }}", 10);
+  const counter = document.getElementById("vaultXpNum");
+  let count = 0;
+
+  const step = () => {
+    if (count < target) {
+      count += 1;
+      counter.textContent = count;
+      requestAnimationFrame(step);
+    } else {
+      counter.textContent = target;
+    }
+  };
+
+  requestAnimationFrame(step);
+});
+</script>
 

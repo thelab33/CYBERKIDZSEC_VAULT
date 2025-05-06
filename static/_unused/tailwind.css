@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─────────────────────────────────────────────
+   🔮 CORE ENHANCEMENTS — Colors, Tokens, Layout
+────────────────────────────────────────────── */
+@import "cyber-enhancements.css";   /* Brand tokens, base colors, mixins */
+@import "ghost-boot.css";           /* Layout reset, flex/grid utils */
+@import "ghost-mode.css";           /* Ghost mode overrides & glow UI */
+@import "back_to_top.css";          /* Floating CTA back-to-top button */
+@import "bug_tales.css";            /* Report styles & metadata tags */
+
+/* ─────────────────────────────────────────────
+   🧠 COMPONENT STYLING — Sections & Partials
+────────────────────────────────────────────── */
+@import "sections/header.css";      /* Sticky header w/ navigation */
+@import "hero.css";                 /* Hero section + orbits, flare, starfield */
+@import "footer.css";               /* Footer layout, socials, quote */
+@import "skip_nav.css";             /* Skip link for a11y + animations */
+@import "console.css";              /* Terminal-simulated interfaces */
+
+/* ─────────────────────────────────────────────
+   🛰️ EFFECTS & ANIMATIONS — AOS, HUD, Orbits
+────────────────────────────────────────────── */
+@import "animations.css";           /* Keyframes: glitch, orbit, blur, pulse */
+@import "hud_toolbar.css";          /* New HUD toolbar styles (toolbar + badge) */
+@import "orbit_effects.css";        /* Optional: Extracted from Tailwind plugin */
+
+/* ─────────────────────────────────────────────
+   🎯 GLOBAL OVERRIDES & FINAL TWEAKS
+────────────────────────────────────────────── */
+@import "app.css";                  /* Final bundle: responsive tweaks, overrides */
+

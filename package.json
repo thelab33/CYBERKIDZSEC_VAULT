@@ -40,6 +40,7 @@
     "start": "npm run dev"
   },
   "dependencies": {
+    "@tailwindcss/line-clamp": "^0.4.4",
     "aos": "^2.3.4",
     "fuse.js": "^7.1.0"
   },
@@ -64,4 +65,3 @@
     "last 2 Safari versions"
   ]
 }
-

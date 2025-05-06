@@ -1,0 +1,10 @@
+/* components/report_grid.css — Bug Report Card Grid */
+
+#dynamicGrid {
+  @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8;
+}
+
+.card {
+  @apply p-4 bg-zinc-800 rounded-xl shadow hover:shadow-lg;
+}
+

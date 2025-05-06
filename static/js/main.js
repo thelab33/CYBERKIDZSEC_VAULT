@@ -265,4 +265,16 @@ document.addEventListener('DOMContentLoaded', () => {
   initStarfield('heroStarfield');
 });
 
+// 👻 Cursor Glow (Ghost Mode)
+document.addEventListener("mousemove", (e) => {
+  let ghostCursor = document.querySelector("#ghostCursor");
+  if (!ghostCursor) {
+    ghostCursor = document.createElement("div");
+    ghostCursor.id = "ghostCursor";
+    ghostCursor.className = "cursor-glow";
+    document.body.appendChild(ghostCursor);
+  }
+  ghostCursor.style.left = `${e.clientX}px`;
+  ghostCursor.style.top = `${e.clientY}px`;
+});
 

@@ -1,0 +1,61 @@
+/* 🧠 HUD Toolbar – styles for the live floating HUD */
+
+#hudToolbar {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 9998;
+  width: 18rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 127, 0, 0.25);
+  background: linear-gradient(to bottom right, #0f111a, #151827, #090a11);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 0 40px rgba(249, 115, 22, 0.25);
+  transform: translateY(2rem) scale(0.95);
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+#hudToolbar.active {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+#hudToolbar button {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: 0.75rem;
+  font-family: monospace;
+  color: #ff9350;
+  background: transparent;
+  border: none;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+#hudToolbar button:hover {
+  background-color: rgba(39, 39, 42, 0.2);
+}
+
+#hudBody {
+  padding: 1rem 1.25rem;
+  font-size: 0.75rem;
+  font-family: monospace;
+  color: rgba(255, 147, 80, 0.9);
+}
+
+#hudBody p#hudLog {
+  min-height: 1.3rem;
+  animation: pulse 1.5s infinite;
+}
+
+#hudProgress {
+  height: 100%;
+  background: linear-gradient(to right, #fb923c, #facc15, #34d399);
+  transition: width 0.7s ease-out;
+}
+

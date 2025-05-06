@@ -1,0 +1,68 @@
+/* 🎯 Auto-generated: sections/hud_status.css */
+
+#hudBadge {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  background-color: rgba(24, 24, 27, 0.9);
+  backdrop-filter: blur(4px);
+  color: #fb923c;
+  font-size: 0.75rem;
+  font-family: monospace;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+#vaultXpBar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 50;
+  backdrop-filter: blur(4px);
+}
+
+#vaultXpBar > div {
+  height: 100%;
+  background: linear-gradient(to right, #fb923c, #34d399);
+  transition: width 0.7s ease-out;
+}
+
+#hudTooltip {
+  position: fixed;
+  bottom: 4.5rem;
+  right: 1rem;
+  font-size: 0.625rem;
+  color: #fb923c;
+  font-family: monospace;
+  background-color: rgba(24, 24, 27, 0.9);
+  padding: 0.375rem 0.75rem;
+  border-radius: 0.375rem;
+  box-shadow: 0 0 12px rgba(251, 146, 60, 0.2);
+  display: none;
+  animation: fade-in 0.3s ease-in-out;
+  z-index: 50;
+}
+
+@keyframes hudPulse {
+  0%, 100% { opacity: 0.2; transform: scale(1); }
+  50%      { opacity: 0.4; transform: scale(1.05); }
+}
+
+#hudBadge::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 20px rgba(255, 127, 0, 0.1);
+  animation: hudPulse 3s ease-in-out infinite;
+  z-index: -1;
+}
+

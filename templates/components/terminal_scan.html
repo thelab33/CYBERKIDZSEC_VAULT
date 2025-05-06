@@ -1,1 +1,26 @@
-<section id=...>...</section>
+.ghost-frame {
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(8px);
+}
+
+.neon-border {
+  border: 2px solid transparent;
+  border-image: linear-gradient(45deg, var(--orange), #22d3ee) 1;
+  animation: gradientBorder 6s ease infinite;
+}
+
+@keyframes gradientBorder {
+  0%   { border-image-source: linear-gradient(45deg, var(--orange), #22d3ee); }
+  50%  { border-image-source: linear-gradient(135deg, #22d3ee, #ec4899); }
+  100% { border-image-source: linear-gradient(45deg, var(--orange), #22d3ee); }
+}
+
+.terminal-pane::before {
+  content: '👾 root@vault:~';
+  display: block;
+  font-size: 0.75rem;
+  color: #f97316;
+  margin-bottom: 0.25rem;
+}
+

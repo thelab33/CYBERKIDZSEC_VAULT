@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" class="scroll-smooth" data-theme="dark">
+<html lang="en" class="scroll-smooth" data-theme="{{ theme or 'dark' }}" data-ghostmode="{{ ghost or false }}">
 <head>
   <!-- 🌐 Core Meta -->
   <meta charset="utf-8" />
@@ -7,6 +7,10 @@
   <meta name="theme-color" content="#0f172a" />
   <meta name="robots" content="index, follow" />
   <meta name="description" content="{% block meta_desc %}CYBERKIDZSEC — Zero-Day Vault.{% endblock %}" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <meta name="color-scheme" content="dark light" />
+
   <title>{% block title %}CYBERKIDZSEC Vault{% endblock %}</title>
 
   <!-- 🔌 PWA Support -->
@@ -14,70 +18,80 @@
   <meta name="apple-mobile-web-app-capable" content="yes" />
 
   <!-- 🖼 Favicons -->
-  <link rel="icon"        href="{{ url_for('static', filename='favicon-32.png') }}" sizes="32x32" />
-  <link rel="icon"        href="{{ url_for('static', filename='favicon-16.png') }}" sizes="16x16" />
+  <link rel="icon" href="{{ url_for('static', filename='favicon-32.png') }}" sizes="32x32" />
+  <link rel="icon" href="{{ url_for('static', filename='favicon-16.png') }}" sizes="16x16" />
   <link rel="apple-touch-icon" href="{{ url_for('static', filename='apple-touch-icon.png') }}" />
 
   <!-- 🌐 Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
-  <link rel="preload"    as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
 
-  <!-- 🎨 Compiled Tailwind + Your Styles -->
+  <!-- 🎨 Tailwind + Site Styles -->
   <link rel="stylesheet" href="{{ url_for('static', filename='css/app.min.css') }}" />
 
-  <!-- 🔧 Always-on Overrides -->
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/ghost-mode.css') }}" />
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/ghost-boot.css') }}" />
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/bug_tales.css') }}" />
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/back_to_top.css') }}" />
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/cyber-enhancements.css') }}" />
+  <!-- ⚙️ Always-on Enhancements -->
+  {% for css_file in [
+    'css/ghost-mode.css',
+    'css/ghost-boot.css',
+    'css/bug_tales.css',
+    'css/back_to_top.css',
+    'css/cyberpunk.css'
+  ] %}
+    <link rel="stylesheet" href="{{ url_for('static', filename=css_file) }}" />
+  {% endfor %}
 
-  <!-- 📦 3rd-Party -->
+  <!-- 📦 Vendor Styles -->
   <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        integrity="sha512-KKyjR..." crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
 
   {% block head_extra %}{% endblock %}
 
-  <!-- No-JS Fallback for AOS -->
+  <!-- 🚫 Fallback for AOS if JS is disabled -->
   <noscript>
     <style>
-      .aos-init[data-aos] { opacity:1!important; transform:none!important; }
+      .aos-init[data-aos] { opacity: 1 !important; transform: none !important; }
     </style>
   </noscript>
 </head>
 
 <body class="bg-cyberNight text-zinc-100 antialiased flex flex-col min-h-screen">
-  <!-- ⌨️ Skip-to-content for accessibility -->
-  {% include "components/skip_nav.html" %}
+
+  <!-- ⌨️ Accessibility: Skip Link -->
+  {% include "components/skip_nav.html" ignore missing %}
 
   <!-- 🛰️ Operative Title Banner -->
   {% if operative_title %}
-    <p class="text-orange-400 text-sm text-center font-bold uppercase mb-4 tracking-wider">
+    <p class="text-orange-400 text-sm text-center font-bold uppercase mb-4 tracking-widest">
       {{ operative_title }}
     </p>
   {% endif %}
 
-  <!-- 🔝 Header + Scroll-progress bar -->
-  {% include "components/header.html" %}
+  <!-- 🔝 Header + Scroll Progress + Theme Toggles -->
+  {% include "components/header.html" ignore missing %}
   <div id="scrollProgress" class="scroll-progress"></div>
+  <div class="fixed top-4 right-4 z-50 flex gap-2">
+    <button onclick="toggleTheme()" class="bg-zinc-800 px-2 py-1 rounded text-white text-xs">🌗 Theme</button>
+    <button onclick="toggleGhost()" class="bg-zinc-800 px-2 py-1 rounded text-white text-xs">👻 Ghost</button>
+  </div>
 
-  <!-- 🚀 Main Content -->
-  <main id="main" class="flex-1">
+  <!-- 🚀 Main Vault Content -->
+  <main id="main" role="main" class="flex-1">
     {% block content %}{% endblock %}
   </main>
 
-  <!-- 🎛 Modals & Overlays -->
-  {% include "components/vault_popup.html" %}
-  {% include "components/quick_view_modal.html" %}
-  {% include "components/hud_toolbar.html" %}
-  {% include "components/command_palette.html" %}
+  <!-- 🎛 Modals & Toolbars -->
+  {% include "components/vault_popup.html" ignore missing %}
+  {% include "components/quick_view_modal.html" ignore missing %}
+  {% include "components/hud_toolbar.html" ignore missing %}
+  {% include "components/command_palette.html" ignore missing %}
 
-  <!-- 🧭 Footer + Back-to-top -->
-  {% include "components/footer.html" %}
-  {% include "components/back_to_top.html" %}
+  <!-- 🧭 Footer -->
+  {% include "components/footer.html" ignore missing %}
+  {% include "components/back_to_top.html" ignore missing %}
 
   <!-- ⚙️ Scripts -->
   <script src="{{ url_for('static', filename='js/app.min.js') }}" defer></script>
@@ -94,11 +108,58 @@
     });
   </script>
 
-  <!-- 🔒 Service Worker -->
+  <!-- 🔝 Auto-scroll to top on page refresh -->
+  <script>
+    window.addEventListener('beforeunload', () => {
+      window.scrollTo({ top: 0, behavior: 'auto' });
+    });
+  </script>
+
+  <!-- 🎮 Konami Code Vault Unlock -->
+  <script>
+    const kCode = [38,38,40,40,37,39,37,39,66,65], buffer = [];
+    window.addEventListener("keydown", e => {
+      buffer.push(e.keyCode); buffer.splice(-kCode.length - 1, buffer.length - kCode.length);
+      if (kCode.every((v,i) => v === buffer[i])) {
+        document.body.classList.add("vault-unlocked");
+        alert("🚨 VAULT OVERRIDE: Welcome, Operative.");
+      }
+    });
+  </script>
+
+  <!-- 🌗 Theme + Ghost Mode Sync -->
+  <script>
+    function toggleTheme() {
+      const root = document.documentElement;
+      const current = root.dataset.theme || 'dark';
+      const next = current === 'dark' ? 'light' : 'dark';
+      root.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+    }
+
+    function toggleGhost() {
+      const root = document.documentElement;
+      const ghost = root.dataset.ghostmode === 'true';
+      const newVal = !ghost;
+      root.setAttribute('data-ghostmode', newVal);
+      localStorage.setItem('ghostmode', newVal);
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const savedTheme = localStorage.getItem('theme');
+      const ghost = localStorage.getItem('ghostmode') === 'true';
+      if (savedTheme) document.documentElement.setAttribute('data-theme', savedTheme);
+      document.documentElement.setAttribute('data-ghostmode', ghost);
+    });
+  </script>
+
+  <!-- 🛰️ Service Worker -->
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () =>
-        navigator.serviceWorker.register('/sw.js').catch(e => console.warn('SW failed:', e))
+        navigator.serviceWorker.register('/sw.js').catch(e =>
+          console.warn('Service Worker registration failed:', e)
+        )
       );
     }
   </script>
@@ -106,9 +167,10 @@
   {% block scripts_extra %}{% endblock %}
 
   {% if config['ENV'] == 'production' %}
-    <script defer data-domain="cyberkidzsec.com"
-            src="https://plausible.io/js/script.js"></script>
+    <!-- 📈 Analytics (Plausible) -->
+    <script defer data-domain="cyberkidzsec.com" src="https://plausible.io/js/script.js"></script>
   {% endif %}
+
 </body>
 </html>
 

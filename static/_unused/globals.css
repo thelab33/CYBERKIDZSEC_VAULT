@@ -1,0 +1,75 @@
+/* 🌐 utilities/globals.css — Global Base Enhancements */
+
+:root {
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-mono: 'Fira Code', ui-monospace, monospace;
+  --color-orange: #f97316;
+  --color-orange-glow: rgba(255, 127, 0, 0.4);
+  --color-emerald: #34d399;
+  --radius-xl: 1rem;
+  --transition-base: 0.3s ease-in-out;
+  --ghost-bg: rgba(15, 15, 15, 0.9);
+}
+
+/* 🧩 Box Sizing Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* 🖋 Base Typography */
+body {
+  font-family: var(--font-sans);
+  background-color: #0f111a;
+  color: #e5e7eb;
+  font-size: 16px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 🌀 Anchor Links */
+a {
+  color: var(--color-orange);
+  transition: color var(--transition-base);
+}
+a:hover {
+  color: var(--color-emerald);
+}
+
+/* ✨ Smooth Transitions */
+button,
+input,
+select,
+textarea {
+  transition: all var(--transition-base);
+  font-family: inherit;
+}
+
+/* 🌗 Theme Toggle Smoothness */
+html {
+  scroll-behavior: smooth;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* 💠 Utility Classes */
+.glow-text {
+  color: var(--color-orange);
+  text-shadow:
+    0 0 4px var(--color-orange-glow),
+    0 0 12px var(--color-orange-glow);
+}
+
+.rounded-xl {
+  border-radius: var(--radius-xl);
+}
+
+.backdrop-glass {
+  background-color: var(--ghost-bg);
+  backdrop-filter: blur(12px) saturate(160%);
+}
+
+/* 🖼️ Images */
+img {
+  max-width: 100%;
+  display: block;
+}
+

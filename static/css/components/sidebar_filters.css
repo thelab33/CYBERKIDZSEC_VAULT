@@ -1,0 +1,23 @@
+/* components/sidebar_filters.css — Tag Explorer Sidebar */
+
+#sideFilter {
+  @apply space-y-4 bg-cyberNightGlow p-5 rounded-2xl shadow-inner;
+}
+
+#tagSearch {
+  @apply w-full px-4 py-2 rounded-md bg-zinc-800 text-orangeLuxe-light
+         text-sm placeholder-orangeLuxe-light/50 focus:ring-2 focus:ring-orangeLuxe;
+}
+
+#tagList button {
+  @apply block w-full text-left px-4 py-2 rounded font-mono text-sm transition-all;
+}
+
+#tagList button.bg-orangeLuxe {
+  @apply text-black font-bold;
+}
+
+#tagList button:not(.bg-orangeLuxe) {
+  @apply text-orangeLuxe-light hover:bg-orangeLuxe/10;
+}
+

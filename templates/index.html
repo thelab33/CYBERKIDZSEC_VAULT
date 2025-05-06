@@ -5,7 +5,7 @@
 
 {% block head_extra %}
   {{ super() }}
-  {# Only load the extra section-and-component CSS not in app.min.css #}
+  {# 💅 Modular Section Styles #}
   {% set styles = [
     'sections/vault_overview.css',
     'sections/featured_reports.css',
@@ -21,7 +21,8 @@
     'sections/hacker_playground.css',
     'components/hero.css',
     'components/terminal_scan.css',
-    'components/hud_status.css'
+    'components/hud_status.css',
+    'components/bug_tales.css'
   ] %}
   {% for path in styles %}
     <link rel="stylesheet" href="{{ url_for('static', filename='css/' ~ path) }}">
@@ -29,27 +30,22 @@
 {% endblock %}
 
 {% block content %}
-  <!-- 🧠 Boot Console + Hero always visible -->
-  {% include "components/console.html" %}
+  <!-- 🧠 Hero + Console Boot Area -->
   {% include "components/hero.html" %}
+  {% include "components/console.html" %}
 
   <!-- 🔐 Vault Status Banner -->
   <section id="vault-status" class="section-container" aria-live="polite">
-    <div
-      class="bg-zinc-800/80 text-orange-400 text-xs sm:text-sm text-center py-2 font-mono uppercase tracking-wider animate-pulse backdrop-blur shadow"
-    >
+    <div class="bg-zinc-800/80 text-orange-400 text-xs sm:text-sm text-center py-2 font-mono uppercase tracking-wider animate-pulse backdrop-blur shadow">
       🔐 Zero-Day Archive Updating · Stay Ghosted.
     </div>
   </section>
 
-  {# 🚀 Unified Vault Overview (XP + Banners) #}
+  <!-- 🚀 Overview + Banners -->
   {% include "components/vault_overview.html" %}
 
-  <!-- 📚 Reports + Sidebar Filters -->
-  <section
-    id="vault-feed"
-    class="section-container grid grid-cols-1 lg:grid-cols-4 gap-10 my-24"
-  >
+  <!-- 📚 Vault Feed Grid + Filters -->
+  <section id="vault-feed" class="section-container grid grid-cols-1 lg:grid-cols-4 gap-10 my-24">
     <aside class="space-y-10 lg:sticky lg:top-24 self-start" role="complementary">
       {% include "components/filter_bar.html" %}
       {% include "components/sidebar_filters.html" %}
@@ -60,23 +56,25 @@
       <h2 id="reports-section" class="sr-only">Reports & Analytics</h2>
       {% include "components/featured_reports.html" %}
       {% include "components/report_grid.html" %}
-      {% include "components/empty_state.html" %}
-      {% include "components/pagination.html" %}
-      {% include "components/report_charts_grid.html" %}
-      {% include "components/tags_section.html" %}
-      {% include "components/related_reports.html" %}
+
+      <!-- 🧠 Hacker Console Section -->
+      <section id="hacker-console" class="container mx-auto px-6 my-12" data-aos="fade-up">
+        {% include "components/hacker_console.html" %}
+        {% include "components/empty_state.html" %}
+        {% include "components/pagination.html" %}
+        {% include "components/report_charts_grid.html" %}
+        {% include "components/tags_section.html" %}
+        {% include "components/related_reports.html" %}
+      </section>
     </div>
   </section>
 
-  <!-- 🎮 Hacker Playground -->
-  <section
-    id="hacker-playground"
-    class="section-container py-20 text-center rounded-3xl shadow-2xl border border-orangeLuxe/30 backdrop-blur bg-gradient-to-br from-cyberNight via-cyberNightGlow to-cyberNightPhantom"
-  >
+  <!-- 🎮 Hacker Playground Zone -->
+  <section id="hacker-playground" class="section-container py-20 text-center rounded-3xl shadow-2xl border border-orangeLuxe/30 backdrop-blur bg-gradient-to-br from-cyberNight via-cyberNightGlow to-cyberNightPhantom">
     {% include "components/hacker_playground.html" %}
   </section>
 
-  <!-- 🛰️ HUD & Terminal Scan Modules -->
+  <!-- 🛰️ HUD Modules -->
   {% include "components/terminal_scan.html" %}
   {% include "components/hud_status.html" %}
 {% endblock %}

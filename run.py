@@ -1,16 +1,13 @@
 # run.py
-# ───────────────────────────────────────────────────────────────────────── #
-#  CYBERKIDZSEC ⚡ VAULT — Development Launcher
-# ───────────────────────────────────────────────────────────────────────── #
-
-# run.py
+# ────────────────────────────────────────────────────────────── #
+#  CYBERKIDZSEC ⚡ VAULT — Development Entry Point
+# ────────────────────────────────────────────────────────────── #
 
 from src.app import create_app
 
-# this top-level `app` is what Flask CLI will import
 app = create_app()
 
 if __name__ == "__main__":
-    # fallback if you still like `python run.py`
-    app.run(debug=True)
+    # Run with: `python run.py`
+    app.run(debug=True, host="0.0.0.0", port=5000)
 

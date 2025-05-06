@@ -1,0 +1,59 @@
+/* 🌌 Orbit FX + Glitch + Lens Flare — components/orbit_effects.css */
+
+.orbit-container {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.orbit {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border: 1px solid rgba(255, 127, 0, 0.4);
+  border-radius: 9999px;
+  transform: translate(-50%, -50%);
+}
+
+.orbit--small { width: 6rem; height: 6rem; animation: spin 8s linear infinite; }
+.orbit--med   { width: 10rem; height: 10rem; animation: spinReverse 12s linear infinite; }
+.orbit--large { width: 14rem; height: 14rem; animation: spin 20s linear infinite; }
+
+#lensFlare {
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 20rem; height: 20rem;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle, rgba(255, 255, 200, 0.4) 0%, transparent 60%);
+  filter: blur(100px);
+  mix-blend-mode: screen;
+  animation: lensFlicker 3s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Glitch FX */
+.glitch {
+  position: relative;
+  color: white;
+}
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  overflow: hidden;
+}
+.glitch::before {
+  left: 2px;
+  text-shadow: -2px 0 #f97316;
+  animation: glitch 1.5s infinite alternate-reverse;
+}
+.glitch::after {
+  left: -2px;
+  text-shadow: 2px 0 #22d3ee;
+  animation: glitch 1.5s infinite alternate;
+}
+

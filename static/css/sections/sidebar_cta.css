@@ -1,5 +1,15 @@
-/* 🎯 Auto-generated: sections/sidebar_cta.css */
+/* static/css/sections/sidebar_cta.css */
 
-.sidebar_cta {
-  /* Add styles here */
+.sidebar-cta {
+  margin-top: 2rem;
 }
+
+.cta-card {
+  transition: all 0.3s ease;
+}
+
+.cta-btn {
+  transition: all 0.25s ease-in-out;
+  font-family: var(--font-mono, monospace);
+}
+

@@ -1,0 +1,34 @@
+/* 📈 Vault XP + Overview – components/vault_xp.css */
+
+#vault-overview {
+  @apply section-container my-24 space-y-12;
+}
+
+.vault-xp-status {
+  @apply mx-auto max-w-lg space-y-2;
+}
+
+#vaultXpProgress {
+  @apply absolute inset-0 w-full h-full appearance-none;
+}
+
+#vaultXpFill {
+  @apply h-4 bg-gradient-to-r from-orangeLuxe to-emeraldLuxe transition-all duration-700 ease-out;
+}
+
+#vaultXpText {
+  @apply text-center text-xs text-orange-400 font-mono tracking-wide;
+}
+
+.vault-banner-grid {
+  @apply grid grid-cols-1 md:grid-cols-3 gap-8 px-6;
+}
+
+.vault-banner {
+  @apply overflow-hidden rounded-2xl shadow-lg group hover:shadow-orangeLuxe/30 transition-all duration-300;
+}
+
+.vault-banner img {
+  @apply w-full h-48 object-cover rounded-xl group-hover:scale-105 transition-transform duration-500 ease-out;
+}
+

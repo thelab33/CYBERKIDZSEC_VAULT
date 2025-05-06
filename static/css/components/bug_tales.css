@@ -1,0 +1,49 @@
+/* 🎯 Enhanced: components/bug_tales.css — Cyberpunk Archive Panel */
+
+#bug-tales {
+  background: rgba(15, 15, 15, 0.9);
+  border: 1px solid #334155; /* slate-700 */
+  border-radius: 1rem;
+  padding: 1.5rem;
+  backdrop-filter: blur(10px) saturate(140%);
+  box-shadow:
+    0 0 20px rgba(255, 127, 0, 0.08),
+    0 0 60px rgba(34, 211, 238, 0.06);
+  transition: background 0.3s ease, border 0.3s ease;
+  position: relative;
+}
+
+#bug-tales h2 {
+  font-family: 'Fira Code', monospace;
+  font-size: 1.125rem;
+  color: #f97316; /* orange */
+  margin-bottom: 1rem;
+  text-shadow: 0 0 4px rgba(255, 127, 0, 0.4);
+}
+
+#bug-tales p {
+  color: #e2e8f0; /* zinc-100 */
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+#bug-tales button {
+  font-family: 'Fira Code', system-ui, sans-serif;
+  font-weight: 600;
+  color: white;
+  background: linear-gradient(to right, #f97316, #22d3ee);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 10px rgba(249, 115, 22, 0.2);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#bug-tales button:hover {
+  transform: scale(1.05);
+  box-shadow:
+    0 0 15px rgba(255, 127, 0, 0.4),
+    0 0 30px rgba(34, 211, 238, 0.2);
+}
+

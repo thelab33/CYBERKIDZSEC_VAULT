@@ -1,0 +1,40 @@
+/* 🎯 Auto-generated: sections/terminal_scan.css */
+
+#scanForm {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+@media (min-width: 640px) {
+  #scanForm {
+    flex-direction: row;
+  }
+}
+
+#scanInput {
+  flex: 1;
+  font-family: monospace;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 0.375rem;
+  border: 1px solid rgba(251, 146, 60, 0.4);
+  padding: 0.5rem 1rem;
+  color: #f8fafc;
+  placeholder-color: #fb923c;
+  outline: none;
+}
+
+#scanInput:focus {
+  ring: 2px solid #fb923c;
+}
+
+#scanOut {
+  background-color: rgba(0, 0, 0, 0.7);
+  border: 1px solid rgba(251, 146, 60, 0.4);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  font-family: monospace;
+  font-size: 0.875rem;
+  color: #fcd34d;
+}
+

@@ -1,5 +1,9 @@
-{# templates/components/cta_cards.html — Spotlight CTAs #}
-<section aria-label="Primary actions" class="grid grid-cols-1 sm:grid-cols-2 gap-6" data-aos="fade-up">
+{# templates/components/sidebar_cta.html #}
+<section
+  class="sidebar-cta grid grid-cols-1 sm:grid-cols-2 gap-6"
+  aria-label="Primary actions"
+  data-aos="fade-up"
+>
   {% set ctas = [
     {
       "id": "academy",
@@ -21,19 +25,25 @@
     }
   ] %}
   {% for cta in ctas %}
-  <article role="region"
-           aria-labelledby="{{ cta.id }}-title"
-           class="cta-card group rounded-2xl border border-orangeLuxe/30 p-6 bg-cyberNight shadow transition-all focus-within:ring-2">
-    <h2 id="{{ cta.id }}-title"
-        class="text-xs uppercase font-bold text-orange-300 mb-2 transition-colors group-hover:text-orangeLuxe-light">
+  <article
+    role="region"
+    aria-labelledby="{{ cta.id }}-title"
+    class="cta-card group bg-cyberNight border border-orangeLuxe/30 rounded-2xl p-6 shadow transition-all focus-within:ring-2"
+  >
+    <h2
+      id="{{ cta.id }}-title"
+      class="text-xs uppercase font-bold text-orange-300 mb-2 group-hover:text-orangeLuxe-light transition"
+    >
       {{ cta.emoji }} {{ cta.title }}
     </h2>
     <p class="text-xs text-orangeLuxe-light/70 mb-4">{{ cta.desc }}</p>
-    <a href="{{ cta.href }}"
-       aria-labelledby="{{ cta.id }}-title"
-       class="inline-flex items-center justify-center w-full text-xs font-semibold px-4 py-2 rounded border-2 border-orangeLuxe text-orangeLuxe
-              bg-transparent transition-shadow duration-300 {{ cta.btn_shadow }}
-              hover:bg-orangeLuxe hover:text-black focus:outline-none">
+    <a
+      href="{{ cta.href }}"
+      aria-labelledby="{{ cta.id }}-title"
+      class="cta-btn inline-flex items-center justify-center w-full text-xs font-semibold px-4 py-2 rounded border-2 border-orangeLuxe text-orangeLuxe
+             bg-transparent transition-shadow duration-300 {{ cta.btn_shadow }}
+             hover:bg-orangeLuxe hover:text-black focus:outline-none"
+    >
       {{ cta.label }}
     </a>
   </article>

@@ -1,0 +1,32 @@
+/* components/filter_bar.css — Top Toolbar Styles */
+
+#filterBar {
+  @apply sticky top-0 z-50 mb-10 bg-gradient-to-r
+         from-cyberNight via-cyberNight-glow to-cyberNight-phantom
+         backdrop-blur-md border-b border-orangeLuxe/30 shadow-lg
+         rounded-md px-4 py-3;
+}
+
+#filterScroll {
+  @apply flex items-center overflow-x-auto no-scrollbar gap-4 pr-6;
+}
+
+#filterScroll select {
+  @apply appearance-none bg-zinc-900 border border-orangeLuxe
+         px-3 py-1 pr-6 text-sm rounded text-orange-200
+         focus:outline-none focus:ring-2 focus:ring-orangeLuxe;
+}
+
+#filterScroll button[role="radio"] {
+  @apply px-4 py-1.5 text-sm font-mono rounded-full transition-border border whitespace-nowrap;
+}
+
+#filterScroll button[aria-checked="true"] {
+  @apply bg-orangeLuxe text-white border-orangeLuxe shadow-md;
+}
+
+#filterScroll button:not([aria-checked="true"]) {
+  @apply bg-zinc-900 text-orange-300 border-orangeLuxe
+         hover:bg-orange-600 hover:text-white;
+}
+

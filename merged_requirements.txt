@@ -1,0 +1,107 @@
+
+# ==== AI & GPT ====
+annotated-types==0.7.0
+anyio==4.9.0
+# ==== API & SCHEMAS ====
+asttokens==3.0.0
+attrs==25.3.0
+# ==== AUTH, SECURITY, HEADERS ====
+black==25.1.0
+build==1.2.2.post1
+certifi==2025.1.31
+cffi==1.17.1
+cfgv==3.4.0
+charset-normalizer==3.4.1
+click==8.1.8
+# ==== CORE WEB STACK ====
+cryptography==44.0.2
+# ==== DATABASE & ORM ====
+# ==== DATA VALIDATION ====
+decorator==5.2.1
+distlib==0.3.9
+distro==1.9.0
+Django==5.2
+django-environ==0.12.0
+django-extensions==3.2.3
+django-heroku==0.3.1
+djangorestframework==3.16.0
+django-sslserver==0.22
+dj-database-url==2.3.0
+drf-spectacular==0.28.0
+EditorConfig==0.17.0
+# ==== ENVIRONMENTS & BUILD ====
+fastapi==0.115.12
+filelock==3.18.0
+# ==== FRONTEND TOOLING ====
+gpt-cli==1.0.11
+gunicorn==22.0.0
+# ==== HTTP CLIENTS ====
+httpcore==1.0.7
+httpx==0.28.1
+identify==2.6.9
+idna==3.10
+inflection==0.5.1
+ipython==9.0.2
+jedi==0.19.2
+jsbeautifier==1.15.4
+jsonschema==4.23.0
+jsonschema-specifications==2024.10.1
+markdown-it-py==3.0.0
+matplotlib-inline==0.1.7
+mdurl==0.1.2
+# ==== MISC UTILITIES ====
+mypy-extensions==1.0.0
+nodeenv==1.9.1
+# ==== OBSERVABILITY & PERFORMANCE ====
+openai==1.69.0
+parso==0.8.4
+pathspec==0.12.1
+pexpect==4.9.0
+pillow==11.1.0
+pipreqs==0.4.13
+pip-tools==7.4.1
+platformdirs==4.3.7
+playwright==1.51.0
+pre_commit==4.2.0
+prisma==0.15.0
+prompt_toolkit==3.0.50
+psycopg2==2.9.10
+psycopg2-binary==2.9.10
+ptyprocess==0.7.0
+pycparser==2.22
+pydantic==2.11.1
+pydantic_core==2.33.0
+Pygments==2.19.1
+pyOpenSSL==25.0.0
+pyproject_hooks==1.2.0
+pytest==7.4.4
+pytest-cov==5.0.0
+pytest-django==4.8.0
+pytest-playwright==0.4.2
+python-dotenv==1.1.0
+python-slugify==8.0.4
+referencing==0.36.2
+requests==2.32.3
+rich==14.0.0
+rpds-py==0.24.0
+ruff==0.11.2
+sentry-sdk==2.25.1
+setuptools==78.1.0
+# ==== SHELL / REPL / DEBUG ====
+sniffio==1.3.1
+sqlparse==0.5.3
+stack-data==0.6.3
+starlette==0.46.1
+# ==== TESTING & LINTING ====
+text-unidecode==1.3
+tld==0.13
+# ==== TOOLING & DEV EXPERIENCE ====
+traitlets==5.14.3
+typing_extensions==4.13.0
+typing-inspection==0.4.0
+urllib3==2.3.0
+uvicorn==0.34.0
+virtualenv==20.29.3
+wcwidth==0.2.13
+wheel==0.45.1
+whitenoise==6.9.0

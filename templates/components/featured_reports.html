@@ -1,79 +1,33 @@
-{# templates/components/featured_reports.html — Polished Featured Reports #}
+{# templates/components/featured_reports.html #}
+<section id="featured" class="featured-reports" aria-labelledby="featured-heading">
+  <div aria-hidden="true" id="featuredAurora" class="featured-aurora"></div>
 
-{# Fallback demo data if none provided #}
-{% set reports = featured_reports if featured_reports is defined else [
-  {'slug':'demo-1','title':'Demo Report 1','summary':'Lorem ipsum dolor sit amet consectetur adipisicing elit.','tags':['xss','race','web3']},
-  {'slug':'demo-2','title':'Demo Report 2','summary':'Lorem ipsum dolor sit amet consectetur adipisicing elit.','tags':['xss','injection']},
-  {'slug':'demo-3','title':'Demo Report 3','summary':'Lorem ipsum dolor sit amet consectetur adipisicing elit.','tags':['misconfiguration','race']},
-] %}
-
-<section
-  id="featured"
-  aria-labelledby="featured-heading"
-  class="relative isolate py-20 px-4 sm:px-6 lg:px-8
-         bg-gradient-to-br from-[#0f0c29] via-[#302b63] to-[#24243e]
-         border border-orangeLuxe/25 shadow-2xl overflow-hidden
-         rounded-2xl ring-1 ring-orangeLuxe/10 backdrop-blur-lg"
->
-  <!-- Aurora flare -->
-  <div
-    aria-hidden="true"
-    id="featuredAurora"
-    class="absolute -inset-20 bg-[conic-gradient(at_top_right,_#ff7f00_0%,_#ff00e0_45%,_transparent_70%)]
-           opacity-10 will-change-transform"
-  ></div>
-
-  <!-- Header -->
-  <header class="relative z-10 text-center space-y-4 mb-12">
-    <h2
-      id="featured-heading"
-      class="text-4xl sm:text-5xl font-extrabold tracking-tight
-             bg-gradient-to-r from-orangeLuxe via-pink-400 to-fuchsia-500
-             bg-clip-text text-transparent animate-pulse-glow"
-    >
-      🧠 Featured Vault Reports
-    </h2>
-    <p class="mx-auto max-w-2xl text-sm sm:text-base font-mono text-orangeLuxe-light/80">
+  <header class="featured-header text-center space-y-4 mb-12">
+    <h2 id="featured-heading" class="featured-title">🧠 Featured Vault Reports</h2>
+    <p class="featured-subtitle">
       Hand-picked exploits, rare bugs & security artforms — straight from the archive.
     </p>
   </header>
 
-  <!-- Grid -->
-  <ul
-    id="featuredGrid"
-    class="relative z-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3"
-    role="list"
-  >
+  <ul id="featuredGrid" class="featured-grid" role="list">
     {% for r in reports %}
     <li>
-      <a href="{{ url_for('views.report_detail', slug=r.slug) }}"
-         class="group block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-orangeLuxe rounded-xl"
-      >
-        <article class="tiltCard h-full rounded-xl bg-gradient-to-br from-cyberNightGlow to-zinc-900/90
-                         border border-orangeLuxe/20 shadow-lg transition-shadow
-                         group-hover:shadow-orangeLuxe/40 p-0 overflow-hidden"
-                 data-aos="fade-up" data-aos-delay="{{ loop.index0 * 100 }}">
-          <div class="relative h-40 overflow-hidden">
+      <a href="{{ url_for('views.report_detail', slug=r.slug) }}" class="report-link group">
+        <article class="tiltCard report-card" data-aos="fade-up" data-aos-delay="{{ loop.index0 * 100 }}">
+          <div class="report-image-container">
             <img
               src="{{ url_for('static', filename='images/og/' ~ r.slug ~ '.png') }}"
               alt="{{ r.title }}"
-              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out shimmer"
+              class="report-image shimmer"
               loading="lazy"
             />
           </div>
-          <div class="p-6 space-y-2">
-            <h3 class="text-lg font-semibold text-orangeLuxe-light
-                       group-hover:text-orangeLuxe transition-colors">
-              {{ r.title }}
-            </h3>
-            <p class="text-xs text-orangeLuxe-light/70 font-mono line-clamp-3">
-              {{ r.summary }}
-            </p>
-            <div class="flex flex-wrap gap-1.5 text-[10px] uppercase font-semibold">
+          <div class="report-body">
+            <h3 class="report-title">{{ r.title }}</h3>
+            <p class="report-summary">{{ r.summary }}</p>
+            <div class="report-tags">
               {% for tag in r.tags[:4] %}
-                <span class="bg-orangeLuxe/10 text-orangeLuxe-light px-2 py-0.5 rounded-full">
-                  #{{ tag }}
-                </span>
+              <span class="report-tag">#{{ tag }}</span>
               {% endfor %}
             </div>
           </div>
@@ -83,55 +37,4 @@
     {% endfor %}
   </ul>
 </section>
-
-<script>
-// Tilt interaction
-const grid = document.getElementById("featuredGrid");
-grid.addEventListener("pointermove", e => {
-  const card = e.target.closest(".tiltCard");
-  if (!card) return;
-  const rect = card.getBoundingClientRect();
-  const x = (e.clientX - rect.left) / rect.width  - 0.5;
-  const y = (e.clientY - rect.top ) / rect.height - 0.5;
-  card.style.transform = `perspective(700px) rotateX(${-y*12}deg) rotateY(${x*12}deg)`;
-});
-grid.addEventListener("pointerleave", e => {
-  const card = e.target.closest(".tiltCard");
-  if (card) card.style.transform = "";
-});
-
-// Aurora spin
-(function spinAurora(){
-  const el = document.getElementById("featuredAurora");
-  let deg = 0;
-  setInterval(() => {
-    deg = (deg + 0.2) % 360;
-    el.style.transform = `rotate(${deg}deg)`;
-  }, 30);
-})();
-</script>
-
-<style>
-/* scoped shimmer effect */
-@keyframes shimmer {
-  0%   { background-position: -200% 0; }
-  100% { background-position: 200% 0; }
-}
-.shimmer {
-  position: relative;
-  overflow: hidden;
-}
-.shimmer::after {
-  content: "";
-  position: absolute; inset: 0;
-  background: linear-gradient(
-    110deg,
-    transparent 0%,
-    rgba(255,255,255,0.4) 50%,
-    transparent 100%
-  );
-  background-size: 200% 100%;
-  animation: shimmer 1.6s infinite;
-}
-</style>
 
