@@ -1,0 +1,23 @@
+:root {
+  --orangeLuxe: #facc15;
+  --cyberNight: #0f172a;
+  --cyberNightGlow: #12182f;
+  --font-sans: 'Inter', sans-serif;
+}
+.focus-visible:focus {
+  outline: 2px solid var(--orangeLuxe);
+  outline-offset: 2px;
+}
+.hover-glow:hover {
+  box-shadow: 0 0 10px var(--orangeLuxe);
+  transition: box-shadow 0.3s ease-in-out;
+}
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.fade-in.appear {
+  opacity: 1;
+  transform: none;
+}

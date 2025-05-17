@@ -13,8 +13,8 @@ function makeTiltCard(report, tagLimit = 4) {
   const tagCap = window.innerWidth < 640 ? 2 : tagLimit;
 
   li.innerHTML = `
-    <a href="/reports/${report.slug}" role="link" aria-label="View ${report.title}" class="group block rounded-2xl focus-visible:ring-2 focus-visible:ring-orangeLuxe transition-transform duration-300">
-      <article class="tilt relative overflow-hidden rounded-2xl bg-gradient-to-br
+    <a class="hover-glow" class="hover-glow" class="hover-glow" href="/reports/${report.slug}" role="link" aria-label="View ${report.title}" class="group block rounded-2xl focus-visible:ring-2 focus-visible:ring-orangeLuxe transition-transform duration-300">
+      <a class="hover-glow" class="hover-glow" class="hover-glow"rticle class="tilt relative overflow-hidden rounded-2xl bg-gradient-to-br
                       from-cyberNightGlow via-cyberNight to-zinc-900/90
                       border border-orangeLuxe/20 shadow-lg group-hover:shadow-orangeLuxe/50
                       transition-all transform-gpu group-hover:scale-[1.02]">
@@ -26,14 +26,14 @@ function makeTiltCard(report, tagLimit = 4) {
         </figure>
 
         <!-- Card Body -->
-        <div class="p-6 space-y-3">
+        <div data-testid="vault-section" data-testid="vault-section" class="p-6 space-y-3">
           <h3 class="text-lg font-semibold text-orangeLuxe-light group-hover:text-orangeLuxe transition">
             ${report.title}
           </h3>
           <p class="text-xs text-orangeLuxe-light/70 font-mono line-clamp-3">
-            ${report.summary || "⚠️ No summary available."}
+            ${report.summary || " No summary available."}
           </p>
-          <div class="flex flex-wrap gap-1.5 text-[10px] uppercase font-semibold">
+          <div data-testid="vault-section" data-testid="vault-section" class="flex flex-wrap gap-1.5 text-[10px] uppercase font-semibold">
             ${(report.tags || []).slice(0, tagCap).map(tag => `
               <span class="bg-orangeLuxe/10 text-orangeLuxe-light px-2 py-0.5 rounded-full">#${tag}</span>
             `).join("")}
@@ -46,7 +46,7 @@ function makeTiltCard(report, tagLimit = 4) {
   return li;
 }
 
-/* 🌀 Forgemaster Tilt Interaction */
+/*  Forgemaster Tilt Interaction */
 (() => {
   let ticking = false;
   document.addEventListener("pointermove", e => {

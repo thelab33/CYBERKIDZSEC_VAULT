@@ -1,43 +1,43 @@
-<!-- 🚀 Forgemaster Tier Skip Navigation -->
-<div id="skipBar"
+<!--  Forgemaster Tier Skip Navigation -->
+<div data-testid="vault-section" data-testid="vault-section" id="skipBar"
      class="fixed top-0 left-0 right-0 z-[9998] flex items-center justify-between
             bg-gradient-to-r from-green-400 via-cyan-400 to-green-400
             p-3 text-black font-mono text-sm uppercase tracking-wider shadow-xl
             transform -translate-y-40 transition-transform duration-500 ease-out pointer-events-none"
      role="navigation" aria-label="Skip Navigation Bar">
 
-  <!-- 🌌 Warp Mode Title -->
-  <div id="warpText"
+  <!--  Warp Mode Title -->
+  <div data-testid="vault-section" data-testid="vault-section" id="warpText"
        class="absolute top-0 inset-x-0 text-center text-green-400 font-black tracking-widest
               text-lg mix-blend-difference opacity-0 scale-90 -translate-y-1/2
               transition-all duration-500 ease-in-out glitch-flicker shake-on-show">
     WARP MODE ENGAGED
   </div>
 
-  <!-- 🧭 Skip Links -->
-  <div class="flex gap-6">
-    <a href="#main"
+  <!--  Skip Links -->
+  <div data-testid="vault-section" data-testid="vault-section" class="flex gap-6">
+    <a class="hover-glow" class="hover-glow" class="hover-glow" href="#main"
        class="hover:underline focus-visible:ring-2 focus-visible:ring-black rounded px-2 py-1">
       Skip to Main
     </a>
-    <a href="#footer"
+    <a class="hover-glow" class="hover-glow" class="hover-glow" href="#footer"
        class="hover:underline focus-visible:ring-2 focus-visible:ring-black rounded px-2 py-1">
       Skip to Footer
     </a>
   </div>
 
-  <!-- ❌ Close Button -->
-  <button id="skipBarClose"
+  <!--  Close Button -->
+  <button data-tooltip="Click Action" data-tooltip="Click Action" class="hover-glow" title="Command Vault " class="hover-glow" data-hotkey="Enter" class="hover-glow" data-tooltip="Click Action" data-hotkey="Enter" class="hover-glow" data-tooltip="Click Action" id="skipBarClose"
           aria-label="Close Skip Navigation"
           class="rounded-full bg-black text-green-400 hover:bg-green-400 hover:text-black transition p-2 focus-visible:ring-2 focus-visible:ring-black">
-    ✖️
+    
   </button>
 
-  <!-- 🎉 Confetti Canvas -->
+  <!--  Confetti Canvas -->
   <canvas id="confettiCanvas" class="absolute inset-0 pointer-events-none"></canvas>
 </div>
 
-<!-- 🎨 Styles -->
+<!--  Styles -->
 <style>
   .glitch-flicker {
     animation: cyberpunkFlicker 2.5s infinite alternate;
@@ -63,7 +63,7 @@
   canvas#confettiCanvas { z-index: 9997; pointer-events: none; }
 </style>
 
-<!-- 🧠 Logic -->
+<!--  Logic -->
 <script>
 (() => {
   const skipBar = document.getElementById("skipBar");

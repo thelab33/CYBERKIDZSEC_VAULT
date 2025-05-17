@@ -1,11 +1,11 @@
-/* ─── Elite Header Styles – CYBERKIDZSEC ─────────────────────── */
+/*  Elite Header Styles  CYBERKIDZSEC  */
 
-/* 1️⃣ Define your header height as a CSS variable */
+/* 1 Define your header height as a CSS variable */
 :root {
-  --header-height: 4rem; /* adjust this to match your actual header’s total height */
+  --header-height: 4rem; /* adjust this to match your actual headers total height */
 }
 
-/* 2️⃣ Make the header sticky at the top */
+/* 2 Make the header sticky at the top */
 #siteHeader {
   position: sticky;
   top: 0;
@@ -22,20 +22,20 @@
   /* vertical padding is baked into --header-height so remove padding-block */
 }
 
-/* 3️⃣ Shrink & shadow once you scroll */
+/* 3 Shrink & shadow once you scroll */
 #siteHeader.scrolled {
   /* if you want it to shrink, reduce height and adjust padding */
   height: calc(var(--header-height) * 0.75);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
 }
 
-/* 4️⃣ Push all main content down by the header’s height */
+/* 4 Push all main content down by the headers height */
 main, 
 #hero {
   margin-top: var(--header-height);
 }
 
-/* ─── Logo ───────────────────────────────────────────────────── */
+/*  Logo  */
 #siteHeader a[aria-label="Go to Home"] {
   min-width: 220px;
   margin-right: 2rem;
@@ -46,7 +46,7 @@ main,
   flex-shrink: 0;
 }
 
-/* ─── Search Bar ─────────────────────────────────────────────── */
+/*  Search Bar  */
 #globalSearch {
   position: relative;
   flex: 1 1 320px;
@@ -90,7 +90,7 @@ kbd {
   color: #a1a1aa;
 }
 
-/* ─── Navigation Links ───────────────────────────────────────── */
+/*  Navigation Links  */
 nav a.relative {
   position: relative;
   font-weight: 500;
@@ -117,7 +117,7 @@ nav a.relative[data-active]::after {
   width: 100%;
 }
 
-/* ─── Icon Buttons ───────────────────────────────────────────── */
+/*  Icon Buttons  */
 #siteHeader .icon-button {
   padding: 0.5rem;
   border-radius: 9999px;
@@ -144,7 +144,7 @@ nav a.relative[data-active]::after {
   line-height: 1;
 }
 
-/* ─── Responsive Adjustments ─────────────────────────────────── */
+/*  Responsive Adjustments  */
 @media (max-width: 1024px) {
   #globalSearch {
     padding: 0.5rem 0.75rem 0.5rem 2.25rem;

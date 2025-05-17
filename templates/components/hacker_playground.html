@@ -3,53 +3,53 @@
   class="relative mx-auto my-24 max-w-3xl px-6 py-12 rounded-2xl border border-orangeLuxe/40
          bg-gradient-to-b from-cyberNight to-black shadow-xl space-y-12"
 >
-  <!-- ✨ Header with Typewriter Effect -->
-  <div class="text-center">
-    <h2 id="hackIntro" class="text-3xl sm:text-4xl font-extrabold text-orangeLuxe-light mb-2 font-mono">
-      ▓▒░ Loading Hacker Playground…
+  <!--  Header with Typewriter Effect -->
+  <div data-testid="vault-section" data-testid="vault-section" class="text-center">
+    <h2 data-aos="fade-up" data-aos-delay="150" data-aos="fade-up" data-aos-delay="150" id="hackIntro" class="text-3xl sm:text-4xl font-extrabold text-orangeLuxe-light mb-2 font-mono">
+       Loading Hacker Playground
     </h2>
     <p class="text-orangeLuxe-light/80 font-mono text-sm">
-      Think you’ve got what it takes? Hack the vault – only the curious survive.
+      Think youve got what it takes? Hack the vault  only the curious survive.
     </p>
   </div>
 
-  <!-- 🔓 Hack Me Button + XP Bar -->
-  <div class="text-center space-y-4">
-    <button id="hackBtn"
+  <!--  Hack Me Button + XP Bar -->
+  <div data-testid="vault-section" data-testid="vault-section" class="text-center space-y-4">
+    <button data-tooltip="Click Action" data-tooltip="Click Action" class="hover-glow" title="Command Vault " class="hover-glow" data-hotkey="Enter" class="hover-glow" data-tooltip="Click Action" data-hotkey="Enter" class="hover-glow" data-tooltip="Click Action" id="hackBtn"
       class="bg-orangeLuxe hover:bg-orangeLuxe-dark text-black px-8 py-3 rounded-full
              font-semibold shadow-lg focus:ring-2 focus:ring-orange-400 transition">
-      Hack Me 🔓
+      Hack Me 
     </button>
     <p id="hackXPText" class="text-xs text-orangeLuxe-light font-mono">Hacks Triggered: <span id="hackCount">0</span></p>
-    <div class="w-full max-w-xs mx-auto bg-zinc-800 rounded-full h-2 overflow-hidden">
-      <div id="hackXPBar" class="h-full bg-gradient-to-r from-orangeLuxe to-emeraldLuxe transition-all duration-700 ease-out" style="width: 0%"></div>
+    <div data-testid="vault-section" data-testid="vault-section" class="w-full max-w-xs mx-auto bg-zinc-800 rounded-full h-2 overflow-hidden">
+      <div data-testid="vault-section" data-testid="vault-section" id="hackXPBar" class="h-full bg-gradient-to-r from-orangeLuxe to-emeraldLuxe transition-all duration-700 ease-out" style="width: 0%"></div>
     </div>
     <pre id="flagOut" class="hidden mt-4 text-emerald-400 font-mono text-sm break-all"></pre>
   </div>
 
-  <!-- 🛰️ Terminal Scanner -->
+  <!--  Terminal Scanner -->
   <div>
-    <h3 class="text-orangeLuxe text-lg font-semibold mb-3">🛰️ Terminal-Scan™ Interface</h3>
+    <h3 class="text-orangeLuxe text-lg font-semibold mb-3"> Terminal-Scan Interface</h3>
     <form id="scanForm" class="flex flex-col sm:flex-row gap-3">
-      <input id="scanInput" type="text"
-        placeholder="> scan /api/dev/console …"
+      <input class="hover-glow" class="hover-glow" id="scanInput" type="text"
+        placeholder="> scan /api/dev/console "
         class="flex-1 font-mono bg-black/80 rounded border border-orangeLuxe/40
                px-4 py-2 text-orange-100 placeholder:text-orange-400 focus:ring-2 focus:ring-orangeLuxe" />
-      <button
+      <button data-tooltip="Click Action" data-tooltip="Click Action" class="hover-glow" title="Command Vault " class="hover-glow" data-hotkey="Enter" class="hover-glow" data-tooltip="Click Action" data-hotkey="Enter" class="hover-glow"
         class="bg-orangeLuxe-dark text-white px-5 py-2 rounded font-medium shadow
                hover:bg-orangeLuxe-light transition">
-        Run Scan 🛰️
+        Run Scan 
       </button>
     </form>
     <pre id="scanOut" class="hidden mt-5 bg-black/70 border border-orangeLuxe/40 rounded p-4 font-mono text-sm text-orangeLuxe-light transition-all"></pre>
   </div>
 
-  <!-- 👻 Ghost Easter Egg -->
-  <div id="ghostFlag" class="hidden mt-16 text-center bg-cyberNight.glow/70 rounded-xl p-6
+  <!--  Ghost Easter Egg -->
+  <div data-testid="vault-section" data-testid="vault-section" id="ghostFlag" class="hidden mt-16 text-center bg-cyberNight.glow/70 rounded-xl p-6
         border border-orangeLuxe/40 shadow-lg animate-pulse-glow text-orangeLuxe-light font-mono">
   </div>
 
-  <!-- 🕶️ Return Egg -->
+  <!--  Return Egg -->
   <p id="returnEgg" class="hidden absolute -top-5 right-4 text-[10px] font-mono text-orangeLuxe-light/60">
     welcome back, operative
   </p>
@@ -67,7 +67,7 @@ let commandHistory = [], historyIndex = -1;
 // Typewriter intro effect
 window.addEventListener("DOMContentLoaded", () => {
   const intro = $("#hackIntro");
-  const msg = "🧠 Hacker Playground";
+  const msg = " Hacker Playground";
   let i = 0;
   const type = () => {
     if (i < msg.length) {
@@ -80,7 +80,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
   if (localStorage.getItem("firstHack")) $("#returnEgg").style.display = "block";
   if (ghostUnlocked) {
-    $("#ghostFlag").innerHTML = `👻 <strong>Ghost Mode Active!</strong><br>${makeFlag("ghost_mode_persist")}`;
+    $("#ghostFlag").innerHTML = ` <strong>Ghost Mode Active!</strong><br>${makeFlag("ghost_mode_persist")}`;
     $("#ghostFlag").classList.remove("hidden");
   }
   updateXP();
@@ -116,8 +116,8 @@ $("#scanForm").onsubmit = (e) => {
 
   const good = ["admin","dev","console","vault"].some(k => q.includes(k));
   const output = good
-    ? "🟢 Access Granted – " + makeFlag("access_terminal_scan_success")
-    : "🔴 Access Denied – Endpoint not in routing table.";
+    ? " Access Granted  " + makeFlag("access_terminal_scan_success")
+    : " Access Denied  Endpoint not in routing table.";
 
   const el = $("#scanOut");
   el.textContent = "";
@@ -154,7 +154,7 @@ window.addEventListener("keydown", (e) => {
   if (keyBuf.join("") === "gh" && !ghostUnlocked) {
     ghostUnlocked = true;
     localStorage.setItem("ghostUnlocked", "1");
-    $("#ghostFlag").innerHTML = `👻 <strong>Ghost Sequence Unlocked!</strong><br>${makeFlag("you_found_the_ghost_sequence")}`;
+    $("#ghostFlag").innerHTML = ` <strong>Ghost Sequence Unlocked!</strong><br>${makeFlag("you_found_the_ghost_sequence")}`;
     $("#ghostFlag").classList.remove("hidden");
   }
 });

@@ -1,4 +1,4 @@
-<section id="relatedWrap" class="my-20" data-aos="fade-up"></section>
+<section data-aos="fade-up" class="fade-in" data-aos="fade-up" class="fade-in" data-aos="fade-up" class="fade-in" data-aos="fade-up" x-data x-intersect="$el.classList.add('fade-in')" data-aos="fade-up" x-data x-intersect="$el.classList.add('fade-in')" x-data x-intersect="$el.classList.add('fade-in')" id="relatedWrap" class="my-20" data-aos="fade-up"></section>
 
 <script>
 const ALL = window.ALL_REPORTS || [];
@@ -21,13 +21,13 @@ const results = CURRENT ? getRelated(CURRENT) : [];
 const wrap = document.getElementById("relatedWrap");
 
 wrap.innerHTML = `
-  <h2 class="text-3xl font-bold mb-6 tracking-tight text-orangeLuxe-light">🔗 Related Reports</h2>
+  <h2 data-aos="fade-up" data-aos-delay="150" data-aos="fade-up" data-aos-delay="150" class="text-3xl font-bold mb-6 tracking-tight text-orangeLuxe-light"> Related Reports</h2>
   ${
     results.length === 0
-    ? `<p class="text-sm text-orangeLuxe-light/70">No related reports found… yet 👀</p>`
-    : `<div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    ? `<p class="text-sm text-orangeLuxe-light/70">No related reports found yet </p>`
+    : `<div data-testid="vault-section" data-testid="vault-section" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         ${results.map((r, i) => `
-          <a href="/reports/${r.slug}" data-aos="fade-up" data-aos-delay="${i * 150}"
+          <a class="hover-glow" class="hover-glow" class="hover-glow" href="/reports/${r.slug}" data-aos="fade-up" data-aos-delay="${i * 150}"
              class="group block p-5 rounded-xl bg-zinc-900/80 border border-orangeLuxe/20 hover:border-orangeLuxe hover:shadow-lg transition-all">
             <h3 class="font-semibold text-orangeLuxe-light group-hover:text-orangeLuxe mb-1 line-clamp-2">${r.title}</h3>
             <p class="text-xs font-mono text-orangeLuxe-light/60 mb-3">${new Date(r.date).toLocaleDateString()}</p>

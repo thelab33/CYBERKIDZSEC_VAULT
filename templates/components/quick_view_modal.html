@@ -1,23 +1,23 @@
-\<!-- 🔍 components/quick_view_modal.html — Forgemaster Tier -->
+\<!--  components/quick_view_modal.html  Forgemaster Tier -->
 <template id="quickViewTpl">
-  <div class="fixed inset-0 z-[9999] flex items-center justify-center p-8 bg-black/70 backdrop-blur-md overflow-y-auto" role="dialog" aria-modal="true" aria-labelledby="qvTitle">
-    <div class="relative w-full max-w-2xl bg-gradient-to-br from-cyberNight via-cyberNight-glow to-cyberNight-phantom border border-orangeLuxe/30 rounded-2xl shadow-[0_0_40px_rgba(249,115,22,0.25)] animate-fade-in ring-1 ring-orangeLuxe/20">
+  <div data-testid="vault-section" data-testid="vault-section" class="fixed inset-0 z-[9999] flex items-center justify-center p-8 bg-black/70 backdrop-blur-md overflow-y-auto" role="dialog" aria-modal="true" aria-labelledby="qvTitle">
+    <div data-testid="vault-section" data-testid="vault-section" class="relative w-full max-w-2xl bg-gradient-to-br from-cyberNight via-cyberNight-glow to-cyberNight-phantom border border-orangeLuxe/30 rounded-2xl shadow-[0_0_40px_rgba(249,115,22,0.25)] animate-fade-in ring-1 ring-orangeLuxe/20">
 
       <!-- Modal Header -->
-      <div class="flex items-center justify-between p-6 border-b border-orangeLuxe/20">
-        <h2 id="qvTitle" class="text-2xl sm:text-3xl font-extrabold text-orangeLuxe-light">Report Preview</h2>
-        <button data-close aria-label="Close modal" class="text-2xl text-orange-300 hover:text-orangeLuxe transition">✖</button>
+      <div data-testid="vault-section" data-testid="vault-section" class="flex items-center justify-between p-6 border-b border-orangeLuxe/20">
+        <h2 data-aos="fade-up" data-aos-delay="150" data-aos="fade-up" data-aos-delay="150" id="qvTitle" class="text-2xl sm:text-3xl font-extrabold text-orangeLuxe-light">Report Preview</h2>
+        <button data-tooltip="Click Action" data-tooltip="Click Action" class="hover-glow" title="Command Vault " class="hover-glow" data-hotkey="Enter" class="hover-glow" data-tooltip="Click Action" data-hotkey="Enter" class="hover-glow" data-tooltip="Click Action" data-close aria-label="Close modal" class="text-2xl text-orange-300 hover:text-orangeLuxe transition"></button>
       </div>
 
       <!-- Modal Body -->
-      <div id="qvBody" class="px-6 py-5 space-y-5 text-sm leading-relaxed font-mono text-orange-100"></div>
+      <div data-testid="vault-section" data-testid="vault-section" id="qvBody" class="px-6 py-5 space-y-5 text-sm leading-relaxed font-mono text-orange-100"></div>
 
       <!-- Modal Footer -->
-      <div class="flex flex-wrap items-center justify-between gap-4 px-6 py-4 border-t border-orangeLuxe/20">
-        <a id="qvFullLink" href="#" class="btn btn--outline text-sm">View Full Report →</a>
-        <div class="flex gap-3">
-          <button id="qvPrev" class="navBtn hidden" aria-label="Previous report">← Prev</button>
-          <button id="qvNext" class="navBtn hidden" aria-label="Next report">Next →</button>
+      <div data-testid="vault-section" data-testid="vault-section" class="flex flex-wrap items-center justify-between gap-4 px-6 py-4 border-t border-orangeLuxe/20">
+        <a class="hover-glow" class="hover-glow" class="hover-glow" id="qvFullLink" href="#" class="btn btn--outline text-sm">View Full Report </a>
+        <div data-testid="vault-section" data-testid="vault-section" class="flex gap-3">
+          <button data-tooltip="Click Action" data-tooltip="Click Action" class="hover-glow" title="Command Vault " class="hover-glow" data-hotkey="Enter" class="hover-glow" data-tooltip="Click Action" data-hotkey="Enter" class="hover-glow" data-tooltip="Click Action" id="qvPrev" class="navBtn hidden" aria-label="Previous report"> Prev</button>
+          <button data-tooltip="Click Action" data-tooltip="Click Action" class="hover-glow" title="Command Vault " class="hover-glow" data-hotkey="Enter" class="hover-glow" data-tooltip="Click Action" data-hotkey="Enter" class="hover-glow" data-tooltip="Click Action" id="qvNext" class="navBtn hidden" aria-label="Next report">Next </button>
         </div>
       </div>
 
@@ -44,12 +44,12 @@
   function fill(report, opts = {}) {
     document.getElementById("qvTitle").textContent = report.title || "Report Preview";
     document.getElementById("qvBody").innerHTML = `
-      <p>${report.description || "⚠️ No description available."}</p>
-      <div class="grid sm:grid-cols-2 gap-4 mt-4" data-aos="fade-up">
-        ${report.date ? `<div><b>📅 Date:</b> ${new Date(report.date).toLocaleDateString()}</div>` : ""}
-        ${report.severity ? `<div><b>🧪 Severity:</b> ${report.severity}</div>` : ""}
-        <div><b>📈 CVSS:</b> ${typeof report.cvss === "number" ? report.cvss.toFixed(1) : "N/A"}</div>
-        ${report.tags?.length ? `<div class="col-span-2 flex flex-wrap gap-2"><b class="mr-2">🏷️ Tags:</b> ${report.tags.map(t =>
+      <p>${report.description || " No description available."}</p>
+      <div data-testid="vault-section" data-testid="vault-section" class="grid sm:grid-cols-2 gap-4 mt-4" data-aos="fade-up">
+        ${report.date ? `<div><b> Date:</b> ${new Date(report.date).toLocaleDateString()}</div>` : ""}
+        ${report.severity ? `<div><b> Severity:</b> ${report.severity}</div>` : ""}
+        <div><b> CVSS:</b> ${typeof report.cvss === "number" ? report.cvss.toFixed(1) : "N/A"}</div>
+        ${report.tags?.length ? `<div data-testid="vault-section" data-testid="vault-section" class="col-span-2 flex flex-wrap gap-2"><b class="mr-2"> Tags:</b> ${report.tags.map(t =>
           `<span class="px-2 py-0.5 bg-orangeLuxe/10 rounded text-xs">${t}</span>`).join("")}</div>` : ""}
       </div>
     `;

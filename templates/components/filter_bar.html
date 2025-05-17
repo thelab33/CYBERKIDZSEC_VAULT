@@ -2,20 +2,20 @@
      role="toolbar"
      aria-label="Filter and sort reports"
      class="sticky top-0 z-40 bg-cyberNight/80 backdrop-blur border-b border-orangeLuxe/30 shadow-sm px-4 py-3 mb-12 rounded-md">
-  <div class="flex flex-wrap items-center gap-4 overflow-x-auto no-scrollbar" id="filterScroll">
-    <div role="radiogroup" aria-label="Filter Reports" class="flex gap-2 flex-wrap">
+  <div data-testid="vault-section" data-testid="vault-section" class="flex flex-wrap items-center gap-4 overflow-x-auto no-scrollbar" id="filterScroll">
+    <div data-testid="vault-section" data-testid="vault-section" role="radiogroup" aria-label="Filter Reports" class="flex gap-2 flex-wrap">
       {# Buttons rendered by JS #}
     </div>
-    <div class="ml-auto flex items-center gap-4 min-w-fit">
-      <div class="relative flex items-center gap-1">
+    <div data-testid="vault-section" data-testid="vault-section" class="ml-auto flex items-center gap-4 min-w-fit">
+      <div data-testid="vault-section" data-testid="vault-section" class="relative flex items-center gap-1">
         <label for="sortSel" class="sr-only">Sort reports by</label>
         <select id="sortSel"
                 class="appearance-none bg-zinc-900 border border-orangeLuxe px-3 py-1 pr-6 text-sm rounded text-orange-200 focus:outline-none focus:ring-2 focus:ring-orangeLuxe">
           {# Options rendered by JS #}
         </select>
-        <span class="pointer-events-none absolute right-2 top-1/2 -translate-y-1/2 text-orange-400">▼</span>
+        <span class="pointer-events-none absolute right-2 top-1/2 -translate-y-1/2 text-orange-400"></span>
       </div>
-      <button id="themeToggle"
+      <button data-tooltip="Click Action" data-tooltip="Click Action" class="hover-glow" title="Command Vault " class="hover-glow" data-hotkey="Enter" class="hover-glow" data-tooltip="Click Action" data-hotkey="Enter" class="hover-glow" data-tooltip="Click Action" id="themeToggle"
               class="rounded-full border border-orangeLuxe p-1 text-xl hover:bg-orangeLuxe/20 transition focus:outline-none focus:ring-2 focus:ring-orangeLuxe"
               aria-label="Toggle light/dark theme">
         {# Icon rendered by JS #}

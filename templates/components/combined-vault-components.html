@@ -1,5 +1,5 @@
 <!-- back_to_top.html -->
-<button
+<button data-tooltip="Click Action" data-tooltip="Click Action" class="hover-glow" title="Command Vault " class="hover-glow" data-hotkey="Enter" class="hover-glow" data-tooltip="Click Action" data-hotkey="Enter" class="hover-glow"
   id="backToTopBtn"
   aria-label="Back to top"
   class="fixed bottom-8 right-8 z-[9998] rounded-full bg-orangeLuxe p-4 text-black
@@ -34,63 +34,63 @@
 <!-- components/footer.html -->
 <footer class="relative mt-32 border-t border-orangeLuxe/25 bg-gradient-to-b from-zinc-900 via-zinc-950 to-black px-6 py-20 text-sm font-mono text-orange-200 overflow-hidden">
   <!-- animated aurora ribbon -->
-  <div aria-hidden class="pointer-events-none absolute -top-1 left-0 w-full h-1 bg-gradient-to-r from-transparent via-orangeLuxe to-transparent animate-[pulse-glow_4s_infinite]"></div>
+  <div data-testid="vault-section" data-testid="vault-section" aria-hidden class="pointer-events-none absolute -top-1 left-0 w-full h-1 bg-gradient-to-r from-transparent via-orangeLuxe to-transparent animate-[pulse-glow_4s_infinite]"></div>
 
   <!-- subtle noise texture -->
-  <div aria-hidden class="absolute inset-0 bg-[url('/static/img/noise.png')] opacity-5 mix-blend-overlay"></div>
+  <div data-testid="vault-section" data-testid="vault-section" aria-hidden class="absolute inset-0 bg-[url('/static/img/noise.png')] opacity-5 mix-blend-overlay"></div>
 
-  <div class="relative z-10 max-w-6xl mx-auto grid gap-10 sm:grid-cols-2 xl:grid-cols-4" data-aos="fade-up"">
+  <div data-testid="vault-section" data-testid="vault-section" class="relative z-10 max-w-6xl mx-auto grid gap-10 sm:grid-cols-2 xl:grid-cols-4" data-aos="fade-up"">
     <!-- Brand + quote -->
     <div>
       <p class="text-xs tracking-widest text-orange-400 font-bold select-none">CYBERKIDZSEC&nbsp;VAULT</p>
-      <p class="mt-1 text-orangeLuxe-light">© {{ current_year }} CyberKidzSec</p>
-      <p class="mt-4 italic text-orangeLuxe-light/80 max-w-[14rem]">“Ghosted&nbsp;but&nbsp;not&nbsp;gone.”</p>
+      <p class="mt-1 text-orangeLuxe-light"> {{ current_year }} CyberKidzSec</p>
+      <p class="mt-4 italic text-orangeLuxe-light/80 max-w-[14rem]">Ghosted&nbsp;but&nbsp;not&nbsp;gone.</p>
     </div>
 
     <!-- Quick nav -->
     <nav class="flex flex-col gap-2 text-orange-300">
       {% set nav = [("Home","/"),("About","/about"),("Reports","/reports"),("Playground","/playground"),("Analytics","/charts")] %}
       {% for label, href in nav %}
-        <a href="{{ href }}" class="w-max hover:text-orangeLuxe transition">{{ label }}</a>
+        <a class="hover-glow" class="hover-glow" class="hover-glow" href="{{ href }}" class="w-max hover:text-orangeLuxe transition">{{ label }}</a>
       {% endfor %}
     </nav>
 
     <!-- Latest CVE count (placeholder updated by JS) -->
-    <div class="space-y-3">
-      <p class="text-xs tracking-wide text-orange-300/80">🛰️ Latest CVEs (24h)</p>
+    <div data-testid="vault-section" data-testid="vault-section" class="space-y-3">
+      <p class="text-xs tracking-wide text-orange-300/80"> Latest CVEs (24h)</p>
       <p id="cveCounter" class="text-3xl font-black text-orangeLuxe-light animate-pulse">--</p>
-      <a href="/charts" class="btn-secondary w-max text-xs">View analytics →</a>
+      <a class="hover-glow" class="hover-glow" class="hover-glow" href="/charts" class="btn-secondary w-max text-xs">View analytics </a>
     </div>
 
     <!-- Newsletter & socials -->
-    <div class="space-y-4">
+    <div data-testid="vault-section" data-testid="vault-section" class="space-y-4">
       <!-- newsletter form -->
       <form action="https://buttondown.email/api/emails/embed-subscribe/cyberkidzsec" method="post" target="popupwindow"
             class="flex gap-2"
             onsubmit="window.open('https://buttondown.email/cyberkidzsec','popupwindow')">
-        <input required type="email" name="email" placeholder="your@domain.tld"
+        <input class="hover-glow" class="hover-glow" required type="email" name="email" placeholder="your@domain.tld"
                class="flex-1 rounded-md bg-zinc-800 border border-orangeLuxe/40 px-3 py-2 text-xs placeholder-orangeLuxe-light focus:outline-none" />
-        <button class="rounded-md bg-orangeLuxe px-4 py-2 text-xs font-bold text-black hover:bg-orangeLuxe-dark" aria-label="Subscribe to newsletter">Join</button>
+        <button data-tooltip="Click Action" data-tooltip="Click Action" class="hover-glow" title="Command Vault " class="hover-glow" data-hotkey="Enter" class="hover-glow" data-tooltip="Click Action" data-hotkey="Enter" class="hover-glow" data-tooltip="Click Action" class="rounded-md bg-orangeLuxe px-4 py-2 text-xs font-bold text-black hover:bg-orangeLuxe-dark" aria-label="Subscribe to newsletter">Join</button>
       </form>
 
       <!-- social icons -->
-      <div class="flex gap-4 text-xl text-orange-400">
-        <a href="https://github.com/thelab33/cyberkidzsec-vault" target="_blank" rel="noopener" aria-label="GitHub repository" class="hover:text-orangeLuxe transition"><i class="fa-brands fa-github"></i></a>
-        <a href="https://linkedin.com/in/cyberkidzsec" target="_blank" rel="noopener" aria-label="LinkedIn profile" class="hover:text-orangeLuxe transition"><i class="fa-brands fa-linkedin"></i></a>
-        <a href="/submit" aria-label="Submit vulnerability" class="hover:text-orangeLuxe transition"><i class="fa-solid fa-bug"></i></a>
+      <div data-testid="vault-section" data-testid="vault-section" class="flex gap-4 text-xl text-orange-400">
+        <a class="hover-glow" class="hover-glow" class="hover-glow" href="https://github.com/thelab33/cyberkidzsec-vault" target="_blank" rel="noopener" aria-label="GitHub repository" class="hover:text-orangeLuxe transition"><i class="fa-brands fa-github"></i></a>
+        <a class="hover-glow" class="hover-glow" class="hover-glow" href="https://linkedin.com/in/cyberkidzsec" target="_blank" rel="noopener" aria-label="LinkedIn profile" class="hover:text-orangeLuxe transition"><i class="fa-brands fa-linkedin"></i></a>
+        <a class="hover-glow" class="hover-glow" class="hover-glow" href="/submit" aria-label="Submit vulnerability" class="hover:text-orangeLuxe transition"><i class="fa-solid fa-bug"></i></a>
       </div>
 
       <!-- theme toggle -->
-      <button id="themeToggler" class="mt-3 inline-flex items-center gap-2 text-xs btn-secondary">
+      <button data-tooltip="Click Action" data-tooltip="Click Action" class="hover-glow" title="Command Vault " class="hover-glow" data-hotkey="Enter" class="hover-glow" data-tooltip="Click Action" data-hotkey="Enter" class="hover-glow" data-tooltip="Click Action" id="themeToggler" class="mt-3 inline-flex items-center gap-2 text-xs btn-secondary">
         <i class="fa-solid fa-circle-half-stroke"></i> Toggle&nbsp;Theme
       </button>
     </div>
   </div>
 
   <!-- Vault XP Bar -->
-  <div class="micro-xp-bar mt-8 max-w-6xl mx-auto">
-    <div class="vault-xp-bar w-full h-2 rounded bg-gray-800 overflow-hidden">
-      <div class="vault-xp-fill h-full" style="width: {{ vault_xp_percentage }}%; background: linear-gradient(90deg, red, orange, yellow, green, cyan);"></div>
+  <div data-testid="vault-section" data-testid="vault-section" class="micro-xp-bar mt-8 max-w-6xl mx-auto">
+    <div data-testid="vault-section" data-testid="vault-section" class="vault-xp-bar w-full h-2 rounded bg-gray-800 overflow-hidden">
+      <div data-testid="vault-section" data-testid="vault-section" class="vault-xp-fill h-full" style="width: {{ vault_xp_percentage }}%; background: linear-gradient(90deg, red, orange, yellow, green, cyan);"></div>
     </div>
     <p class="vault-xp-text text-center text-xs text-orange-400 mt-2">Vault Stability: {{ vault_xp_percentage }}%</p>
   </div>
@@ -117,43 +117,43 @@ fetch("/api/cve").then(r => r.json()).then(list => {
 <!-- templates/playground.html -->
 {% extends "base.html" %}
 
-{% block title %}Playground · CyberKidzSec{% endblock %}
+{% block title %}Playground  CyberKidzSec{% endblock %}
 
 {% block content %}
-<section class="ckz-hero" data-aos="fade-up"">
-  <div class="max-w-3xl mx-auto flex flex-col items-center justify-center gap-6 text-center">
+<section data-aos="fade-up" class="fade-in" data-aos="fade-up" class="fade-in" data-aos="fade-up" class="fade-in" data-aos="fade-up" x-data x-intersect="$el.classList.add('fade-in')" data-aos="fade-up" x-data x-intersect="$el.classList.add('fade-in')" x-data x-intersect="$el.classList.add('fade-in')" class="ckz-hero" data-aos="fade-up"">
+  <div data-testid="vault-section" data-testid="vault-section" class="max-w-3xl mx-auto flex flex-col items-center justify-center gap-6 text-center">
 
     <h1 class="ckz-hero-title">
-      Hacker Playground 👾
+      Hacker Playground 
     </h1>
 
     <p class="text-orange-300 font-mono text-sm">
       "Only the curious survive the Vault."
     </p>
 
-    <div class="mt-10 space-y-6">
+    <div data-testid="vault-section" data-testid="vault-section" class="mt-10 space-y-6">
       <p class="text-orange-200">
-        🧠 <strong>Challenge #1:</strong> Find the hidden flag in the source code of this page.
+         <strong>Challenge #1:</strong> Find the hidden flag in the source code of this page.
       </p>
       <p class="text-orange-400 text-xs">
-        Tip: Right-click → View Page Source 👀
+        Tip: Right-click  View Page Source 
       </p>
     </div>
 
-    <a href="/" class="btn-secondary mt-8">
-      Return to Base 🛰️
+    <a class="hover-glow" class="hover-glow" class="hover-glow" href="/" class="btn-secondary mt-8">
+      Return to Base 
     </a>
 
   </div>
 
-  <!-- 👻 Hidden Flag inside a comment -->
+  <!--  Hidden Flag inside a comment -->
   <!-- flag{ghost-vault-activated} -->
 
 </section>
 {% endblock %}
 
 <!-- report_grid.html -->
-<div id="dynamicGrid"></div>
+<div data-testid="vault-section" data-testid="vault-section" id="dynamicGrid"></div>
 
 <script>
 /* expects window.FILTERED_REPORTS injected; fall back to empty */
@@ -162,7 +162,7 @@ const LIST = window.FILTERED_REPORTS || [];
 const wrap = document.getElementById("dynamicGrid");
 if(!LIST.length){
   wrap.innerHTML = `<p class="text-center text-orangeLuxe-light/60 py-12 text-sm font-mono">
-                     ⚠️ No reports match your filters. Try adjusting tags or sort order.
+                      No reports match your filters. Try adjusting tags or sort order.
                     </p>`;
 } else {
   wrap.className = "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8";
@@ -176,7 +176,7 @@ if(!LIST.length){
         ${new Date(r.date).toLocaleDateString("en-US",{year:"numeric",month:"short",day:"numeric"})}
       </time>
       <p class="text-sm text-orangeLuxe-light/80 font-mono mb-4 line-clamp-3">${r.summary||"No summary provided."}</p>
-      <div class="flex justify-between items-center">
+      <div data-testid="vault-section" data-testid="vault-section" class="flex justify-between items-center">
         <span class="text-[11px] px-2 py-0.5 rounded-full font-mono border border-orangeLuxe/30 ${cvssColor(r.cvss)}">
           CVSS ${typeof r.cvss==="number"?r.cvss.toFixed(1):"N/A"}
         </span>
@@ -192,12 +192,12 @@ function cvssColor(v){
 </script>
 
 <header class="ckz-header">
-  <div class="flex items-center">
-    <a href="/" class="text-lg font-bold text-orange-400 hover:text-orange-300 transition">
-      CyberKidzSec ⚡ Vault
+  <div data-testid="vault-section" data-testid="vault-section" class="flex items-center">
+    <a class="hover-glow" class="hover-glow" class="hover-glow" href="/" class="text-lg font-bold text-orange-400 hover:text-orange-300 transition">
+      CyberKidzSec  Vault
     </a>
   </div>
-  <div class="ckz-ghost-badge">LIVE</div>
+  <div data-testid="vault-section" data-testid="vault-section" class="ckz-ghost-badge">LIVE</div>
 </header>
 
 <!-- breadcrumbs.html -->
@@ -212,7 +212,7 @@ function cvssColor(v){
 <script>
 /**
  * Call this once you know the crumbs.
- * items = [{label:'Home', href:'/'}, {label:'Reports', href:'/reports'}, …]
+ * items = [{label:'Home', href:'/'}, {label:'Reports', href:'/reports'}, ]
  */
 function renderBreadcrumbs(items) {
   const nav = document.getElementById("breadcrumbs");
@@ -279,40 +279,40 @@ renderBreadcrumbs([
   class="relative mx-auto my-24 max-w-3xl px-6 py-12 rounded-2xl border border-orangeLuxe/40
          bg-gradient-to-b from-cyberNight to-black shadow-xl"
 >
-  <h2 class="text-center text-3xl sm:text-4xl font-extrabold text-orangeLuxe-light mb-2">
-    🧠 Hacker Playground
+  <h2 data-aos="fade-up" data-aos-delay="150" data-aos="fade-up" data-aos-delay="150" class="text-center text-3xl sm:text-4xl font-extrabold text-orangeLuxe-light mb-2">
+     Hacker Playground
   </h2>
   <p class="text-center text-orangeLuxe-light/80 mb-10 font-mono text-sm">
-    Think you’ve got what it takes? Hack the vault – only the curious survive.
+    Think youve got what it takes? Hack the vault  only the curious survive.
   </p>
 
   <!-- Hack button -->
-  <button id="hackBtn"
+  <button data-tooltip="Click Action" data-tooltip="Click Action" class="hover-glow" title="Command Vault " class="hover-glow" data-hotkey="Enter" class="hover-glow" data-tooltip="Click Action" data-hotkey="Enter" class="hover-glow" data-tooltip="Click Action" id="hackBtn"
     class="block mx-auto mb-10 bg-orangeLuxe hover:bg-orangeLuxe-dark text-black px-8 py-3
            rounded-full font-semibold shadow-lg focus:ring-2 focus:ring-orange-400 transition">
-    Hack Me 🔓
+    Hack Me 
   </button>
   <pre id="flagOut" class="hidden mt-4 text-center text-emerald-400 font-mono text-sm break-all"></pre>
 
   <!-- Terminal scan -->
-  <div class="mt-16">
-    <h3 class="text-orangeLuxe text-lg font-semibold mb-3">🛰️ Terminal-Scan™ Interface</h3>
+  <div data-testid="vault-section" data-testid="vault-section" class="mt-16">
+    <h3 class="text-orangeLuxe text-lg font-semibold mb-3"> Terminal-Scan Interface</h3>
     <form id="scanForm" class="flex flex-col sm:flex-row gap-3">
-      <input id="scanInput" type="text"
-        placeholder="> scan /api/dev/console …"
+      <input class="hover-glow" class="hover-glow" id="scanInput" type="text"
+        placeholder="> scan /api/dev/console "
         class="flex-1 font-mono bg-black/80 rounded border border-orangeLuxe/40
                px-4 py-2 text-orange-100 placeholder:text-orange-400 focus:ring-2 focus:ring-orangeLuxe" />
-      <button
+      <button data-tooltip="Click Action" data-tooltip="Click Action" class="hover-glow" title="Command Vault " class="hover-glow" data-hotkey="Enter" class="hover-glow" data-tooltip="Click Action" data-hotkey="Enter" class="hover-glow"
         class="bg-orangeLuxe-dark text-white px-5 py-2 rounded font-medium shadow
                hover:bg-orangeLuxe-light transition">
-        Run Scan 🛰️
+        Run Scan 
       </button>
     </form>
     <pre id="scanOut" class="hidden mt-5 bg-black/70 border border-orangeLuxe/40 rounded p-4 font-mono text-sm text-orangeLuxe-light"></pre>
   </div>
 
   <!-- ghost flag -->
-  <div id="ghostFlag" class="hidden mt-16 text-center bg-cyberNight.glow/70 rounded-xl p-6
+  <div data-testid="vault-section" data-testid="vault-section" id="ghostFlag" class="hidden mt-16 text-center bg-cyberNight.glow/70 rounded-xl p-6
         border border-orangeLuxe/40 shadow-lg animate-pulse-glow"></div>
 
   <!-- returnee easter-egg -->
@@ -349,8 +349,8 @@ $("#scanForm").onsubmit = (e) => {
   if(!q) return;
   const good = ["admin","dev","console","vault"].some(k => q.includes(k));
   $("#scanOut").textContent = good
-    ? "🟢 Access Granted – " + makeFlag("access_terminal_scan_success")
-    : "🔴 Access Denied – Endpoint not in routing table.";
+    ? " Access Granted  " + makeFlag("access_terminal_scan_success")
+    : " Access Denied  Endpoint not in routing table.";
   $("#scanOut").classList.remove("hidden");
 };
 
@@ -361,7 +361,7 @@ window.addEventListener("keydown", (e)=>{
   keyBuf = [...keyBuf.slice(-1), e.key.toLowerCase()];
   if(keyBuf.join("")==="gh" && !ghostUnlocked){
     ghostUnlocked = true;
-    $("#ghostFlag").innerHTML = `👻 <strong>Ghost Sequence Unlocked!</strong><br>${makeFlag("you_found_the_ghost_sequence")}`;
+    $("#ghostFlag").innerHTML = ` <strong>Ghost Sequence Unlocked!</strong><br>${makeFlag("you_found_the_ghost_sequence")}`;
     $("#ghostFlag").classList.remove("hidden");
   }
 });
@@ -369,12 +369,12 @@ window.addEventListener("keydown", (e)=>{
 
 <!-- quick_view_modal.html -->
 <template id="quickViewTpl">
-  <div class="fixed inset-0 z-[9999] overflow-y-auto" role="dialog" aria-modal="true">
+  <div data-testid="vault-section" data-testid="vault-section" class="fixed inset-0 z-[9999] overflow-y-auto" role="dialog" aria-modal="true">
     <!-- overlay -->
-    <div class="fixed inset-0 bg-black/70 backdrop-blur-md" data-close></div>
+    <div data-testid="vault-section" data-testid="vault-section" class="fixed inset-0 bg-black/70 backdrop-blur-md" data-close></div>
 
     <!-- centering helper -->
-    <div class="min-h-screen px-4 text-center">
+    <div data-testid="vault-section" data-testid="vault-section" class="min-h-screen px-4 text-center">
       <span class="inline-block h-screen align-middle" aria-hidden="true"></span>
       <!-- panel -->
       <div
@@ -383,22 +383,22 @@ window.addEventListener("keydown", (e)=>{
                bg-gradient-to-br from-cyberNight via-cyberNight.glow to-cyberNight.phantom
                shadow-[0_0_35px_rgba(249,115,22,0.3)]"
       >
-        <h2 id="qvTitle" class="text-2xl sm:text-3xl font-extrabold text-orangeLuxe-light mb-4">
+        <h2 data-aos="fade-up" data-aos-delay="150" data-aos="fade-up" data-aos-delay="150" id="qvTitle" class="text-2xl sm:text-3xl font-extrabold text-orangeLuxe-light mb-4">
           Report Preview
         </h2>
 
-        <div id="qvBody" class="space-y-5 text-sm leading-relaxed font-mono"></div>
+        <div data-testid="vault-section" data-testid="vault-section" id="qvBody" class="space-y-5 text-sm leading-relaxed font-mono"></div>
 
         <!-- footer -->
-        <div class="mt-8 flex justify-between items-center">
-          <a id="qvFullLink" href="#" class="text-sm font-semibold text-orangeLuxe hover:underline">
-            View Full Report →
+        <div data-testid="vault-section" data-testid="vault-section" class="mt-8 flex justify-between items-center">
+          <a class="hover-glow" class="hover-glow" class="hover-glow" id="qvFullLink" href="#" class="text-sm font-semibold text-orangeLuxe hover:underline">
+            View Full Report 
           </a>
 
-          <div class="flex gap-3">
-            <button id="qvPrev" class="navBtn hidden" aria-label="Previous report">← Prev</button>
-            <button id="qvNext" class="navBtn hidden" aria-label="Next report">Next →</button>
-            <button data-close
+          <div data-testid="vault-section" data-testid="vault-section" class="flex gap-3">
+            <button data-tooltip="Click Action" data-tooltip="Click Action" class="hover-glow" title="Command Vault " class="hover-glow" data-hotkey="Enter" class="hover-glow" data-tooltip="Click Action" data-hotkey="Enter" class="hover-glow" data-tooltip="Click Action" id="qvPrev" class="navBtn hidden" aria-label="Previous report"> Prev</button>
+            <button data-tooltip="Click Action" data-tooltip="Click Action" class="hover-glow" title="Command Vault " class="hover-glow" data-hotkey="Enter" class="hover-glow" data-tooltip="Click Action" data-hotkey="Enter" class="hover-glow" data-tooltip="Click Action" id="qvNext" class="navBtn hidden" aria-label="Next report">Next </button>
+            <button data-tooltip="Click Action" data-tooltip="Click Action" class="hover-glow" title="Command Vault " class="hover-glow" data-hotkey="Enter" class="hover-glow" data-tooltip="Click Action" data-hotkey="Enter" class="hover-glow" data-tooltip="Click Action" data-close
               class="rounded-md bg-orangeLuxe px-4 py-2 text-sm font-semibold text-black hover:bg-orangeLuxe.dark">
               Close
             </button>
@@ -422,14 +422,14 @@ window.addEventListener("keydown", (e)=>{
   function fill(report, opts = {}) {
     document.getElementById("qvTitle").textContent = report.title || "Report Preview";
     document.getElementById("qvBody").innerHTML =
-      `<p>${report.description || "⚠️ No description available."}</p>` +
-      `<div class="grid sm:grid-cols-2 gap-4 mt-4" data-aos="fade-up"">
-        ${report.date ? `<div><b>📅 Date:</b> ${new Date(report.date).toLocaleDateString()}</div>` : ""}
-        ${report.severity ? `<div><b>🧪 Severity:</b> ${report.severity}</div>` : ""}
-        <div><b>📈 CVSS:</b> ${typeof report.cvss === "number" ? report.cvss.toFixed(1) : "N/A"}</div>
+      `<p>${report.description || " No description available."}</p>` +
+      `<div data-testid="vault-section" data-testid="vault-section" class="grid sm:grid-cols-2 gap-4 mt-4" data-aos="fade-up"">
+        ${report.date ? `<div><b> Date:</b> ${new Date(report.date).toLocaleDateString()}</div>` : ""}
+        ${report.severity ? `<div><b> Severity:</b> ${report.severity}</div>` : ""}
+        <div><b> CVSS:</b> ${typeof report.cvss === "number" ? report.cvss.toFixed(1) : "N/A"}</div>
         ${
           report.tags?.length
-            ? `<div class="col-span-2 flex flex-wrap gap-2"><b class="mr-2">🏷️ Tags:</b>${report.tags
+            ? `<div data-testid="vault-section" data-testid="vault-section" class="col-span-2 flex flex-wrap gap-2"><b class="mr-2"> Tags:</b>${report.tags
                 .map((t) => `<span class="bg-orangeLuxe/10 px-2 py-0.5 rounded">${t}</span>`)
                 .join("")}</div>`
             : ""
@@ -475,7 +475,7 @@ window.addEventListener("keydown", (e)=>{
 </script>
 
 {# components/scroll_progress.html #}
-<div id="scrollProgress"
+<div data-testid="vault-section" data-testid="vault-section" id="scrollProgress"
      class="fixed inset-x-0 top-0 h-1 bg-orangeLuxe origin-left scale-x-0">
 </div>
 <!-- tag.html -->
@@ -507,14 +507,14 @@ function makeTag(label, active=false, onClick=null){
 </script>
 
 <!-- command_palette.html -->
-<div id="cmdBackdrop" class="fixed inset-0 z-[9999] hidden backdrop-blur bg-black/60 p-4"></div>
+<div data-testid="vault-section" data-testid="vault-section" id="cmdBackdrop" class="fixed inset-0 z-[9999] hidden backdrop-blur bg-black/60 p-4"></div>
 
 <template id="cmdTpl">
-  <div class="mx-auto w-full max-w-2xl bg-night border border-orangeLuxe/40 rounded-xl shadow-xl overflow-hidden">
-    <input id="cmdSearch" type="search" placeholder="Search vault reports…"
+  <div data-testid="vault-section" data-testid="vault-section" class="mx-auto w-full max-w-2xl bg-night border border-orangeLuxe/40 rounded-xl shadow-xl overflow-hidden">
+    <input class="hover-glow" class="hover-glow" id="cmdSearch" type="search" placeholder="Search vault reports"
            class="w-full px-5 py-4 text-lg font-mono bg-black text-orangeLuxe-light
                   border-b border-orangeLuxe/30 placeholder:text-orangeLuxe-light/60 outline-none" />
-    <div id="cmdResults" class="max-h-80 overflow-y-auto"></div>
+    <div data-testid="vault-section" data-testid="vault-section" id="cmdResults" class="max-h-80 overflow-y-auto"></div>
   </div>
 </template>
 
@@ -530,12 +530,12 @@ function makeTag(label, active=false, onClick=null){
 import Fuse from "https://cdn.jsdelivr.net/npm/fuse.js@7.0.0/dist/fuse.esm.js";
 
 /* ---- data injection ---- */
-const REPORTS = window.ALL_REPORTS || [];   // [{slug,title,tags,cvss,type}, …]
+const REPORTS = window.ALL_REPORTS || [];   // [{slug,title,tags,cvss,type}, ]
 
 /* build Fuse index */
 const fuse = new Fuse(REPORTS, { keys:["title","tags"], threshold:.4 });
 
-/* ---- open palette on ⌘/Ctrl + K ---- */
+/* ---- open palette on /Ctrl + K ---- */
 const backdrop = document.getElementById("cmdBackdrop");
 const tpl      = document.getElementById("cmdTpl").content;
 
@@ -563,13 +563,13 @@ function close(){
 /* ---- render helpers ---- */
 function render(arr){
   list.innerHTML=""; rows=[];
-  if(!arr.length){ list.innerHTML='<div class="cmdSection">Nothing found</div>'; return;}
-  list.insertAdjacentHTML("beforeend",'<div class="cmdSection">Reports</div>');
+  if(!arr.length){ list.innerHTML='<div data-testid="vault-section" data-testid="vault-section" class="cmdSection">Nothing found</div>'; return;}
+  list.insertAdjacentHTML("beforeend",'<div data-testid="vault-section" data-testid="vault-section" class="cmdSection">Reports</div>');
   arr.forEach((r,i)=>{
     const div=document.createElement("div");
     div.className="cmdRow"; div.dataset.active="false"; div.tabIndex=-1;
-    div.innerHTML=`<div class="text-sm font-semibold">${r.title}</div>
-                   <div class="text-xs opacity-70">CVSS ${r.cvss} • ${r.type}</div>`;
+    div.innerHTML=`<div data-testid="vault-section" data-testid="vault-section" class="text-sm font-semibold">${r.title}</div>
+                   <div data-testid="vault-section" data-testid="vault-section" class="text-xs opacity-70">CVSS ${r.cvss}  ${r.type}</div>`;
     div.onclick=()=>location.href=`/reports/${r.slug}`;
     list.appendChild(div); rows.push(div);
   });
@@ -605,9 +605,9 @@ document.addEventListener("input",e=>{
         role="banner"
         aria-label="Main Site Header">
 
-  <div class="container mx-auto flex items-center justify-between px-6 py-4">
+  <div data-testid="vault-section" data-testid="vault-section" class="container mx-auto flex items-center justify-between px-6 py-4">
     <!-- Brand Logo & Title -->
-    <a href="/"
+    <a class="hover-glow" class="hover-glow" class="hover-glow" href="/"
        class="inline-flex items-center gap-2 text-2xl font-extrabold tracking-wider text-orangeLuxe hover:text-orangeLuxe-light focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-orangeLuxe transition"
        aria-label="CYBERKIDZSEC Vault Home">
       <svg class="h-8 w-8 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -617,32 +617,32 @@ document.addEventListener("input",e=>{
     </a>
 
     <!-- Desktop Controls -->
-    <div class="hidden lg:flex items-center space-x-5">
+    <div data-testid="vault-section" data-testid="vault-section" class="hidden lg:flex items-center space-x-5">
       <span class="vault-status relative px-3 py-1 text-xs font-mono text-orange-300 rounded-full bg-zinc-800/40">
-        📡 Vault: LIVE
+         Vault: LIVE
       </span>
       <kbd class="px-2 py-1 font-mono text-xs rounded border border-zinc-700 bg-zinc-800 text-orange-300">
-        ⌘ K
+         K
       </kbd>
-      <button id="themeToggle"
+      <button data-tooltip="Click Action" data-tooltip="Click Action" class="hover-glow" title="Command Vault " class="hover-glow" data-hotkey="Enter" class="hover-glow" data-tooltip="Click Action" data-hotkey="Enter" class="hover-glow" data-tooltip="Click Action" id="themeToggle"
               class="p-2 rounded-full bg-zinc-800 hover:bg-zinc-700 transition focus-visible:ring-2 focus-visible:ring-orangeLuxe"
               aria-label="Toggle dark mode"
               data-action="toggle-dark-mode">
-        <span class="sr-only">Toggle dark mode</span>🌙
+        <span class="sr-only">Toggle dark mode</span>
       </button>
     </div>
 
     <!-- Mobile Menu Toggle -->
-    <button id="menuToggle"
+    <button data-tooltip="Click Action" data-tooltip="Click Action" class="hover-glow" title="Command Vault " class="hover-glow" data-hotkey="Enter" class="hover-glow" data-tooltip="Click Action" data-hotkey="Enter" class="hover-glow" data-tooltip="Click Action" id="menuToggle"
             class="lg:hidden p-2 rounded-md text-2xl hover:bg-orange-500/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orangeLuxe transition"
             aria-controls="mobileNav"
             aria-expanded="false"
             aria-label="Open mobile navigation">
-      ☰
+      
     </button>
 
     <!-- Ghost Mode Badge -->
-    <div id="ghostBadge"
+    <div data-testid="vault-section" data-testid="vault-section" id="ghostBadge"
          class="hidden animate-pulse font-semibold text-emeraldLuxe text-xs ml-4"
          role="status"
          aria-live="polite">
@@ -661,16 +661,16 @@ document.addEventListener("input",e=>{
        role="navigation"
        aria-label="Mobile Navigation">
     <ul class="flex flex-col gap-4">
-      <li><a href="/"        class="hover:text-orangeLuxe focus-visible:text-orangeLuxe transition">Home</a></li>
-      <li><a href="/reports" class="hover:text-orangeLuxe focus-visible:text-orangeLuxe transition">Vault</a></li>
-      <li><a href="/playground" class="hover:text-orangeLuxe focus-visible:text-orangeLuxe transition">Playground</a></li>
-      <li><a href="/academy" class="hover:text-orangeLuxe focus-visible:text-orangeLuxe transition">Ghost Academy</a></li>
-      <li><a href="/dashboard" class="hover:text-orangeLuxe focus-visible:text-orangeLuxe transition">Dashboard</a></li>
+      <li><a class="hover-glow" class="hover-glow" class="hover-glow" href="/"        class="hover:text-orangeLuxe focus-visible:text-orangeLuxe transition">Home</a></li>
+      <li><a class="hover-glow" class="hover-glow" class="hover-glow" href="/reports" class="hover:text-orangeLuxe focus-visible:text-orangeLuxe transition">Vault</a></li>
+      <li><a class="hover-glow" class="hover-glow" class="hover-glow" href="/playground" class="hover:text-orangeLuxe focus-visible:text-orangeLuxe transition">Playground</a></li>
+      <li><a class="hover-glow" class="hover-glow" class="hover-glow" href="/academy" class="hover:text-orangeLuxe focus-visible:text-orangeLuxe transition">Ghost Academy</a></li>
+      <li><a class="hover-glow" class="hover-glow" class="hover-glow" href="/dashboard" class="hover:text-orangeLuxe focus-visible:text-orangeLuxe transition">Dashboard</a></li>
     </ul>
   </nav>
 
   <!-- Scroll Progress Indicator -->
-  <div id="scrollProgress"
+  <div data-testid="vault-section" data-testid="vault-section" id="scrollProgress"
        class="h-1 bg-orangeLuxe origin-left scale-x-0 transition-transform duration-150 ease-linear"
        aria-hidden="true">
   </div>
@@ -693,11 +693,11 @@ document.addEventListener("input",e=>{
 </script>
 
 <!-- related_reports.html -->
-<section id="relatedWrap" class="my-16" data-aos="fade-up""></section>
+<section data-aos="fade-up" class="fade-in" data-aos="fade-up" class="fade-in" data-aos="fade-up" class="fade-in" data-aos="fade-up" x-data x-intersect="$el.classList.add('fade-in')" data-aos="fade-up" x-data x-intersect="$el.classList.add('fade-in')" x-data x-intersect="$el.classList.add('fade-in')" id="relatedWrap" class="my-16" data-aos="fade-up""></section>
 
 <script>
 /* expects window.ALL_REPORTS (array) & window.CURRENT_REPORT (slug) injected server-side */
-const RPTS = window.ALL_REPORTS || [];   // [{slug,title,date,tags,cvss}, …]
+const RPTS = window.ALL_REPORTS || [];   // [{slug,title,date,tags,cvss}, ]
 const CUR  = RPTS.find(r => r.slug === window.CURRENT_REPORT);
 
 function getRelated(src, max=3){
@@ -713,13 +713,13 @@ const rel = CUR ? getRelated(CUR,3) : [];
 
 const wrap = document.getElementById("relatedWrap");
 wrap.innerHTML = `
-  <h2 class="text-2xl font-extrabold mb-6 tracking-tight text-orangeLuxe-light">🔗 Related Reports</h2>
+  <h2 data-aos="fade-up" data-aos-delay="150" data-aos="fade-up" data-aos-delay="150" class="text-2xl font-extrabold mb-6 tracking-tight text-orangeLuxe-light"> Related Reports</h2>
   ${
     !rel.length
-      ? `<p class="text-sm text-orangeLuxe-light/70">No directly-related reports found… yet 👀</p>`
-      : `<div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6" data-aos="fade-up"">
+      ? `<p class="text-sm text-orangeLuxe-light/70">No directly-related reports found yet </p>`
+      : `<div data-testid="vault-section" data-testid="vault-section" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6" data-aos="fade-up"">
           ${rel.map(r=>`
-            <a href="/reports/${r.slug}"
+            <a class="hover-glow" class="hover-glow" class="hover-glow" href="/reports/${r.slug}"
                class="block group rounded-xl bg-night-glow/60 border border-orangeLuxe/20 p-5
                       hover:shadow-lg hover:border-orangeLuxe/40 transition">
               <h3 class="font-semibold text-orangeLuxe-light group-hover:text-orangeLuxe mb-1 line-clamp-2">${r.title}</h3>
@@ -741,7 +741,7 @@ function cvssColor(v){
 </script>
 
 <!-- section_skeleton.html  (drop anywhere you need a loading placeholder) -->
-<div class="skeleton" data-lines="4"></div> <!-- change lines via data-lines -->
+<div data-testid="vault-section" data-testid="vault-section" class="skeleton" data-lines="4"></div> <!-- change lines via data-lines -->
 
 <style>
 @keyframes shimmer { 0%{background-position:-200% 0} 100%{background-position:200% 0} }
@@ -769,17 +769,17 @@ document.querySelectorAll(".skeleton").forEach(box=>{
 </script>
 
 <!-- tags_section.html -->
-<section class="my-24 px-4 sm:px-6 lg:px-8" data-aos="fade-up"" id="tagsSection">
-  <h2 class="text-3xl sm:text-4xl font-extrabold text-center mb-8
+<section data-aos="fade-up" class="fade-in" data-aos="fade-up" class="fade-in" data-aos="fade-up" class="fade-in" data-aos="fade-up" x-data x-intersect="$el.classList.add('fade-in')" data-aos="fade-up" x-data x-intersect="$el.classList.add('fade-in')" x-data x-intersect="$el.classList.add('fade-in')" class="my-24 px-4 sm:px-6 lg:px-8" data-aos="fade-up"" id="tagsSection">
+  <h2 data-aos="fade-up" data-aos-delay="150" data-aos="fade-up" data-aos-delay="150" class="text-3xl sm:text-4xl font-extrabold text-center mb-8
              bg-gradient-to-r from-orangeLuxe via-pink-400 to-fuchsia-500 bg-clip-text text-transparent">
-    🏷️ Browse by Tag
+     Browse by Tag
   </h2>
 
   <!-- horizontal rail -->
-  <div id="tagRail" class="relative flex gap-2 overflow-x-auto pb-3 no-scrollbar snap-x snap-mandatory"></div>
+  <div data-testid="vault-section" data-testid="vault-section" id="tagRail" class="relative flex gap-2 overflow-x-auto pb-3 no-scrollbar snap-x snap-mandatory"></div>
 
   <!-- results grid -->
-  <div id="tagGrid" class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3" data-aos="fade-up""></div>
+  <div data-testid="vault-section" data-testid="vault-section" id="tagGrid" class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3" data-aos="fade-up""></div>
 </section>
 
 <script>
@@ -827,62 +827,62 @@ function render(){
 render();
 </script>
 
-<div class="grid md:grid-cols-2 gap-6 mt-12" data-aos="fade-up"">
+<div data-testid="vault-section" data-testid="vault-section" class="grid md:grid-cols-2 gap-6 mt-12" data-aos="fade-up"">
   <!-- Ghost Academy -->
-  <div class="rounded-lg bg-zinc-900 border border-orange-500/30 p-6 text-center shadow hover:shadow-orange-400/20 transition">
-    <h3 class="text-sm font-bold uppercase text-orange-300 mb-2">🎓 Join Ghost Academy</h3>
+  <div data-testid="vault-section" data-testid="vault-section" class="rounded-lg bg-zinc-900 border border-orange-500/30 p-6 text-center shadow hover:shadow-orange-400/20 transition">
+    <h3 class="text-sm font-bold uppercase text-orange-300 mb-2"> Join Ghost Academy</h3>
     <p class="text-xs text-orange-400 mb-4">Sharpen your skills. Earn XP. Become a legend.</p>
-    <a href="/academy" class="btn-primary text-xs w-full">Enter Academy</a>
+    <a class="hover-glow" class="hover-glow" class="hover-glow" href="/academy" class="btn-primary text-xs w-full">Enter Academy</a>
   </div>
 
   <!-- Operative Dashboard -->
-  <div class="rounded-lg bg-zinc-900 border border-orange-500/30 p-6 text-center shadow hover:shadow-orange-400/20 transition">
-    <h3 class="text-sm font-bold uppercase text-orange-300 mb-2">🛰️ Operative Stats</h3>
+  <div data-testid="vault-section" data-testid="vault-section" class="rounded-lg bg-zinc-900 border border-orange-500/30 p-6 text-center shadow hover:shadow-orange-400/20 transition">
+    <h3 class="text-sm font-bold uppercase text-orange-300 mb-2"> Operative Stats</h3>
     <p class="text-xs text-orange-400 mb-4">Track your Vault Journey + XP growth.</p>
-    <a href="/dashboard" class="btn-primary text-xs w-full">Launch Dashboard</a>
+    <a class="hover-glow" class="hover-glow" class="hover-glow" href="/dashboard" class="btn-primary text-xs w-full">Launch Dashboard</a>
   </div>
 </div>
 
-{# Header partial – drop in templates/components/ #}
+{# Header partial  drop in templates/components/ #}
 <header id="siteHeader"
         class="fixed inset-x-0 top-0 z-50 flex items-center justify-between
                px-6 py-3 backdrop-blur-md bg-zinc-900/70 dark:bg-zinc-800/70
                border-b border-orange-500 transition-transform duration-300">
 
   <!-- brand -->
-  <a href="/" class="text-xl font-black tracking-widest text-orange-400
+  <a class="hover-glow" class="hover-glow" class="hover-glow" href="/" class="text-xl font-black tracking-widest text-orange-400
                      focus:outline-none focus-visible:ring-2
                      focus-visible:ring-orange-200">
     CYBERKIDZSEC&nbsp;VAULT
   </a>
 
   <!-- desktop widgets -->
-  <div class="hidden lg:flex items-center gap-4">
-    <span class="text-sm font-mono text-orange-300">📡 Vault: LIVE</span>
-    <kbd class="px-2 py-1 font-mono text-xs bg-zinc-700 rounded">⌘ K</kbd>
-    <button id="themeToggle"
+  <div data-testid="vault-section" data-testid="vault-section" class="hidden lg:flex items-center gap-4">
+    <span class="text-sm font-mono text-orange-300"> Vault: LIVE</span>
+    <kbd class="px-2 py-1 font-mono text-xs bg-zinc-700 rounded"> K</kbd>
+    <button data-tooltip="Click Action" data-tooltip="Click Action" class="hover-glow" title="Command Vault " class="hover-glow" data-hotkey="Enter" class="hover-glow" data-tooltip="Click Action" data-hotkey="Enter" class="hover-glow" data-tooltip="Click Action" id="themeToggle"
             class="text-2xl rounded focus:outline-none
                    focus-visible:ring-2 focus-visible:ring-orange-200"
             aria-label="Toggle theme">
-      🌙
+      
     </button>
   </div>
 
   <!-- hamburger -->
-  <button id="menuToggle"
+  <button data-tooltip="Click Action" data-tooltip="Click Action" class="hover-glow" title="Command Vault " class="hover-glow" data-hotkey="Enter" class="hover-glow" data-tooltip="Click Action" data-hotkey="Enter" class="hover-glow" data-tooltip="Click Action" id="menuToggle"
           class="lg:hidden text-2xl p-1 rounded hover:bg-orange-500/20
                  focus:outline-none focus-visible:ring-2
                  focus-visible:ring-orange-200"
           aria-label="Toggle navigation"
           aria-expanded="false">
-    ☰
+    
   </button>
 
   <!-- ghost badge -->
-  <div id="ghostBadge"
+  <div data-testid="vault-section" data-testid="vault-section" id="ghostBadge"
        class="absolute right-6 text-xs font-semibold text-emerald-400
               animate-pulse hidden">
-    👻 Ghost Mode
+     Ghost Mode
   </div>
 </header>
 
@@ -891,28 +891,28 @@ render();
      class="lg:hidden fixed inset-x-0 top-14 bg-black/90 backdrop-blur p-6
             z-40 hidden">
   <ul class="space-y-4 text-lg font-semibold">
-    <li><a href="/"        class="hover:text-orange-400">Home</a></li>
-    <li><a href="/reports" class="hover:text-orange-400">Vault</a></li>
-    <li><a href="/playground" class="hover:text-orange-400">Playground</a></li>
+    <li><a class="hover-glow" class="hover-glow" class="hover-glow" href="/"        class="hover:text-orange-400">Home</a></li>
+    <li><a class="hover-glow" class="hover-glow" class="hover-glow" href="/reports" class="hover:text-orange-400">Vault</a></li>
+    <li><a class="hover-glow" class="hover-glow" class="hover-glow" href="/playground" class="hover:text-orange-400">Playground</a></li>
   </ul>
 </nav>
 
 <!-- scroll progress bar -->
-<div id="scrollProgress"
+<div data-testid="vault-section" data-testid="vault-section" id="scrollProgress"
      class="fixed inset-x-0 top-0 h-1 bg-orange-500 origin-left scale-x-0">
 </div>
 
 <!-- report_card_grid.html -->
-<section class="max-w-6xl mx-auto py-20 px-6" data-aos="fade-up"" id="cardGridWrap">
-  <h2 class="text-center text-3xl sm:text-4xl font-black mb-12 tracking-tight gradient-text-orange">
-    🧠 Featured Vulnerability Reports
+<section data-aos="fade-up" class="fade-in" data-aos="fade-up" class="fade-in" data-aos="fade-up" class="fade-in" data-aos="fade-up" x-data x-intersect="$el.classList.add('fade-in')" data-aos="fade-up" x-data x-intersect="$el.classList.add('fade-in')" x-data x-intersect="$el.classList.add('fade-in')" class="max-w-6xl mx-auto py-20 px-6" data-aos="fade-up"" id="cardGridWrap">
+  <h2 data-aos="fade-up" data-aos-delay="150" data-aos="fade-up" data-aos-delay="150" class="text-center text-3xl sm:text-4xl font-black mb-12 tracking-tight gradient-text-orange">
+     Featured Vulnerability Reports
   </h2>
 
-  <div id="cardGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10" data-aos="fade-up""></div>
+  <div data-testid="vault-section" data-testid="vault-section" id="cardGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10" data-aos="fade-up""></div>
 </section>
 
 <script>
-/* expects window.ALL_REPORTS from server — use first 9 as sample */
+/* expects window.ALL_REPORTS from server  use first 9 as sample */
 const CARDS = (window.ALL_REPORTS || []).slice(0, 9);
 
 const grid = document.getElementById("cardGrid");
@@ -931,10 +931,10 @@ function makeCard(r){
       <img src="https://cdn.example.com/thumbnails/${r.slug}.jpg" alt=""
            class="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105" loading="lazy">
     </figure>
-    <div class="p-6 space-y-3">
+    <div data-testid="vault-section" data-testid="vault-section" class="p-6 space-y-3">
       <h3 class="text-lg font-semibold text-orangeLuxe-light group-hover:text-orangeLuxe transition">${r.title}</h3>
-      <p class="text-xs text-orangeLuxe-light/60 font-mono">${new Date(r.date).toLocaleDateString()} • ${r.reportType}</p>
-      <div class="flex flex-wrap gap-2">${r.tags.slice(0,3).map(t=>`<span class="badge">${t}</span>`).join("")}
+      <p class="text-xs text-orangeLuxe-light/60 font-mono">${new Date(r.date).toLocaleDateString()}  ${r.reportType}</p>
+      <div data-testid="vault-section" data-testid="vault-section" class="flex flex-wrap gap-2">${r.tags.slice(0,3).map(t=>`<span class="badge">${t}</span>`).join("")}
         ${r.tags.length>3?`<span class="badge">+${r.tags.length-3}</span>`:""}
       </div>
       <span class="inline-block mt-2 text-[11px] px-2 py-0.5 rounded-full font-mono border border-orangeLuxe/30 ${cvssColor(r.cvss)}">
@@ -950,65 +950,65 @@ function cvssColor(v){
 </script>
 
 <!-- templates/components/cta_cards.html -->
-<div class="grid grid-cols-1 sm:grid-cols-2 gap-6" data-aos="fade-up"">
-  <!-- 🎓 Ghost Academy Invite -->
+<div data-testid="vault-section" data-testid="vault-section" class="grid grid-cols-1 sm:grid-cols-2 gap-6" data-aos="fade-up"">
+  <!--  Ghost Academy Invite -->
   <div
     role="region" aria-labelledby="academy-title"
     class="cta-card group"
   >
-    <h2 id="academy-title"
+    <h2 data-aos="fade-up" data-aos-delay="150" data-aos="fade-up" data-aos-delay="150" id="academy-title"
         class="text-sm font-bold uppercase text-orange-300 mb-2 group-hover:text-orangeLuxe transition-colors duration-300">
-      🎓 Join Ghost Academy
+       Join Ghost Academy
     </h2>
     <p class="text-xs text-orange-400 mb-4">
       Sharpen your skills. Earn XP. Become a legend.
     </p>
-    <a href="/academy"
+    <a class="hover-glow" class="hover-glow" class="hover-glow" href="/academy"
        class="btn btn--primary btn--outline w-full text-xs group-hover:shadow-glow-orange transition-shadow duration-300">
       Enter Academy
     </a>
   </div>
 
-  <!-- 🛰️ Operative Dashboard Invite -->
+  <!--  Operative Dashboard Invite -->
   <div
     role="region" aria-labelledby="dashboard-title"
     class="cta-card group"
   >
-    <h2 id="dashboard-title"
+    <h2 data-aos="fade-up" data-aos-delay="150" data-aos="fade-up" data-aos-delay="150" id="dashboard-title"
         class="text-sm font-bold uppercase text-orange-300 mb-2 group-hover:text-emeraldLuxe transition-colors duration-300">
-      🛰️ View Operative Stats
+       View Operative Stats
     </h2>
     <p class="text-xs text-orange-400 mb-4">
       Track your vault journey + XP history.
     </p>
-    <a href="/dashboard"
+    <a class="hover-glow" class="hover-glow" class="hover-glow" href="/dashboard"
        class="btn btn--primary btn--outline w-full text-xs group-hover:shadow-hud-panel transition-shadow duration-300">
       Launch Dashboard
     </a>
   </div>
 </div>
 
-<section id="vault-banners" class="my-16 grid grid-cols-1 md:grid-cols-3 gap-8" data-aos="fade-up"">
+<section data-aos="fade-up" class="fade-in" data-aos="fade-up" class="fade-in" data-aos="fade-up" class="fade-in" data-aos="fade-up" x-data x-intersect="$el.classList.add('fade-in')" data-aos="fade-up" x-data x-intersect="$el.classList.add('fade-in')" x-data x-intersect="$el.classList.add('fade-in')" id="vault-banners" class="my-16 grid grid-cols-1 md:grid-cols-3 gap-8" data-aos="fade-up"">
   {% set banners = [
     ('images/og/main_vault_banner.png', "Main Vault Banner"),
     ('images/og/hacker_underground_banner.png', "Hacker Underground Banner"),
     ('images/og/zero_day_archive_banner.png', "Zero-Day Archive Banner")
   ] %}
   {% for src, alt in banners %}
-  <div class="rounded-xl overflow-hidden shadow-lg hover:shadow-orange-400/30 transition-all duration-300 group">
+  <div data-testid="vault-section" data-testid="vault-section" class="rounded-xl overflow-hidden shadow-lg hover:shadow-orange-400/30 transition-all duration-300 group">
     <img src="{{ url_for('static', filename=src) }}" alt="{{ alt }}" class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105">
   </div>
   {% endfor %}
 </section>
 
 <!-- empty_state.html -->
-<div id="emptyWrap" class="flex flex-col items-center justify-center py-24 text-center">
-  <div class="w-24 h-24 mb-4 opacity-60 animate-spin-slow">🙀</div>
+<div data-testid="vault-section" data-testid="vault-section" id="emptyWrap" class="flex flex-col items-center justify-center py-24 text-center">
+  <div data-testid="vault-section" data-testid="vault-section" class="w-24 h-24 mb-4 opacity-60 animate-spin-slow"></div>
   <p class="text-lg text-orangeLuxe-light font-mono mb-4">
-    Nothing to see here—try adjusting your filters.
+    Nothing to see heretry adjusting your filters.
   </p>
   <!-- toggle the reset button by adding data-reset -->
-  <button id="resetBtn" class="hidden px-4 py-1.5 rounded-full bg-orangeLuxe text-black font-semibold hover:bg-orangeLuxe.dark">
+  <button data-tooltip="Click Action" data-tooltip="Click Action" class="hover-glow" title="Command Vault " class="hover-glow" data-hotkey="Enter" class="hover-glow" data-tooltip="Click Action" data-hotkey="Enter" class="hover-glow" data-tooltip="Click Action" id="resetBtn" class="hidden px-4 py-1.5 rounded-full bg-orangeLuxe text-black font-semibold hover:bg-orangeLuxe.dark">
     Reset filters
   </button>
 </div>
@@ -1021,7 +1021,7 @@ function cvssColor(v){
 <script>
 /* Call emptyState.show(msg, resetHandler) anywhere */
 window.emptyState = {
-  show(msg="Nothing to see here—try adjusting your filters.", onReset){
+  show(msg="Nothing to see heretry adjusting your filters.", onReset){
     document.querySelector("#emptyWrap p").textContent = msg;
     const btn=document.getElementById("resetBtn");
     if(onReset){ btn.classList.remove("hidden"); btn.onclick=onReset; }
@@ -1032,50 +1032,50 @@ window.emptyState = {
 };
 </script>
 
-<section id="hero" class="relative text-center py-24 px-6 sm:px-8 lg:px-12 rounded-2xl border border-orangeLuxe/40 shadow-[0_10px_50px_rgba(255,115,0,0.1)] bg-gradient-to-br from-cyberNight via-cyberNight to-cyberNight text-orangeLuxe-light overflow-hidden opacity-0 animate-fade-in" data-aos="fade-up"">
+<section data-aos="fade-up" class="fade-in" data-aos="fade-up" class="fade-in" data-aos="fade-up" class="fade-in" data-aos="fade-up" x-data x-intersect="$el.classList.add('fade-in')" data-aos="fade-up" x-data x-intersect="$el.classList.add('fade-in')" x-data x-intersect="$el.classList.add('fade-in')" id="hero" class="relative text-center py-24 px-6 sm:px-8 lg:px-12 rounded-2xl border border-orangeLuxe/40 shadow-[0_10px_50px_rgba(255,115,0,0.1)] bg-gradient-to-br from-cyberNight via-cyberNight to-cyberNight text-orangeLuxe-light overflow-hidden opacity-0 animate-fade-in" data-aos="fade-up"">
 
   <!-- Ambient FX -->
-  <div class="absolute inset-0 pointer-events-none">
-    <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(255,255,255,0.04),transparent)]"></div>
-    <div class="absolute inset-0 bg-[url('/scanlines.svg')] bg-repeat animate-shimmer opacity-5"></div>
+  <div data-testid="vault-section" data-testid="vault-section" class="absolute inset-0 pointer-events-none">
+    <div data-testid="vault-section" data-testid="vault-section" class="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(255,255,255,0.04),transparent)]"></div>
+    <div data-testid="vault-section" data-testid="vault-section" class="absolute inset-0 bg-[url('/scanlines.svg')] bg-repeat animate-shimmer opacity-5"></div>
   </div>
 
   <!-- Main Content -->
-  <div class="relative z-10 max-w-3xl mx-auto">
+  <div data-testid="vault-section" data-testid="vault-section" class="relative z-10 max-w-3xl mx-auto">
     <p id="heroTyper" class="text-xs sm:text-sm uppercase font-mono tracking-widest text-orangeLuxe-light animate-typewriter mb-6"></p>
 
     <h1 class="text-5xl sm:text-6xl md:text-7xl font-extrabold leading-tight tracking-tight bg-gradient-to-r from-orange-400 via-yellow-500 to-orange-300 bg-clip-text text-transparent drop-shadow-xl animate-glow mb-4">
-      💀 CYBERKIDZSEC REPORT VAULT
+       CYBERKIDZSEC REPORT VAULT
     </h1>
 
     <p class="text-lg sm:text-xl font-mono tracking-tight text-orangeLuxe-light mb-8">
-      “Ghosted but not gone.” — <span class="text-orangeLuxe font-semibold">cyberkidzsec</span>
+      Ghosted but not gone.  <span class="text-orangeLuxe font-semibold">cyberkidzsec</span>
     </p>
 
     <!-- Operative -->
-    <div class="space-y-2 mb-8">
-      <p class="text-xs sm:text-sm animate-glow">🛰️ Operative Title: <strong>{{ operative_title }}</strong></p>
-      <div class="w-full bg-zinc-800 rounded-full overflow-hidden h-3">
-        <div class="h-full bg-gradient-to-r from-orange-400 via-yellow-400 to-emerald-400 transition-all" style="width: {{ vault_xp_percentage }}%"></div>
+    <div data-testid="vault-section" data-testid="vault-section" class="space-y-2 mb-8">
+      <p class="text-xs sm:text-sm animate-glow"> Operative Title: <strong>{{ operative_title }}</strong></p>
+      <div data-testid="vault-section" data-testid="vault-section" class="w-full bg-zinc-800 rounded-full overflow-hidden h-3">
+        <div data-testid="vault-section" data-testid="vault-section" class="h-full bg-gradient-to-r from-orange-400 via-yellow-400 to-emerald-400 transition-all" style="width: {{ vault_xp_percentage }}%"></div>
       </div>
       <p class="text-xs text-center text-orangeLuxe-light mt-2">
-        Level: {{ operative_level }} — Vault Stability: {{ vault_xp_percentage }}%
+        Level: {{ operative_level }}  Vault Stability: {{ vault_xp_percentage }}%
       </p>
     </div>
 
     <!-- Action Buttons -->
-    <div class="flex flex-wrap justify-center gap-4">
-      <button id="searchBtn" class="btn btn--outline px-6 py-2 rounded-full font-semibold hover:shadow-md transition">
-        ⌘ Cmd + K — Search
+    <div data-testid="vault-section" data-testid="vault-section" class="flex flex-wrap justify-center gap-4">
+      <button data-tooltip="Click Action" data-tooltip="Click Action" class="hover-glow" title="Command Vault " class="hover-glow" data-hotkey="Enter" class="hover-glow" data-tooltip="Click Action" data-hotkey="Enter" class="hover-glow" data-tooltip="Click Action" id="searchBtn" class="btn btn--outline px-6 py-2 rounded-full font-semibold hover:shadow-md transition">
+         Cmd + K  Search
       </button>
-      <a href="#playground" class="btn btn--primary px-6 py-2 rounded-full font-semibold hover:shadow-md transition">
-        🎮 Hack the Vault
+      <a class="hover-glow" class="hover-glow" class="hover-glow" href="#playground" class="btn btn--primary px-6 py-2 rounded-full font-semibold hover:shadow-md transition">
+         Hack the Vault
       </a>
     </div>
 
     <!-- Ghost Mode Easter Egg -->
     <span id="ghostMsg" class="hidden mt-8 block animate-pulse font-mono text-xs text-emerald-400">
-      👻 Ghost Mode Activated
+       Ghost Mode Activated
     </span>
   </div>
 
@@ -1085,10 +1085,10 @@ window.emptyState = {
 <script defer>
 (() => {
   const lines = [
-    "🔐 Zero-Day Archive Updating…",
-    "💀 Ghosted but not gone.",
-    "🛰️ Live Vault Feed: Stable.",
-    "⚡ Stay Dangerous, Operative."
+    " Zero-Day Archive Updating",
+    " Ghosted but not gone.",
+    " Live Vault Feed: Stable.",
+    " Stay Dangerous, Operative."
   ];
   let idx = 0;
   const typer = document.getElementById('heroTyper');
@@ -1111,22 +1111,22 @@ window.emptyState = {
 function makeTiltCard(r){
   const li = document.createElement("li");
   li.innerHTML = `
-    <a href="/reports/${r.slug}" class="group block rounded-2xl focus:ring-2 focus:ring-orangeLuxe">
-      <article class="tilt overflow-hidden rounded-2xl bg-gradient-to-br" data-aos="fade-up"
+    <a class="hover-glow" class="hover-glow" class="hover-glow" href="/reports/${r.slug}" class="group block rounded-2xl focus:ring-2 focus:ring-orangeLuxe">
+      <a class="hover-glow" class="hover-glow" class="hover-glow"rticle class="tilt overflow-hidden rounded-2xl bg-gradient-to-br" data-aos="fade-up"
                       from-cyberNight.glow via-cyberNight to-zinc-900/90
                       border border-orangeLuxe/20 shadow-lg transition-shadow
                       group-hover:shadow-orangeLuxe/40">
-        <div class="relative h-40 overflow-hidden">
+        <div data-testid="vault-section" data-testid="vault-section" class="relative h-40 overflow-hidden">
           <img src="https://source.unsplash.com/512x300?cybersecurity,${r.slug}" alt="${r.title}"
                class="object-cover w-full h-full group-hover:scale-[1.08]
                       transition-transform duration-500 ease-out" loading="lazy">
         </div>
-        <div class="p-6 space-y-3">
+        <div data-testid="vault-section" data-testid="vault-section" class="p-6 space-y-3">
           <h3 class="text-lg font-semibold text-orangeLuxe-light group-hover:text-orangeLuxe transition-colors">
             ${r.title}
           </h3>
           <p class="text-xs text-orangeLuxe-light/70 font-mono line-clamp-3">${r.summary||"No summary provided."}</p>
-          <div class="flex flex-wrap gap-1.5 text-[10px] uppercase font-semibold">
+          <div data-testid="vault-section" data-testid="vault-section" class="flex flex-wrap gap-1.5 text-[10px] uppercase font-semibold">
             ${r.tags.slice(0,4).map(t=>`<span class="bg-orangeLuxe/10 text-orangeLuxe-light px-2 py-0.5 rounded-full">#${t}</span>`).join("")}
           </div>
         </div>
@@ -1152,11 +1152,11 @@ document.addEventListener("pointerleave",e=>{
 </script>
 
 <!-- sidebar_filters.html -->
-<aside class="space-y-2 bg-cyberNight.phantom p-4 rounded-lg shadow-inner" id="sideFilter">
-  <input type="search" id="tagSearch" placeholder="Search tags…"
+<a class="hover-glow" class="hover-glow" class="hover-glow"side class="space-y-2 bg-cyberNight.phantom p-4 rounded-lg shadow-inner" id="sideFilter">
+  <input class="hover-glow" class="hover-glow" type="search" id="tagSearch" placeholder="Search tags"
     class="w-full mb-3 px-3 py-1.5 rounded bg-zinc-800 text-sm text-orangeLuxe-light">
 
-  <div id="tagList" class="max-h-60 overflow-y-auto pr-1 space-y-1"></div>
+  <div data-testid="vault-section" data-testid="vault-section" id="tagList" class="max-h-60 overflow-y-auto pr-1 space-y-1"></div>
 </aside>
 
 <script>
@@ -1184,25 +1184,25 @@ draw(TAGS_ALL);
 
 <!-- vault_popup.html -->
 <template id="vaultTpl">
-  <div class="fixed inset-0 z-[9999] flex items-center justify-center bg-black/85 backdrop-blur p-4" role="dialog" aria-modal="true">
+  <div data-testid="vault-section" data-testid="vault-section" class="fixed inset-0 z-[9999] flex items-center justify-center bg-black/85 backdrop-blur p-4" role="dialog" aria-modal="true">
     <!-- focus trap sentinels -->
     <span tabindex="0"></span>
 
-    <div class="relative w-full max-w-xl rounded-2xl overflow-hidden border border-orangeLuxe/30
+    <div data-testid="vault-section" data-testid="vault-section" class="relative w-full max-w-xl rounded-2xl overflow-hidden border border-orangeLuxe/30
                 bg-gradient-to-br from-cyberNight via-cyberNight.glow to-cyberNight.phantom
                 text-orangeLuxe-light shadow-[0_0_40px_rgba(249,115,22,0.25)] font-mono"
          id="vaultPanel">
       <!-- VHS noise mask -->
-      <div class="absolute inset-0 pointer-events-none vhsMask"></div>
+      <div data-testid="vault-section" data-testid="vault-section" class="absolute inset-0 pointer-events-none vhsMask"></div>
 
-      <div class="relative z-10 p-6 space-y-4" id="vaultBody"></div>
+      <div data-testid="vault-section" data-testid="vault-section" class="relative z-10 p-6 space-y-4" id="vaultBody"></div>
     </div>
 
     <span tabindex="0"></span>
   </div>
 </template>
 
-<audio id="vaultSfx" src="/sfx/vhs-glitch.mp3" preload="auto"></audio>
+<a class="hover-glow" class="hover-glow" class="hover-glow"udio id="vaultSfx" src="/sfx/vhs-glitch.mp3" preload="auto"></audio>
 
 <style>
 @keyframes pulse-glow { 0%,100%{opacity:.05} 50%{opacity:.15} }
@@ -1230,22 +1230,22 @@ draw(TAGS_ALL);
     panel.innerHTML = `
       <header class="text-xs uppercase tracking-wide text-orangeLuxe-light animate-pulse">
         ${mode === "admin"
-          ? "🔓 Developer Terminal · backtrace detected"
-          : "📼 Playback Archive · Breach logs 07/14/2024"}
+          ? " Developer Terminal  backtrace detected"
+          : " Playback Archive  Breach logs 07/14/2024"}
       </header>
 
-      <div class="space-y-1 text-sm">
-        <p class="glitch-text" data-text="> decrypting VAULT_RECORDS.LOG …">&gt; decrypting VAULT_RECORDS.LOG …</p>
+      <div data-testid="vault-section" data-testid="vault-section" class="space-y-1 text-sm">
+        <p class="glitch-text" data-text="> decrypting VAULT_RECORDS.LOG ">&gt; decrypting VAULT_RECORDS.LOG </p>
         <p class="glitch-text" data-text="> asset_vault.tsx | rootkit.backtrace">&gt; asset_vault.tsx | rootkit.backtrace</p>
-        <p class="glitch-text" data-text="> 🧠 MEMORY BLEED layer-3 – status: critical">
-          &gt; 🧠 MEMORY BLEED layer-3 – status: <span class="text-red-400">critical</span>
+        <p class="glitch-text" data-text=">  MEMORY BLEED layer-3  status: critical">
+          &gt;  MEMORY BLEED layer-3  status: <span class="text-red-400">critical</span>
         </p>
         <p class="glitch-text text-emerald-400" data-text="> Access Level: X">
-          &gt; Access Level: <strong>${mode === "admin" ? "🧠 Developer" : "Vault View"}</strong>
+          &gt; Access Level: <strong>${mode === "admin" ? " Developer" : "Vault View"}</strong>
         </p>
       </div>
 
-      <button id="vaultClose"
+      <button data-tooltip="Click Action" data-tooltip="Click Action" class="hover-glow" title="Command Vault " class="hover-glow" data-hotkey="Enter" class="hover-glow" data-tooltip="Click Action" data-hotkey="Enter" class="hover-glow" data-tooltip="Click Action" id="vaultClose"
         class="mt-6 inline-flex items-center gap-2 bg-orangeLuxe text-black px-6 py-2 rounded-full font-semibold
                hover:bg-orangeLuxe.dark hover:scale-105 transition focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-orangeLuxe-light">
         Continue Monitoring
@@ -1328,10 +1328,10 @@ draw(TAGS_ALL);
              bg-gradient-to-r from-orangeLuxe via-pink-400 to-fuchsia-500
              bg-clip-text text-transparent animate-glow"
     >
-      🧠 Featured Vault Reports
+       Featured Vault Reports
     </h2>
     <p class="mx-auto max-w-2xl text-sm sm:text-base font-mono text-orangeLuxe-light/80">
-      Hand-picked exploits, rare bugs &amp; security artforms — straight from the archive.
+      Hand-picked exploits, rare bugs &amp; security artforms  straight from the archive.
     </p>
   </header>
 
@@ -1345,7 +1345,7 @@ draw(TAGS_ALL);
 
 <script>
 /* --------------------------------------------------
-   👉 dynamic build (replace with Jinja if you like)
+    dynamic build (replace with Jinja if you like)
 -------------------------------------------------- */
 const reports = window.FEATURED_REPORTS || []; // inject via Jinja/Flask if desired
 // Example mock (delete in prod):
@@ -1362,14 +1362,14 @@ if (!reports.length)
 function makeCard(r) {
   const li = document.createElement("li");
   li.innerHTML = `
-    <a href="/reports/${r.slug}"
+    <a class="hover-glow" class="hover-glow" class="hover-glow" href="/reports/${r.slug}"
        class="group block focus-visible:outline-none focus-visible:ring-2
               focus-visible:ring-offset-2 focus-visible:ring-orangeLuxe rounded-2xl">
-      <article class="tiltCard h-full rounded-2xl bg-gradient-to-br" data-aos="fade-up"
+      <a class="hover-glow" class="hover-glow" class="hover-glow"rticle class="tiltCard h-full rounded-2xl bg-gradient-to-br" data-aos="fade-up"
                       from-cyberNight.glow via-cyberNight to-zinc-900/90
                       border border-orangeLuxe/20 shadow-lg transition-shadow
                       group-hover:shadow-orangeLuxe/40">
-        <div class="relative h-40 overflow-hidden rounded-t-2xl">
+        <div data-testid="vault-section" data-testid="vault-section" class="relative h-40 overflow-hidden rounded-t-2xl">
           <img
             src="https://source.unsplash.com/512x300?cybersecurity,${r.slug}"
             alt=""
@@ -1378,7 +1378,7 @@ function makeCard(r) {
             loading="lazy"
           />
         </div>
-        <div class="p-6 space-y-3">
+        <div data-testid="vault-section" data-testid="vault-section" class="p-6 space-y-3">
           <h3 class="text-lg font-semibold text-orangeLuxe-light
                      group-hover:text-orangeLuxe transition-colors">
             ${r.title}
@@ -1386,7 +1386,7 @@ function makeCard(r) {
           <p class="text-xs text-orangeLuxe-light/70 font-mono line-clamp-3">
             ${r.summary}
           </p>
-          <div class="flex flex-wrap gap-1.5 text-[10px] uppercase font-semibold">
+          <div data-testid="vault-section" data-testid="vault-section" class="flex flex-wrap gap-1.5 text-[10px] uppercase font-semibold">
             ${r.tags
               .slice(0, 4)
               .map(
@@ -1455,28 +1455,28 @@ grid.addEventListener("pointerleave", (e) => {
 </style>
 
 <!-- HUD Toolbar -->
-<div id="hudToolbar" class="fixed bottom-6 right-6 z-[9998] w-[280px] rounded-2xl border border-orangeLuxe/25 bg-gradient-to-br from-cyberNight via-cyberNight-glow to-cyberNight-phantom backdrop-blur-md shadow-glow opacity-0 translate-y-6 transition-all duration-500 cursor-grab">
+<div data-testid="vault-section" data-testid="vault-section" id="hudToolbar" class="fixed bottom-6 right-6 z-[9998] w-[280px] rounded-2xl border border-orangeLuxe/25 bg-gradient-to-br from-cyberNight via-cyberNight-glow to-cyberNight-phantom backdrop-blur-md shadow-glow opacity-0 translate-y-6 transition-all duration-500 cursor-grab">
   
   <!-- Header -->
-  <button id="hudToggle" class="flex w-full items-center justify-between px-4 py-2 text-xs font-mono text-orangeLuxe-light hover:bg-orangeLuxe/10 rounded-t-2xl" aria-expanded="true">
-    <span class="tracking-widest">💻 HUD STATUS</span>
+  <button data-tooltip="Click Action" data-tooltip="Click Action" class="hover-glow" title="Command Vault " class="hover-glow" data-hotkey="Enter" class="hover-glow" data-tooltip="Click Action" data-hotkey="Enter" class="hover-glow" data-tooltip="Click Action" id="hudToggle" class="flex w-full items-center justify-between px-4 py-2 text-xs font-mono text-orangeLuxe-light hover:bg-orangeLuxe/10 rounded-t-2xl" aria-expanded="true">
+    <span class="tracking-widest"> HUD STATUS</span>
     <i id="hudChevron" class="fas fa-chevron-down"></i>
   </button>
 
   <!-- Body -->
-  <div id="hudBody" class="px-5 py-4 text-xs font-mono text-orangeLuxe-light/90 space-y-2">
-    <div class="flex justify-between">👻 Ghost Mode: <span id="hudGhost" class="font-semibold text-gray-500">OFF</span></div>
-    <div class="flex justify-between">🔓 Admin: <span id="hudAdmin" class="font-semibold text-gray-500">OFF</span></div>
-    <div class="flex justify-between">🛰️ Vault Feed: <span class="font-semibold text-sky-400">STABLE</span></div>
+  <div data-testid="vault-section" data-testid="vault-section" id="hudBody" class="px-5 py-4 text-xs font-mono text-orangeLuxe-light/90 space-y-2">
+    <div data-testid="vault-section" data-testid="vault-section" class="flex justify-between"> Ghost Mode: <span id="hudGhost" class="font-semibold text-gray-500">OFF</span></div>
+    <div data-testid="vault-section" data-testid="vault-section" class="flex justify-between"> Admin: <span id="hudAdmin" class="font-semibold text-gray-500">OFF</span></div>
+    <div data-testid="vault-section" data-testid="vault-section" class="flex justify-between"> Vault Feed: <span class="font-semibold text-sky-400">STABLE</span></div>
 
     <hr class="border-orangeLuxe/20 my-3">
 
-    <p id="hudLog" class="min-h-[1.3rem] animate-pulse">⏳ Initializing HUD…</p>
+    <p id="hudLog" class="min-h-[1.3rem] animate-pulse"> Initializing HUD</p>
 
     <!-- XP Status Bar -->
-    <div class="mt-4">
-      <div class="w-full h-2 bg-zinc-700 rounded-full overflow-hidden">
-        <div class="h-full bg-gradient-to-r from-orange-400 via-yellow-400 to-emerald-400 transition-all" style="width: {{ vault_xp_percentage }}%"></div>
+    <div data-testid="vault-section" data-testid="vault-section" class="mt-4">
+      <div data-testid="vault-section" data-testid="vault-section" class="w-full h-2 bg-zinc-700 rounded-full overflow-hidden">
+        <div data-testid="vault-section" data-testid="vault-section" class="h-full bg-gradient-to-r from-orange-400 via-yellow-400 to-emerald-400 transition-all" style="width: {{ vault_xp_percentage }}%"></div>
       </div>
       <p class="text-[10px] text-center mt-1 text-orangeLuxe">{{ vault_xp_percentage }}% Vault Stability</p>
     </div>
@@ -1506,9 +1506,9 @@ grid.addEventListener("pointerleave", (e) => {
   });
 
   // Simulated Boot
-  setTimeout(() => (logEl.textContent = "🧠 Running memory check…"), 1000);
+  setTimeout(() => (logEl.textContent = " Running memory check"), 1000);
   setTimeout(() => {
-    logEl.textContent = "✅ Vault Systems Verified";
+    logEl.textContent = " Vault Systems Verified";
     const ghost = localStorage.getItem("ghost") === "1";
     const admin = localStorage.getItem("admin") === "1";
     ghostEl.textContent = ghost ? "ACTIVE" : "OFF";
@@ -1516,7 +1516,7 @@ grid.addEventListener("pointerleave", (e) => {
     ghostEl.className = "font-semibold " + (ghost ? "text-emerald-400" : "text-gray-500");
     adminEl.className = "font-semibold " + (admin ? "text-emerald-400" : "text-gray-500");
   }, 2500);
-  setTimeout(() => (logEl.textContent = "🛰️ Vault Feed Stabilized"), 4000);
+  setTimeout(() => (logEl.textContent = " Vault Feed Stabilized"), 4000);
 
   // Draggable HUD
   let dx = 0, dy = 0, sx = 0, sy = 0, dragging = false;
@@ -1543,7 +1543,7 @@ grid.addEventListener("pointerleave", (e) => {
 </script>
 
 <!-- report_chart.html -->
-<div class="w-full max-w-md mx-auto">
+<div data-testid="vault-section" data-testid="vault-section" class="w-full max-w-md mx-auto">
   <h3 id="chartTitle" class="text-center text-lg font-semibold mb-4">Report Distribution</h3>
   <canvas id="reportChart" height="280"></canvas>
 </div>
@@ -1586,18 +1586,18 @@ new Chart(document.getElementById("reportChart"), {
 {% include "components/filter_bar.html" %}
 {% include "components/sidebar_filters.html" %}
 
-<!-- 🎓 Ghost Academy Invite -->
-<div class="rounded-lg border border-orangeLuxe/30 bg-zinc-900 p-4 text-center shadow hover:shadow-orange-500/20 transition">
-  <h2 class="text-sm font-bold uppercase text-orange-300 mb-2">🎓 Join Ghost Academy</h2>
+<!--  Ghost Academy Invite -->
+<div data-testid="vault-section" data-testid="vault-section" class="rounded-lg border border-orangeLuxe/30 bg-zinc-900 p-4 text-center shadow hover:shadow-orange-500/20 transition">
+  <h2 data-aos="fade-up" data-aos-delay="150" data-aos="fade-up" data-aos-delay="150" class="text-sm font-bold uppercase text-orange-300 mb-2"> Join Ghost Academy</h2>
   <p class="text-xs text-orange-400 mb-4">Sharpen your skills. Earn XP. Become a legend.</p>
-  <a href="/academy" class="btn-primary text-xs w-full">Enter Academy</a>
+  <a class="hover-glow" class="hover-glow" class="hover-glow" href="/academy" class="btn-primary text-xs w-full">Enter Academy</a>
 </div>
 
-<!-- 🛰️ Operative Dashboard Invite -->
-<div class="rounded-lg border border-orangeLuxe/30 bg-zinc-900 p-4 text-center shadow hover:shadow-orange-500/20 transition">
-  <h2 class="text-sm font-bold uppercase text-orange-300 mb-2">🛰️ View Operative Stats</h2>
+<!--  Operative Dashboard Invite -->
+<div data-testid="vault-section" data-testid="vault-section" class="rounded-lg border border-orangeLuxe/30 bg-zinc-900 p-4 text-center shadow hover:shadow-orange-500/20 transition">
+  <h2 data-aos="fade-up" data-aos-delay="150" data-aos="fade-up" data-aos-delay="150" class="text-sm font-bold uppercase text-orange-300 mb-2"> View Operative Stats</h2>
   <p class="text-xs text-orange-400 mb-4">Track your vault journey + XP history.</p>
-  <a href="/dashboard" class="btn-primary text-xs w-full">Launch Dashboard</a>
+  <a class="hover-glow" class="hover-glow" class="hover-glow" href="/dashboard" class="btn-primary text-xs w-full">Launch Dashboard</a>
 </div>
 
 <!-- filter_bar.html -->
@@ -1609,7 +1609,7 @@ new Chart(document.getElementById("reportChart"), {
 ></div>
 
 <script>
-/* ---- config – tweak freely ---- */
+/* ---- config  tweak freely ---- */
 const FILTERS      = ["All","XSS","Injection","Misconfiguration","Race Condition"];
 const SORT_OPTIONS = ["cvss","severity","date"];
 
@@ -1622,11 +1622,11 @@ const elBar  = document.getElementById("filterBar");
 /* ---- render ---- */
 function renderBar() {
   elBar.innerHTML = `
-    <div class="relative flex items-center w-full overflow-x-auto no-scrollbar
+    <div data-testid="vault-section" data-testid="vault-section" class="relative flex items-center w-full overflow-x-auto no-scrollbar
                 gap-4 md:gap-6 scroll-smooth pr-6" id="filterScroll">
-      <div class="flex flex-nowrap gap-2" role="radiogroup" aria-label="Filter Reports">
+      <div data-testid="vault-section" data-testid="vault-section" class="flex flex-nowrap gap-2" role="radiogroup" aria-label="Filter Reports">
         ${FILTERS.map(
-          (f) => `<button
+          (f) => `<button data-tooltip="Click Action" data-tooltip="Click Action" class="hover-glow" title="Command Vault " class="hover-glow" data-hotkey="Enter" class="hover-glow" data-tooltip="Click Action" data-hotkey="Enter" class="hover-glow"
                     class="${btnClasses(f === filter)}"
                     data-filter="${f}"
                     role="radio" aria-checked="${f === filter}" title="Filter by ${f}">
@@ -1635,8 +1635,8 @@ function renderBar() {
         ).join("")}
       </div>
 
-      <div class="ml-auto flex items-center gap-4 min-w-fit">
-        <div class="flex items-center gap-2">
+      <div data-testid="vault-section" data-testid="vault-section" class="ml-auto flex items-center gap-4 min-w-fit">
+        <div data-testid="vault-section" data-testid="vault-section" class="flex items-center gap-2">
           <label class="text-xs uppercase tracking-widest text-orange-300 font-mono">Sort</label>
           <select id="sortSel"
             class="appearance-none bg-zinc-900 border border-orangeLuxe px-3 py-1 pr-6
@@ -1646,14 +1646,14 @@ function renderBar() {
               (o) => `<option value="${o}" ${o === sortBy ? "selected" : ""}>${o}</option>`
             ).join("")}
           </select>
-          <span class="absolute right-8 top-1/2 -translate-y-1/2 pointer-events-none text-orange-400">▼</span>
+          <span class="absolute right-8 top-1/2 -translate-y-1/2 pointer-events-none text-orange-400"></span>
         </div>
 
-        <button id="themeToggle"
+        <button data-tooltip="Click Action" data-tooltip="Click Action" class="hover-glow" title="Command Vault " class="hover-glow" data-hotkey="Enter" class="hover-glow" data-tooltip="Click Action" data-hotkey="Enter" class="hover-glow" data-tooltip="Click Action" id="themeToggle"
           class="text-2xl px-2 py-1 rounded-full border border-orangeLuxe
                  hover:bg-orangeLuxe/20 focus:ring-2 focus:ring-orange-400 transition"
           aria-label="Toggle dark/light">
-          ${theme === "dark" ? "☀️" : "🌙"}
+          ${theme === "dark" ? "" : ""}
         </button>
       </div>
     </div>`;
@@ -1715,7 +1715,7 @@ function announce(msg) {
 
 <script>
 /**
- * Emit a “pagechange” CustomEvent whenever the user picks a new page.
+ * Emit a pagechange CustomEvent whenever the user picks a new page.
  *   nav.addEventListener("pagechange", e => console.log(e.detail.page))
  */
 (function () {
@@ -1746,9 +1746,9 @@ function announce(msg) {
   function render() {
     nav.innerHTML = "";
 
-    /* ← Prev */
+    /*  Prev */
     nav.appendChild(
-      makeBtn("← Prev", "Previous page", page === 1, false, () => set(page - 1))
+      makeBtn(" Prev", "Previous page", page === 1, false, () => set(page - 1))
     );
 
     /* middle range */
@@ -1761,7 +1761,7 @@ function announce(msg) {
     elems.forEach((i) => {
       if (i === "...") {
         const span = document.createElement("span");
-        span.textContent = "…";
+        span.textContent = "";
         span.className   = "px-2 text-orangeLuxe-light/60";
         nav.appendChild(span);
       } else {
@@ -1771,9 +1771,9 @@ function announce(msg) {
       }
     });
 
-    /* Next → */
+    /* Next  */
     nav.appendChild(
-      makeBtn("Next →", "Next page", page === total, false, () => set(page + 1))
+      makeBtn("Next ", "Next page", page === total, false, () => set(page + 1))
     );
   }
 
@@ -1791,10 +1791,10 @@ function announce(msg) {
 </script>
 
 <!-- report_charts_grid.html -->
-<section class="grid md:grid-cols-2 gap-10 max-w-6xl mx-auto mt-24 px-6" data-aos="fade-up"">
+<section data-aos="fade-up" class="fade-in" data-aos="fade-up" class="fade-in" data-aos="fade-up" class="fade-in" data-aos="fade-up" x-data x-intersect="$el.classList.add('fade-in')" data-aos="fade-up" x-data x-intersect="$el.classList.add('fade-in')" x-data x-intersect="$el.classList.add('fade-in')" class="grid md:grid-cols-2 gap-10 max-w-6xl mx-auto mt-24 px-6" data-aos="fade-up"">
 
   <!-- Bar card -->
-  <article class="chart-card border-orangeLuxe" data-aos="fade-up"">
+  <a class="hover-glow" class="hover-glow" class="hover-glow"rticle class="chart-card border-orangeLuxe" data-aos="fade-up"">
     <header class="chart-header">
       <h3 id="barTitle">CVSS Avg per Year</h3>
       <select id="barView" class="bg-night-glow text-white text-sm px-3 py-1 rounded border border-night">
@@ -1806,7 +1806,7 @@ function announce(msg) {
   </article>
 
   <!-- Radar card -->
-  <article class="chart-card border-pink-500" data-aos="fade-up"">
+  <a class="hover-glow" class="hover-glow" class="hover-glow"rticle class="chart-card border-pink-500" data-aos="fade-up"">
     <header class="chart-header justify-center"><h3>Severity Distribution</h3></header>
     <canvas id="radarCanvas" height="320"></canvas>
   </article>
@@ -1876,9 +1876,9 @@ function buildRadar(){
 </script>
 
 {# templates/components/skip_nav.html #}
-<a href="#main"
+<a class="hover-glow" class="hover-glow" class="hover-glow" href="#main"
    class="skip-link"
    aria-label="Skip to main content">
-  ⏭️ Skip&nbsp;to&nbsp;main&nbsp;content
+   Skip&nbsp;to&nbsp;main&nbsp;content
 </a>
 

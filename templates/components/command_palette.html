@@ -1,22 +1,22 @@
 <!-- templates/components/command_palette.html -->
-<div id="cmdBackdrop"
+<div data-testid="vault-section" data-testid="vault-section" id="cmdBackdrop"
      class="fixed inset-0 z-[9999] hidden bg-black/80 backdrop-blur-sm p-6"
      role="dialog" aria-modal="true" aria-label="Command Palette"></div>
 
 <template id="cmdTpl">
-  <div id="cmdWrapper"
+  <div data-testid="vault-section" data-testid="vault-section" id="cmdWrapper"
        class="mx-auto w-full max-w-2xl bg-gradient-to-br from-cyberNight via-cyberNight-glow to-cyberNight-phantom 
               border border-orangeLuxe/30 rounded-2xl shadow-[0_0_40px_rgba(255,115,22,0.25)]
               overflow-hidden animate-fade-slide-blur"
        role="search">
        
     <!-- Search Bar -->
-    <input id="cmdSearch" type="search" placeholder="🔎 Search reports…" autocomplete="off"
+    <input class="hover-glow" class="hover-glow" id="cmdSearch" type="search" placeholder=" Search reports" autocomplete="off"
            class="w-full px-6 py-4 text-lg font-mono tracking-wide text-emerald-300 bg-black border-b border-emerald-400/30 placeholder-emerald-400/60 
            focus:outline-none focus:ring-2 focus:ring-emerald-400" aria-label="Search the Vault" />
 
     <!-- Result Container -->
-    <div id="cmdResults" class="max-h-80 overflow-y-auto custom-scrollbar" role="listbox"></div>
+    <div data-testid="vault-section" data-testid="vault-section" id="cmdResults" class="max-h-80 overflow-y-auto custom-scrollbar" role="listbox"></div>
   </div>
 </template>
 
@@ -104,19 +104,19 @@ function render(arr) {
   rows = [];
 
   if (!arr.length) {
-    list.innerHTML = `<div class="cmdSection">No matches found</div>`;
+    list.innerHTML = `<div data-testid="vault-section" data-testid="vault-section" class="cmdSection">No matches found</div>`;
     return;
   }
 
-  list.insertAdjacentHTML("beforeend", `<div class="cmdSection">Results</div>`);
+  list.insertAdjacentHTML("beforeend", `<div data-testid="vault-section" data-testid="vault-section" class="cmdSection">Results</div>`);
   arr.forEach((r, i) => {
     const div = document.createElement("div");
     div.className = "cmdRow";
     div.dataset.active = "false";
     div.tabIndex = -1;
     div.innerHTML = `
-      <div class="text-sm font-bold">${highlight(r.title)}</div>
-      <div class="text-xs opacity-70">CVSS: ${typeof r.cvss === "number" ? r.cvss.toFixed(1) : "N/A"} • ${r.type || "unknown"}</div>
+      <div data-testid="vault-section" data-testid="vault-section" class="text-sm font-bold">${highlight(r.title)}</div>
+      <div data-testid="vault-section" data-testid="vault-section" class="text-xs opacity-70">CVSS: ${typeof r.cvss === "number" ? r.cvss.toFixed(1) : "N/A"}  ${r.type || "unknown"}</div>
     `;
     div.onclick = () => location.href = `/reports/${r.slug}`;
     list.appendChild(div);

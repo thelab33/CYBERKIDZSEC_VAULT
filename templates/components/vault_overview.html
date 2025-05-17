@@ -4,11 +4,11 @@
   data-aos="fade-up"
 >
   <!-- Vault XP Bar -->
-  <div aria-label="Vault XP Status" class="mx-auto max-w-2xl text-center space-y-4">
+  <div data-testid="vault-section" data-testid="vault-section" aria-label="Vault XP Status" class="mx-auto max-w-2xl text-center space-y-4">
     <p class="text-sm text-orange-300 font-mono tracking-widest uppercase">
       Operative Level: {{ operative_level }}
     </p>
-    <div class="relative bg-zinc-800 rounded-full h-4 overflow-hidden shadow-inner">
+    <div data-testid="vault-section" data-testid="vault-section" class="relative bg-zinc-800 rounded-full h-4 overflow-hidden shadow-inner">
       <progress
         id="vaultXpProgress"
         class="absolute inset-0 w-full h-full appearance-none"
@@ -31,7 +31,7 @@
   </div>
 
   <!-- Vault Banners -->
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+  <div data-testid="vault-section" data-testid="vault-section" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
     {% set banners = [
       ('images/og/main_vault_banner.png', 'Main Vault Banner'),
       ('images/og/hacker_underground_banner.png', 'Hacker Underground Banner'),

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# ─── 🧠 New Report Creator ───────────────────────────────
+#   New Report Creator 
 # Usage:
 # ./bin/new-report.sh "Title Here" --tags xss,rce --cvss 9.8 --date 2025-04-30
 
@@ -32,13 +32,13 @@ date: "${date:-$(date +%F)}"
 tags: [${tags:-"xss"}]
 ---
 
-## 🔍 Summary
+##  Summary
 
 Describe the bug here.
 
 ---
 
-## 🧪 Proof of Concept
+##  Proof of Concept
 
 \`\`\`js
 // example payload
@@ -46,15 +46,15 @@ Describe the bug here.
 
 ---
 
-## ✅ Recommendation
+##  Recommendation
 
 Sanitize input and encode output.
 EOF
 
-echo "✅ Created $filename"
+echo " Created $filename"
 
-# ─── Rebuild reports.json ───────────────────────────────
-echo "🧠 Rebuilding reports.json..."
+#  Rebuild reports.json 
+echo " Rebuilding reports.json..."
 python3 <<EOF
 import os, frontmatter, json
 reports = []
@@ -68,8 +68,8 @@ with open('static/data/reports.json', 'w') as out:
     json.dump(reports, out, indent=2)
 EOF
 
-echo "✅ Updated static/data/reports.json"
+echo " Updated static/data/reports.json"
 
-# ─── Git Add (Optional) ───────────────────────────────
+#  Git Add (Optional) 
 git add "$filename" static/data/reports.json
-git commit -m "➕ New report: $title" && echo "✅ Git commit created"
+git commit -m " New report: $title" && echo " Git commit created"

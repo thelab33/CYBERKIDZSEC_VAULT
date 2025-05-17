@@ -1,4 +1,4 @@
-/* ─── Elite Hero Section – CYBERKIDZSEC WARP MODE ─────────────── */
+/*  Elite Hero Section  CYBERKIDZSEC WARP MODE  */
 
 #hero {
   position: relative;
@@ -24,7 +24,7 @@
   pointer-events: none;
 }
 
-/* ─── Parallax Orbit Rings — match .orbit.small / .orbit.med / .orbit.large ─────────────────── */
+/*  Parallax Orbit Rings  match .orbit.small / .orbit.med / .orbit.large  */
 #heroParallax {
   position: absolute;
   inset: 0;

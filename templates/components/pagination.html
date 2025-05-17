@@ -40,9 +40,9 @@
   function render() {
     nav.innerHTML = "";
 
-    // ← Prev
+    //  Prev
     nav.appendChild(
-      makeBtn("← Prev", "Previous page", page === 1, false, () => set(page - 1))
+      makeBtn(" Prev", "Previous page", page === 1, false, () => set(page - 1))
     );
 
     // Page range with ellipses
@@ -55,7 +55,7 @@
     visible.forEach((item) => {
       if (item === "...") {
         const dots = document.createElement("span");
-        dots.textContent = "…";
+        dots.textContent = "";
         dots.className = "px-2 text-orangeLuxe-light/60 font-mono";
         nav.appendChild(dots);
       } else {
@@ -65,9 +65,9 @@
       }
     });
 
-    // Next →
+    // Next 
     nav.appendChild(
-      makeBtn("Next →", "Next page", page === total, false, () => set(page + 1))
+      makeBtn("Next ", "Next page", page === total, false, () => set(page + 1))
     );
   }
 

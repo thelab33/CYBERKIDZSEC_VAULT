@@ -25,10 +25,10 @@
       id="featured-heading"
       class="text-4xl sm:text-5xl font-extrabold tracking-tight bg-gradient-to-r from-orangeLuxe via-pink-400 to-fuchsia-500 bg-clip-text text-transparent animate-pulse-glow"
     >
-      🧠 Featured Vault Reports
+       Featured Vault Reports
     </h2>
     <p class="max-w-2xl mx-auto text-sm sm:text-base font-mono text-orangeLuxe-light/80">
-      Hand-picked exploits, rare bugs & security artforms — straight from the archive.
+      Hand-picked exploits, rare bugs & security artforms  straight from the archive.
     </p>
   </header>
 
@@ -40,14 +40,14 @@
   >
     {% for r in reports %}
     <li>
-      <a href="{{ url_for('views.report_detail', slug=r.slug) }}"
+      <a class="hover-glow" class="hover-glow" class="hover-glow" href="{{ url_for('views.report_detail', slug=r.slug) }}"
          class="group block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-orangeLuxe rounded-xl"
       >
-        <article class="tiltCard h-full overflow-hidden p-0 rounded-xl border border-orangeLuxe/20
+        <a class="hover-glow" class="hover-glow" class="hover-glow"rticle class="tiltCard h-full overflow-hidden p-0 rounded-xl border border-orangeLuxe/20
                         bg-gradient-to-br from-cyberNightGlow to-zinc-900/90
                         shadow-md group-hover:shadow-orangeLuxe/40 transition-shadow duration-300"
                  data-aos="fade-up" data-aos-delay="{{ loop.index0 * 100 }}">
-          <div class="relative h-40">
+          <div data-testid="vault-section" data-testid="vault-section" class="relative h-40">
             <img
               src="{{ url_for('static', filename='images/og/' ~ r.slug ~ '.png') }}"
               alt="{{ r.title }}"
@@ -55,14 +55,14 @@
               class="w-full h-full object-cover shimmer group-hover:scale-105 transition-transform duration-500 ease-out"
             />
           </div>
-          <div class="p-6 space-y-2">
+          <div data-testid="vault-section" data-testid="vault-section" class="p-6 space-y-2">
             <h3 class="text-lg font-semibold text-orangeLuxe-light group-hover:text-orangeLuxe transition-colors">
               {{ r.title }}
             </h3>
             <p class="text-xs text-orangeLuxe-light/70 font-mono line-clamp-3">
               {{ r.summary }}
             </p>
-            <div class="flex flex-wrap gap-1.5 text-[10px] uppercase font-semibold">
+            <div data-testid="vault-section" data-testid="vault-section" class="flex flex-wrap gap-1.5 text-[10px] uppercase font-semibold">
               {% for tag in r.tags[:4] %}
               <span class="bg-orangeLuxe/10 text-orangeLuxe-light px-2 py-0.5 rounded-full">
                 #{{ tag }}

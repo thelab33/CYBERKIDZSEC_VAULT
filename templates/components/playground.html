@@ -1,37 +1,37 @@
 {% extends "base.html" %}
 
-{% block title %}Playground · CyberKidzSec{% endblock %}
+{% block title %}Playground  CyberKidzSec{% endblock %}
 
 {% block content %}
-<section id="playgroundSection" class="ckz-hero min-h-screen flex flex-col justify-center items-center text-center gap-8 px-6" data-aos="fade-up"">
+<section data-aos="fade-up" class="fade-in" data-aos="fade-up" class="fade-in" data-aos="fade-up" class="fade-in" data-aos="fade-up" x-data x-intersect="$el.classList.add('fade-in')" data-aos="fade-up" x-data x-intersect="$el.classList.add('fade-in')" x-data x-intersect="$el.classList.add('fade-in')" id="playgroundSection" class="ckz-hero min-h-screen flex flex-col justify-center items-center text-center gap-8 px-6" data-aos="fade-up"">
 
-  <!-- ✨ Title -->
+  <!--  Title -->
   <h1 class="ckz-hero-title animate-glow text-4xl sm:text-5xl font-extrabold">
-    Hacker Playground 👾
+    Hacker Playground 
   </h1>
 
   <p class="text-orange-300 font-mono text-sm">
     "Only the curious survive the Vault."
   </p>
 
-  <!-- 💻 Hacker Terminal -->
-  <div id="terminalBox" class="w-full max-w-2xl bg-black rounded-lg p-6 border border-orange-500 text-green-400 font-mono text-sm text-left shadow-xl overflow-y-auto h-[400px] relative">
-    <div id="terminalOutput" class="whitespace-pre-wrap"></div>
-    <div class="flex items-center">
+  <!--  Hacker Terminal -->
+  <div data-testid="vault-section" data-testid="vault-section" id="terminalBox" class="w-full max-w-2xl bg-black rounded-lg p-6 border border-orange-500 text-green-400 font-mono text-sm text-left shadow-xl overflow-y-auto h-[400px] relative">
+    <div data-testid="vault-section" data-testid="vault-section" id="terminalOutput" class="whitespace-pre-wrap"></div>
+    <div data-testid="vault-section" data-testid="vault-section" class="flex items-center">
       <span class="text-green-400">$</span>
-      <input id="terminalInput" type="text" autocomplete="off"
+      <input class="hover-glow" class="hover-glow" id="terminalInput" type="text" autocomplete="off"
              class="flex-1 bg-transparent outline-none text-green-400 pl-2 caret-green-400" />
     </div>
   </div>
 
-  <!-- 🛰️ Return Button -->
-  <a href="/" class="btn btn--secondary mt-10">
-    🛰️ Return to Base
+  <!--  Return Button -->
+  <a class="hover-glow" class="hover-glow" class="hover-glow" href="/" class="btn btn--secondary mt-10">
+     Return to Base
   </a>
 
 </section>
 
-<!-- 👻 Hidden Flag inside a comment -->
+<!--  Hidden Flag inside a comment -->
 <!-- flag{ghost-vault-activated} -->
 
 <script>
@@ -42,9 +42,9 @@
   const responses = {
     "help": "Available commands:\n- ls\n- cat flag.txt\n- decrypt\n- ghost\n- clear",
     "ls": "flag.txt  vault.log  hack.exe  access_key.pub",
-    "cat flag.txt": "🧠 FLAG{ghost-vault-activated}",
-    "decrypt": "Decrypting vault records...\nAccess Level: 🧠 OPERATOR",
-    "ghost": "👻 GHOST MODE ACTIVATED!",
+    "cat flag.txt": " FLAG{ghost-vault-activated}",
+    "decrypt": "Decrypting vault records...\nAccess Level:  OPERATOR",
+    "ghost": " GHOST MODE ACTIVATED!",
     "clear": "",
     "default": "Command not recognized. Type 'help'."
   };
@@ -70,7 +70,7 @@
 
   function activateGhostMode() {
     document.documentElement.classList.add("ghost-mode");
-    print("🧪 Neon Hacker Mode Engaged. Welcome, Operative.");
+    print(" Neon Hacker Mode Engaged. Welcome, Operative.");
     localStorage.setItem("ghost", "1");
   }
 
@@ -80,7 +80,7 @@
 </script>
 
 <style>
-/* 🧠 Blinking Hacker Cursor */
+/*  Blinking Hacker Cursor */
 #terminalInput::placeholder {
   color: green;
 }

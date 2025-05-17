@@ -1,0 +1,128 @@
+
+/* Starforge Motion CSS Enhancements */
+
+/* Glow on hover/focus */
+.hover-glow {
+  transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+.hover-glow:hover, .hover-glow:focus-visible {
+  box-shadow: 0 0 12px var(--orangeLuxe);
+  transform: scale(1.07);
+}
+
+/* Fade-in animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.fade-in.appear {
+  opacity: 1;
+  transform: none;
+}
+
+/* Pulse animation for alerts and status strip */
+.alert-pulse {
+  animation: pulse 1s infinite alternate;
+}
+.status-strip {
+  animation: pulse 1.4s ease-in-out infinite alternate;
+}
+@keyframes pulse {
+  from { opacity: 1; }
+  to { opacity: 0.7; }
+}
+
+/* HUD blinking live dot */
+.hud-blink {
+  color: var(--orangeLuxe);
+  animation: hud-blink 1.5s infinite;
+  font-weight: bold;
+  user-select: none;
+}
+@keyframes hud-blink {
+  0%, 50%, 100% { opacity: 1; }
+  25%, 75% { opacity: 0.3; }
+}
+
+/* Tooltip on buttons */
+button[data-tooltip]:hover::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 120%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--orangeLuxe);
+  color: #000;
+  padding: 0.25em 0.5em;
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0.9;
+  z-index: 9999;
+}
+
+/* Starforge Motion CSS Enhancements */
+
+/* Glow on hover/focus */
+.hover-glow {
+  transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+.hover-glow:hover, .hover-glow:focus-visible {
+  box-shadow: 0 0 12px var(--orangeLuxe);
+  transform: scale(1.07);
+}
+
+/* Fade-in animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.fade-in.appear {
+  opacity: 1;
+  transform: none;
+}
+
+/* Pulse animation for alerts and status strip */
+.alert-pulse {
+  animation: pulse 1s infinite alternate;
+}
+.status-strip {
+  animation: pulse 1.4s ease-in-out infinite alternate;
+}
+@keyframes pulse {
+  from { opacity: 1; }
+  to { opacity: 0.7; }
+}
+
+/* HUD blinking live dot */
+.hud-blink {
+  color: var(--orangeLuxe);
+  animation: hud-blink 1.5s infinite;
+  font-weight: bold;
+  user-select: none;
+}
+@keyframes hud-blink {
+  0%, 50%, 100% { opacity: 1; }
+  25%, 75% { opacity: 0.3; }
+}
+
+/* Tooltip on buttons */
+button[data-tooltip]:hover::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 120%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--orangeLuxe);
+  color: #000;
+  padding: 0.25em 0.5em;
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0.9;
+  z-index: 9999;
+}

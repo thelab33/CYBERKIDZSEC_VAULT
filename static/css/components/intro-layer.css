@@ -1,0 +1,9 @@
+/* css/components/intro-layer.css */
+#intro-layer {
+  animation: fadeUp 0.8s ease-out;
+}
+@keyframes fadeUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+

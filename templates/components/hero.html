@@ -1,19 +1,19 @@
 {% set hero = {
   'typer_phrases': [
-    '🔐 Zero-Day Archive Updating…',
-    '💀 CYBERKIDZSEC VAULT',
-    '“Ghosted but not gone.”'
+    ' Zero-Day Archive Updating',
+    ' CYBERKIDZSEC VAULT',
+    'Ghosted but not gone.'
   ],
   'heading': 'CYBERKIDZSEC VAULT',
-  'subheading': '“Ghosted but not gone.”',
+  'subheading': 'Ghosted but not gone.',
   'stats': [
-    {'icon':'🛰️','label':'Operative Title','value': operative_title},
-    {'icon':'⬆️','label':'Level','value': operative_level},
-    {'icon':'🛡️','label':'Vault Stability','value': vault_xp_percentage ~ '%'}
+    {'icon':'','label':'Operative Title','value': operative_title},
+    {'icon':'','label':'Level','value': operative_level},
+    {'icon':'','label':'Vault Stability','value': vault_xp_percentage ~ '%'}
   ],
   'ctas': [
-    {'type':'button','id':'searchBtn','label':'⌘ Cmd + K — Search','classes':'btn--outline'},
-    {'type':'link','href':'#playground','label':'🎮 Hack the Vault','classes':'btn--solid'}
+    {'type':'button','id':'searchBtn','label':' Cmd + K  Search','classes':'btn--outline'},
+    {'type':'link','href':'#playground','label':' Hack the Vault','classes':'btn--solid'}
   ]
 } %}
 
@@ -27,46 +27,46 @@
 >
   <canvas id="heroStarfield" class="absolute inset-0 w-full h-full z-0 pointer-events-none"></canvas>
 
-  <div id="heroParallax" class="absolute inset-0 z-10 will-change-transform">
-    <div class="orbit small animate-spin-slow"></div>
-    <div class="orbit med animate-spin-slower"></div>
-    <div class="orbit large animate-spin-slowest"></div>
+  <div data-testid="vault-section" data-testid="vault-section" id="heroParallax" class="absolute inset-0 z-10 will-change-transform">
+    <div data-testid="vault-section" data-testid="vault-section" class="orbit small animate-spin-slow"></div>
+    <div data-testid="vault-section" data-testid="vault-section" class="orbit med animate-spin-slower"></div>
+    <div data-testid="vault-section" data-testid="vault-section" class="orbit large animate-spin-slowest"></div>
   </div>
 
-  <div aria-hidden="true" class="absolute inset-0 z-20 pointer-events-none">
-    <div class="absolute inset-0 mix-blend-overlay animate-warpBlur"></div>
-    <div class="absolute inset-0 bg-[url('/static/images/scanlines.svg')] bg-repeat opacity-5 animate-shimmer"></div>
-    <div id="heroHalo" class="absolute inset-0 blur-2xl opacity-0 transition-opacity duration-1000 ease-out"></div>
-    <div id="quantumGrid" class="absolute inset-0 bg-[url('/static/images/grid.svg')] opacity-5 mix-blend-color-dodge animate-pulse"></div>
+  <div data-testid="vault-section" data-testid="vault-section" aria-hidden="true" class="absolute inset-0 z-20 pointer-events-none">
+    <div data-testid="vault-section" data-testid="vault-section" class="absolute inset-0 mix-blend-overlay animate-warpBlur"></div>
+    <div data-testid="vault-section" data-testid="vault-section" class="absolute inset-0 bg-[url('/static/images/scanlines.svg')] bg-repeat opacity-5 animate-shimmer"></div>
+    <div data-testid="vault-section" data-testid="vault-section" id="heroHalo" class="absolute inset-0 blur-2xl opacity-0 transition-opacity duration-1000 ease-out"></div>
+    <div data-testid="vault-section" data-testid="vault-section" id="quantumGrid" class="absolute inset-0 bg-[url('/static/images/grid.svg')] opacity-5 mix-blend-color-dodge animate-pulse"></div>
   </div>
 
-  <div class="relative z-30 max-w-4xl space-y-8 text-orangeLuxe-light drop-shadow-[0_0_2px_orange]">
+  <div data-testid="vault-section" data-testid="vault-section" class="relative z-30 max-w-4xl space-y-8 text-orangeLuxe-light drop-shadow-[0_0_2px_orange]">
     <p id="heroTyper" class="text-sm sm:text-base font-mono uppercase tracking-widest text-emeraldLuxe" aria-live="polite"></p>
 
     <h1 id="hero-heading" class="text-6xl sm:text-7xl md:text-8xl font-black bg-clip-text text-transparent bg-gradient-to-r from-orange-400 via-yellow-500 to-orange-300 animate-pulse-glow glitch">
-      <span class="hero-skull inline-block align-middle text-[1.2em] px-1">💀</span> {{ hero.heading }}
+      <span class="hero-skull inline-block align-middle text-[1.2em] px-1"></span> {{ hero.heading }}
     </h1>
 
     <p id="hero-subheading" class="text-lg sm:text-xl font-mono text-white/80">{{ hero.subheading }}</p>
 
-    <div class="flex flex-col sm:flex-row sm:justify-center sm:space-x-6 space-y-4 sm:space-y-0" id="heroStats">
+    <div data-testid="vault-section" data-testid="vault-section" class="flex flex-col sm:flex-row sm:justify-center sm:space-x-6 space-y-4 sm:space-y-0" id="heroStats">
       {% for stat in hero.stats %}
-      <div class="flex items-center space-x-2 stat-countup" data-value="{{ stat.value | replace('%', '') }}">
+      <div data-testid="vault-section" data-testid="vault-section" class="flex items-center space-x-2 stat-countup" data-value="{{ stat.value | replace('%', '') }}">
         <span class="text-emeraldLuxe animate-pulse-glow">{{ stat.icon }}</span>
-        <div class="text-xs text-left">
-          <div class="font-mono uppercase">{{ stat.label }}</div>
-          <div class="font-bold"><span class="countup-target">{{ stat.value }}</span></div>
+        <div data-testid="vault-section" data-testid="vault-section" class="text-xs text-left">
+          <div data-testid="vault-section" data-testid="vault-section" class="font-mono uppercase">{{ stat.label }}</div>
+          <div data-testid="vault-section" data-testid="vault-section" class="font-bold"><span class="countup-target">{{ stat.value }}</span></div>
         </div>
       </div>
       {% endfor %}
     </div>
 
-    <div class="mt-6 flex flex-wrap justify-center gap-6">
+    <div data-testid="vault-section" data-testid="vault-section" class="mt-6 flex flex-wrap justify-center gap-6">
       {% for cta in hero.ctas %}
         {% if cta.type == 'button' %}
-        <button id="{{ cta.id }}" class="btn {{ cta.classes }} px-8 py-3 rounded-lg backdrop-blur-sm transition hover:shadow-lg">{{ cta.label }}</button>
+        <button data-tooltip="Click Action" data-tooltip="Click Action" class="hover-glow" title="Command Vault " class="hover-glow" data-hotkey="Enter" class="hover-glow" data-tooltip="Click Action" data-hotkey="Enter" class="hover-glow" data-tooltip="Click Action" id="{{ cta.id }}" class="btn {{ cta.classes }} px-8 py-3 rounded-lg backdrop-blur-sm transition hover:shadow-lg">{{ cta.label }}</button>
         {% else %}
-        <a href="{{ cta.href }}" class="btn {{ cta.classes }} px-8 py-3 rounded-lg backdrop-blur-sm transition hover:shadow-lg">{{ cta.label }}</a>
+        <a class="hover-glow" class="hover-glow" class="hover-glow" href="{{ cta.href }}" class="btn {{ cta.classes }} px-8 py-3 rounded-lg backdrop-blur-sm transition hover:shadow-lg">{{ cta.label }}</a>
         {% endif %}
       {% endfor %}
     </div>

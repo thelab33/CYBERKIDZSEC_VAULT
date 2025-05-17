@@ -1,43 +1,43 @@
-{# templates/components/console.html — Forgemaster Warp Loader 🌌 #}
+{# templates/components/console.html  Forgemaster Warp Loader  #}
 
-<!-- 🖥️ Vault Loader Overlay -->
-<div id="vault-loader"
+<!--  Vault Loader Overlay -->
+<div data-testid="vault-section" data-testid="vault-section" id="vault-loader"
      class="fixed inset-0 z-50 flex flex-col items-center justify-center bg-gradient-to-b
             from-black via-zinc-900 to-zinc-950 backdrop-blur-md transition-opacity duration-700 opacity-100"
      role="status"
      aria-label="Vault loading screen"
      aria-live="assertive">
-  <div class="text-center space-y-5 max-w-md">
+  <div data-testid="vault-section" data-testid="vault-section" class="text-center space-y-5 max-w-md">
     <p id="vaultStatus"
        class="text-xl sm:text-2xl font-mono text-orange-400 animate-pulse flex flex-col sm:flex-row items-center justify-center gap-2">
-      🔐 <span class="typewriter"></span>
-      <span class="tracking-widest hidden sm:inline"> · WARP MODE ENGAGED</span>
+       <span class="typewriter"></span>
+      <span class="tracking-widest hidden sm:inline">  WARP MODE ENGAGED</span>
     </p>
 
     <!-- Vault Loader Dots -->
-    <div class="loader-dots flex gap-2 justify-center">
+    <div data-testid="vault-section" data-testid="vault-section" class="loader-dots flex gap-2 justify-center">
       <span class="dot bg-orange-400"></span>
       <span class="dot bg-yellow-400"></span>
       <span class="dot bg-emerald-400"></span>
     </div>
 
     <!-- Manual Close -->
-    <button id="loaderClose"
+    <button data-tooltip="Click Action" data-tooltip="Click Action" class="hover-glow" title="Command Vault " class="hover-glow" data-hotkey="Enter" class="hover-glow" data-tooltip="Click Action" data-hotkey="Enter" class="hover-glow" data-tooltip="Click Action" id="loaderClose"
             class="mt-6 text-xl text-orange-300 hover:text-white focus:outline-none
                    focus:ring-2 focus:ring-orange-500 rounded transition"
             aria-label="Close warp loader">
-      ✖ Close Loader
+       Close Loader
     </button>
   </div>
 </div>
 
-<!-- 🔗 Skip Links for Accessibility -->
-<div class="sr-only focus-within:not-sr-only absolute top-0 left-0 bg-zinc-900 text-orange-300 px-4 py-2 rounded-b shadow-md z-[9999]">
-  <a href="#main" class="underline focus:outline-none focus:ring-2 focus:ring-orange-500 mr-4">Skip to Main</a>
-  <a href="#footer" class="underline focus:outline-none focus:ring-2 focus:ring-orange-500">Skip to Footer</a>
+<!--  Skip Links for Accessibility -->
+<div data-testid="vault-section" data-testid="vault-section" class="sr-only focus-within:not-sr-only absolute top-0 left-0 bg-zinc-900 text-orange-300 px-4 py-2 rounded-b shadow-md z-[9999]">
+  <a class="hover-glow" class="hover-glow" class="hover-glow" href="#main" class="underline focus:outline-none focus:ring-2 focus:ring-orange-500 mr-4">Skip to Main</a>
+  <a class="hover-glow" class="hover-glow" class="hover-glow" href="#footer" class="underline focus:outline-none focus:ring-2 focus:ring-orange-500">Skip to Footer</a>
 </div>
 
-<!-- 🌠 Loader Styles -->
+<!--  Loader Styles -->
 <style>
 .loader-dots .dot {
   width: 12px;
@@ -62,7 +62,7 @@
 }
 </style>
 
-<!-- 🧠 Smart Loader Logic -->
+<!--  Smart Loader Logic -->
 <script>
 document.addEventListener("DOMContentLoaded", () => {
   const loader = document.getElementById("vault-loader");
@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", () => {
     "Decrypting Vault OS Kernel...",
     "Bootstrapping Memory Nodes...",
     "Finalizing Operative Overlay...",
-    "✓ Vault Access Granted"
+    " Vault Access Granted"
   ];
 
   // Prevent repeated loads in session

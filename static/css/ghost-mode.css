@@ -1,8 +1,8 @@
-/* ───────────────────────────────────────────────────────────────
-   👻 Hacker Vault Skin: Ghost Mode — STARFORGE Edition
-────────────────────────────────────────────────────────────────── */
+/* 
+    Hacker Vault Skin: Ghost Mode  STARFORGE Edition
+ */
 
-/* 🧠 Global Ghost Base */
+/*  Global Ghost Base */
 body[data-ghost-mode="true"] {
   background-color: #000;
   color: #0f0;
@@ -11,7 +11,7 @@ body[data-ghost-mode="true"] {
   transition: background-color 0.5s ease, color 0.3s ease;
 }
 
-/* 🧩 Greened-Out Interactive Elements */
+/*  Greened-Out Interactive Elements */
 [data-ghost-mode="true"] a,
 [data-ghost-mode="true"] button,
 [data-ghost-mode="true"] .btn,
@@ -24,7 +24,7 @@ body[data-ghost-mode="true"] {
   text-shadow: 0 0 4px #0f0a, 0 0 6px #0f07;
 }
 
-/* 🛰️ Terminal Shell UI Panels */
+/*  Terminal Shell UI Panels */
 [data-ghost-mode="true"] .vault-status,
 [data-ghost-mode="true"] .hud-toolbar,
 [data-ghost-mode="true"] .footer,
@@ -41,7 +41,7 @@ body[data-ghost-mode="true"] {
   transition: all 0.4s ease-in-out;
 }
 
-/* 🔡 Typewriter Cursor */
+/*  Typewriter Cursor */
 [data-ghost-mode="true"] #heroTyper::after {
   content: '|';
   animation: blinkGhost 1s infinite steps(2, start);
@@ -49,7 +49,7 @@ body[data-ghost-mode="true"] {
   margin-left: 4px;
 }
 
-/* 📺 Matrix Scanline Overlay */
+/*  Matrix Scanline Overlay */
 [data-ghost-mode="true"]::before {
   content: '';
   position: fixed;
@@ -67,7 +67,7 @@ body[data-ghost-mode="true"] {
   mix-blend-mode: overlay;
 }
 
-/* ✨ Ghost Blinker + Scanlines Animations */
+/*  Ghost Blinker + Scanlines Animations */
 @keyframes blinkGhost {
   0%, 100% { opacity: 1; }
   50%      { opacity: 0; }

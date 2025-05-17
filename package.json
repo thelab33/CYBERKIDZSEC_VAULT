@@ -2,7 +2,7 @@
   "name": "cyberkidzsec-site-flask",
   "version": "1.0.0",
   "description": "Flask-powered vault for CyberKidzSec zero-day reports.",
-  "author": "Chris “CyberKidzSec” <hi@cyberkidzsec.com>",
+  "author": "Chris CyberKidzSec <hi@cyberkidzsec.com>",
   "license": "MIT",
   "private": true,
   "repository": {
@@ -52,6 +52,7 @@
     "postcss": "^8.5.3",
     "rimraf": "^5.0.5",
     "stylelint": "^16.19.1",
+    "stylelint-config-recommended": "^16.0.0",
     "stylelint-config-standard": "^38.0.0",
     "tailwindcss": "^3.4.4",
     "tailwindcss-animatecss": "^3.0.5"
@@ -64,4 +65,3 @@
     "last 2 Safari versions"
   ]
 }
-

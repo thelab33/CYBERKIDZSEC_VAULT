@@ -5,14 +5,14 @@
   role="navigation"
   aria-label="Main site navigation"
 >
-  <div class="max-w-7xl mx-auto flex items-center justify-between">
+  <div data-testid="vault-section" data-testid="vault-section" class="max-w-7xl mx-auto flex items-center justify-between">
     <!-- Logo -->
-    <a href="/" class="flex items-center gap-2 text-orangeLuxe font-black text-xl tracking-wide hover:scale-105 transition-transform">
-      💀 CYBERKIDZSEC
+    <a class="hover-glow" class="hover-glow" class="hover-glow" href="/" class="flex items-center gap-2 text-orangeLuxe font-black text-xl tracking-wide hover:scale-105 transition-transform">
+       CYBERKIDZSEC
     </a>
 
     <!-- Desktop Nav -->
-    <div class="hidden md:flex space-x-6 text-sm font-semibold">
+    <div data-testid="vault-section" data-testid="vault-section" class="hidden md:flex space-x-6 text-sm font-semibold">
       {% set nav_items = [
         ("Home", "/"),
         ("Vault", "/reports"),
@@ -20,7 +20,7 @@
         ("Academy", "/academy")
       ] %}
       {% for label, href in nav_items %}
-        <a
+        <a class="hover-glow" class="hover-glow" class="hover-glow"
           href="{{ href }}"
           class="relative group transition-colors text-orange-300 hover:text-orangeLuxe"
           aria-current="{{ 'page' if request.path == href else '' }}"
@@ -32,7 +32,7 @@
     </div>
 
     <!-- Mobile Toggle -->
-    <button
+    <button data-tooltip="Click Action" data-tooltip="Click Action" class="hover-glow" title="Command Vault " class="hover-glow" data-hotkey="Enter" class="hover-glow" data-tooltip="Click Action" data-hotkey="Enter" class="hover-glow"
       id="menuToggle"
       class="md:hidden p-2 text-orange-400 focus:outline-none focus:ring-2 focus:ring-orangeLuxe rounded"
       aria-label="Open mobile menu"
@@ -47,7 +47,7 @@
     class="md:hidden mt-4 hidden flex-col space-y-4 px-2 text-orange-300"
   >
     {% for label, href in nav_items %}
-      <a
+      <a class="hover-glow" class="hover-glow" class="hover-glow"
         href="{{ href }}"
         class="block py-2 border-b border-orangeLuxe/20 hover:text-orangeLuxe transition"
       >

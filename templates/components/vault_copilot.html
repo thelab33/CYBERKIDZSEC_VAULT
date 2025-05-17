@@ -1,24 +1,24 @@
-<!-- 🤖 vault_copilot.html — Copilot Panel Forgemaster Edition -->
-<div id="copilot" class="fixed bottom-6 right-6 z-50 bg-zinc-900/90 backdrop-blur-lg border border-orangeLuxe px-4 py-4 rounded-2xl shadow-2xl w-80 hidden" role="dialog" aria-modal="true">
-  <h3 class="font-mono text-orangeLuxe-light text-sm mb-3">🤖 Vault Copilot</h3>
+<!--  vault_copilot.html  Copilot Panel Forgemaster Edition -->
+<div data-testid="vault-section" data-testid="vault-section" id="copilot" class="fixed bottom-6 right-6 z-50 bg-zinc-900/90 backdrop-blur-lg border border-orangeLuxe px-4 py-4 rounded-2xl shadow-2xl w-80 hidden" role="dialog" aria-modal="true">
+  <h3 class="font-mono text-orangeLuxe-light text-sm mb-3"> Vault Copilot</h3>
 
-  <textarea id="copilotInput" placeholder="Ask the Vault…" rows="3"
+  <textarea id="copilotInput" placeholder="Ask the Vault" rows="3"
             class="w-full resize-none p-2 rounded bg-zinc-800 text-white placeholder-zinc-400 font-mono text-sm focus:outline-none focus:ring-2 focus:ring-orangeLuxe"
             aria-label="Copilot prompt input"></textarea>
 
-  <div class="mt-2 flex items-center justify-between gap-2">
-    <button id="copilotSubmit" class="btn btn--solid flex-1 py-2 text-sm">Submit</button>
-    <button id="copilotClear" class="btn btn--outline px-3 py-2 text-xs" title="Clear">✖</button>
+  <div data-testid="vault-section" data-testid="vault-section" class="mt-2 flex items-center justify-between gap-2">
+    <button data-tooltip="Click Action" data-tooltip="Click Action" class="hover-glow" title="Command Vault " class="hover-glow" data-hotkey="Enter" class="hover-glow" data-tooltip="Click Action" data-hotkey="Enter" class="hover-glow" data-tooltip="Click Action" id="copilotSubmit" class="btn btn--solid flex-1 py-2 text-sm">Submit</button>
+    <button data-tooltip="Click Action" data-tooltip="Click Action" class="hover-glow" title="Command Vault " class="hover-glow" data-hotkey="Enter" class="hover-glow" data-tooltip="Click Action" data-hotkey="Enter" class="hover-glow" data-tooltip="Click Action" id="copilotClear" class="btn btn--outline px-3 py-2 text-xs" title="Clear"></button>
   </div>
 
   <pre id="copilotResponse" class="mt-3 text-xs text-emeraldLuxe font-mono whitespace-pre-wrap max-h-48 overflow-y-auto custom-scrollbar" aria-live="polite"></pre>
 </div>
 
-<!-- 🧠 Copilot Toggle Button -->
-<button id="copilotToggle"
+<!--  Copilot Toggle Button -->
+<button data-tooltip="Click Action" data-tooltip="Click Action" class="hover-glow" title="Command Vault " class="hover-glow" data-hotkey="Enter" class="hover-glow" data-tooltip="Click Action" data-hotkey="Enter" class="hover-glow" data-tooltip="Click Action" id="copilotToggle"
         class="fixed bottom-6 right-6 z-40 btn btn--outline rounded-full p-3 shadow-xl hover:scale-105 transition-transform"
         aria-label="Toggle Vault Copilot">
-  🧠
+  
 </button>
 
 <script>
@@ -43,7 +43,7 @@
     const prompt = input.value.trim();
     if (!prompt) return input.focus();
 
-    output.textContent = "🤔 Thinking...";
+    output.textContent = " Thinking...";
     submit.disabled = true;
 
     controller?.abort(); // cancel previous
@@ -64,10 +64,10 @@
       if (data.content) {
         simulateTyping(data.content, output);
       } else {
-        output.textContent = "⚠️ No response received.";
+        output.textContent = " No response received.";
       }
     } catch (err) {
-      output.textContent = "❌ Error: Copilot offline or query failed.";
+      output.textContent = " Error: Copilot offline or query failed.";
     } finally {
       submit.disabled = false;
     }
@@ -83,7 +83,7 @@
     }, delay);
   }
 
-  // ⌨️ Keyboard shortcut (Ctrl+I)
+  //  Keyboard shortcut (Ctrl+I)
   document.addEventListener("keydown", e => {
     if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "i") {
       e.preventDefault();

@@ -1,6 +1,6 @@
 <!-- Inside templates/components/hud_toolbar.html -->
 
-<div id="hudToolbar"
+<div data-testid="vault-section" data-testid="vault-section" id="hudToolbar"
      class="fixed bottom-6 right-6 z-[9998] w-72 rounded-2xl border border-orangeLuxe/25
             bg-gradient-to-br from-cyberNight via-cyberNight-glow to-cyberNight-phantom
             backdrop-blur-md shadow-[0_0_40px_rgba(249,115,22,0.25)]
@@ -8,33 +8,33 @@
      role="region" aria-label="HUD Dashboard" tabindex="0">
 
   <!-- Toolbar Header -->
-  <button id="hudToggle"
+  <button data-tooltip="Click Action" data-tooltip="Click Action" class="hover-glow" title="Command Vault " class="hover-glow" data-hotkey="Enter" class="hover-glow" data-tooltip="Click Action" data-hotkey="Enter" class="hover-glow" data-tooltip="Click Action" id="hudToggle"
           class="flex w-full items-center justify-between px-4 py-3 text-xs font-mono text-orangeLuxe-light
                  hover:bg-zinc-800/20 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orangeLuxe
                  rounded-t-2xl transition-colors duration-200"
           aria-expanded="true">
-    <span class="tracking-widest">💻 HUD STATUS</span>
+    <span class="tracking-widest"> HUD STATUS</span>
     <i id="hudChevron" class="fas fa-chevron-down transition-transform duration-300"></i>
   </button>
 
   <!-- Toolbar Body -->
-  <div id="hudBody" class="px-5 py-4 text-xs font-mono text-orangeLuxe-light/90 space-y-3">
-    <div class="flex justify-between">
-      👻 Ghost Mode: <span id="hudGhost" class="font-semibold">Loading…</span>
+  <div data-testid="vault-section" data-testid="vault-section" id="hudBody" class="px-5 py-4 text-xs font-mono text-orangeLuxe-light/90 space-y-3">
+    <div data-testid="vault-section" data-testid="vault-section" class="flex justify-between">
+       Ghost Mode: <span id="hudGhost" class="font-semibold">Loading</span>
     </div>
-    <div class="flex justify-between">
-      🔓 Admin: <span id="hudAdmin" class="font-semibold">Loading…</span>
+    <div data-testid="vault-section" data-testid="vault-section" class="flex justify-between">
+       Admin: <span id="hudAdmin" class="font-semibold">Loading</span>
     </div>
-    <div class="flex justify-between">
-      🛰️ Vault Feed: <span id="hudFeed" class="font-semibold">CONNECTING…</span>
+    <div data-testid="vault-section" data-testid="vault-section" class="flex justify-between">
+       Vault Feed: <span id="hudFeed" class="font-semibold">CONNECTING</span>
     </div>
 
     <hr class="border-orangeLuxe/20 my-3">
 
-    <p id="hudLog" class="min-h-[1.3rem] animate-pulse">⏳ Initializing HUD...</p>
+    <p id="hudLog" class="min-h-[1.3rem] animate-pulse"> Initializing HUD...</p>
 
-    <div class="w-full bg-zinc-700 rounded-full overflow-hidden h-2 mt-3">
-      <div id="hudProgress"
+    <div data-testid="vault-section" data-testid="vault-section" class="w-full bg-zinc-700 rounded-full overflow-hidden h-2 mt-3">
+      <div data-testid="vault-section" data-testid="vault-section" id="hudProgress"
            class="h-full bg-gradient-to-r from-orange-400 via-yellow-400 to-emerald-400 transition-all duration-700 ease-out"
            style="width: {{ vault_xp_percentage }}%">
       </div>
@@ -43,8 +43,8 @@
       {{ vault_xp_percentage }}% Vault Stability
     </p>
 
-    <!-- 🛰️ Circular Scroll Tracker -->
-    <div class="relative mx-auto w-20 h-20 mt-6" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" title="Scroll Progress">
+    <!--  Circular Scroll Tracker -->
+    <div data-testid="vault-section" data-testid="vault-section" class="relative mx-auto w-20 h-20 mt-6" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" title="Scroll Progress">
       <svg class="w-full h-full" viewBox="0 0 36 36">
         <path class="text-zinc-700" d="M18 2.0845
               a 15.9155 15.9155 0 0 1 0 31.831
@@ -63,7 +63,7 @@
           </linearGradient>
         </defs>
       </svg>
-      <div id="hudScrollPercent"
+      <div data-testid="vault-section" data-testid="vault-section" id="hudScrollPercent"
            class="absolute inset-0 flex items-center justify-center text-[10px] font-bold text-orangeLuxe-light">
         0%
       </div>
@@ -115,9 +115,9 @@
     updateCollapse();
   });
 
-  setTimeout(() => logEl.textContent = "🧠 Running memory check...", 1000);
+  setTimeout(() => logEl.textContent = " Running memory check...", 1000);
   setTimeout(() => {
-    logEl.textContent = "✅ Vault Systems Verified";
+    logEl.textContent = " Vault Systems Verified";
     const ghost = localStorage.getItem("ghost") === "true";
     const admin = localStorage.getItem("admin") === "true";
 

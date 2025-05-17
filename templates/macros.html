@@ -1,8 +1,8 @@
-{# templates/macros.html — Forgemaster Edition 🌌 #}
+{# templates/macros.html  Forgemaster Edition  #}
 
-{# ░▒▓ 🔲 Reusable Card Macro ▓▒░ #}
+{#   Reusable Card Macro  #}
 {% macro card(title, url, footer="", image=None, alt="", tags=[], badge=None) %}
-<article class="card flex flex-col h-full overflow-hidden rounded-2xl border border-orangeLuxe/20 shadow hover:shadow-orangeLuxe/40 transition-all group" role="article" tabindex="0">
+<a class="hover-glow" class="hover-glow" class="hover-glow"rticle class="card flex flex-col h-full overflow-hidden rounded-2xl border border-orangeLuxe/20 shadow hover:shadow-orangeLuxe/40 transition-all group" role="article" tabindex="0">
   {% if image %}
     <figure class="relative h-40 w-full overflow-hidden">
       <img src="{{ image }}" alt="{{ alt }}" class="w-full h-full object-cover group-hover:scale-[1.05] transition-transform duration-500 ease-out"/>
@@ -11,12 +11,12 @@
       {% endif %}
     </figure>
   {% endif %}
-  <div class="p-6 flex-1 flex flex-col justify-between">
+  <div data-testid="vault-section" data-testid="vault-section" class="p-6 flex-1 flex flex-col justify-between">
     <h3 class="text-lg font-bold mb-2 leading-tight tracking-tight text-orangeLuxe-light group-hover:text-orangeLuxe">
-      <a href="{{ url }}" class="hover:underline focus:outline-none focus:ring-2 focus:ring-orangeLuxe">{{ title }}</a>
+      <a class="hover-glow" class="hover-glow" class="hover-glow" href="{{ url }}" class="hover:underline focus:outline-none focus:ring-2 focus:ring-orangeLuxe">{{ title }}</a>
     </h3>
     {% if tags %}
-      <div class="flex flex-wrap gap-1 mb-2">
+      <div data-testid="vault-section" data-testid="vault-section" class="flex flex-wrap gap-1 mb-2">
         {% for tag in tags %}
           <span class="bg-orangeLuxe/10 text-orangeLuxe-light text-[11px] px-2 py-0.5 rounded-full uppercase font-mono tracking-wide">{{ tag }}</span>
         {% endfor %}
@@ -29,9 +29,9 @@
 </article>
 {% endmacro %}
 
-{# ░▒▓ 📊 Reusable Data Table ▓▒░ #}
+{#   Reusable Data Table  #}
 {% macro data_table(headers, rows, caption="Data Table", zebra=True) %}
-<div class="overflow-x-auto rounded-lg shadow border border-orangeLuxe/10">
+<div data-testid="vault-section" data-testid="vault-section" class="overflow-x-auto rounded-lg shadow border border-orangeLuxe/10">
   <table class="min-w-full text-sm text-left text-gray-900 dark:text-zinc-100 font-mono">
     {% if caption %}
       <caption class="sr-only">{{ caption }}</caption>

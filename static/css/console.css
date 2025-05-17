@@ -1,6 +1,6 @@
 /* static/css/console.css */
 
-/* ─── Vault Loader Overlay ─── */
+/*  Vault Loader Overlay  */
 #vault-loader {
   position: fixed;
   inset: 0;
@@ -37,7 +37,7 @@
   color: var(--color-zinc-100);
 }
 
-/* ─── Connection Status Badge ─── */
+/*  Connection Status Badge  */
 #connectionStatus {
   position: fixed;
   bottom: 1rem;
@@ -52,7 +52,7 @@
   z-index: 9000;
 }
 
-/* ─── Terminal-Scan Interface ─── */
+/*  Terminal-Scan Interface  */
 #terminal-scan {
   background: rgba(0, 0, 0, 0.6);
   padding: 1.5rem;
@@ -94,7 +94,7 @@
   background-color: #2fa77a;
 }
 
-/* ─── HUD Status Panel ─── */
+/*  HUD Status Panel  */
 #hud-status {
   position: fixed;
   bottom: 1rem;
@@ -108,7 +108,7 @@
   z-index: 9000;
 }
 
-/* ─── Keyframes ─── */
+/*  Keyframes  */
 @keyframes pulseWarp {
   0%, 100% { transform: scale(1); opacity: 1; }
   50% { transform: scale(1.05) translateX(2px); opacity: 0.8; }

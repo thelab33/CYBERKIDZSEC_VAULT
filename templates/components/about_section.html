@@ -1,13 +1,13 @@
 {# templates/components/about_section.html #}
-<section class="section-container py-20 space-y-12 animate-fade-in" data-aos="fade-up">
+<section data-aos="fade-up" class="fade-in" data-aos="fade-up" class="fade-in" data-aos="fade-up" class="fade-in" data-aos="fade-up" x-data x-intersect="$el.classList.add('fade-in')" data-aos="fade-up" x-data x-intersect="$el.classList.add('fade-in')" x-data x-intersect="$el.classList.add('fade-in')" class="section-container py-20 space-y-12 animate-fade-in" data-aos="fade-up">
   <header class="text-center space-y-4">
     <h1 class="hero-title">About CyberKidzSec</h1>
     <p class="text-lg text-orangeLuxe-light/80 max-w-2xl mx-auto">
-      A guardian’s vault of exploits, reflections, and technical storytelling.
+      A guardians vault of exploits, reflections, and technical storytelling.
     </p>
   </header>
 
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+  <div data-testid="vault-section" data-testid="vault-section" class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
     <figure class="w-full flex justify-center" data-aos="zoom-in" data-aos-delay="200">
       <img src="{{ url_for('static', filename='images/avatars/operative.jpg') }}"
            alt="Operative at keyboard"
@@ -15,15 +15,15 @@
       <figcaption class="sr-only">Operative at work</figcaption>
     </figure>
 
-    <div class="prose dark:prose-invert space-y-6" data-aos="fade-left" data-aos-delay="400">
-      <p>I’m a bug bounty hunter, Certified Network Engineer, and currently interning as a Vulnerability Management analyst at GuidePoint Security.</p>
-      <p>This portfolio showcases my security research — with raw reports, reflections, and redacted HackerOne data.</p>
-      <a href="{{ url_for('bug_vault.index') }}" class="btn btn--primary hover-lift">🛰️ Explore the Vault</a>
+    <div data-testid="vault-section" data-testid="vault-section" class="prose dark:prose-invert space-y-6" data-aos="fade-left" data-aos-delay="400">
+      <p>Im a bug bounty hunter, Certified Network Engineer, and currently interning as a Vulnerability Management analyst at GuidePoint Security.</p>
+      <p>This portfolio showcases my security research  with raw reports, reflections, and redacted HackerOne data.</p>
+      <a class="hover-glow" class="hover-glow" class="hover-glow" href="{{ url_for('bug_vault.index') }}" class="btn btn--primary hover-lift"> Explore the Vault</a>
     </div>
   </div>
 
-  <div data-aos="fade-up" data-aos-delay="600">
-    <h2 class="text-3xl font-bold mb-4">Key Stats</h2>
+  <div data-testid="vault-section" data-testid="vault-section" data-aos="fade-up" data-aos-delay="600">
+    <h2 data-aos="fade-up" data-aos-delay="150" data-aos="fade-up" data-aos-delay="150" class="text-3xl font-bold mb-4">Key Stats</h2>
     {% import "macros.html" as macros %}
     {% set headers = ['Category', 'Count'] %}
     {% set rows = [['XSS', 12], ['Injection', 15], ['Misconfig', 8]] %}

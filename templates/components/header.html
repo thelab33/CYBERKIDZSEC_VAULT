@@ -9,7 +9,7 @@
 
 {% set actions = [
   {'id':'liveStatus','label':'Online','html':'<span class="h-3 w-3 rounded-full bg-emerald-500 animate-pulse" role="status" aria-label="Online"></span>'},
-  {'id':'notifToggle','label':'Notifications','html':'<i class="fas fa-bell" aria-hidden="true"></i><span class="sr-only">Notifications</span><span class="notif-count">3</span>'},
+  {'id':'notifToggle','label':'Notifications <span class="hud-blink"></span>','html':'<i class="fas fa-bell" aria-hidden="true"></i><span class="sr-only">Notifications</span><span class="notif-count">3</span>'},
   {'id':'cmdPalette','label':'Command Palette','html':'<i class="fas fa-terminal" aria-hidden="true"></i><span class="sr-only">Command Palette</span>'},
   {'id':'themeToggle','label':'Toggle Theme','html':'<i class="fas fa-moon" aria-hidden="true"></i><span class="sr-only">Toggle Theme</span>'},
 ] %}
@@ -17,10 +17,10 @@
 <header id="siteHeader"
         class="fixed inset-x-0 top-0 z-50 bg-zinc-900/80 backdrop-blur-md transition-all duration-300 shrinkable-header"
         role="banner">
-  <div class="container mx-auto flex items-center justify-between px-6 py-3 gap-8">
+  <div data-testid="vault-section" data-testid="vault-section" class="container mx-auto flex items-center justify-between px-6 py-3 gap-8">
 
     <!-- Logo -->
-    <a href="{{ url_for('views.home') }}"
+    <a aria-label="Navigation Link" aria-label="Nav Link" class="hover-glow" aria-label="Navigation Link" class="hover-glow" aria-label="Nav Link" class="hover-glow" href="{{ url_for('views.home') }}"
        class="flex items-center space-x-2 text-2xl font-black text-orangeLuxe hover:scale-105 transition-transform mr-auto"
        aria-label="Go to Home">
       <svg class="h-8 w-8 animate-spin-slow text-orangeLuxe" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -30,24 +30,24 @@
     </a>
 
     <!-- Search & Primary Nav -->
-    <div class="flex-1 flex items-center justify-center lg:justify-start gap-10 min-w-0">
-      <!-- 🔍 Global Search -->
-      <div class="relative hidden lg:block w-full max-w-md">
-        <input id="globalSearch" type="search"
-               placeholder="Search the Vault…"
+    <div data-testid="vault-section" data-testid="vault-section" class="flex-1 flex items-center justify-center lg:justify-start gap-10 min-w-0">
+      <!--  Global Search -->
+      <div data-testid="vault-section" data-testid="vault-section" class="relative hidden lg:block w-full max-w-md">
+        <input class="hover-glow" class="hover-glow" id="globalSearch" type="search"
+               placeholder="Search the Vault"
                aria-label="Search the Vault"
                class="w-full pl-10 pr-4 bg-zinc-800 border border-zinc-700 rounded focus:border-orangeLuxe focus:ring-2 focus:ring-orangeLuxe placeholder-zinc-500 text-sm font-mono transition" />
         <span class="absolute inset-y-0 left-3 flex items-center text-zinc-500">
           <i class="fas fa-search" aria-hidden="true"></i>
         </span>
-        <kbd class="absolute right-3 top-1/2 -translate-y-1/2 bg-zinc-800 text-xs font-mono px-1 rounded text-zinc-400">⌘ K</kbd>
+        <kbd class="absolute right-3 top-1/2 -translate-y-1/2 bg-zinc-800 text-xs font-mono px-1 rounded text-zinc-400"> K</kbd>
       </div>
 
-      <!-- 🧭 Nav Items -->
+      <!--  Nav Items -->
       <nav class="hidden lg:flex space-x-6" aria-label="Primary Navigation">
         {% for item in nav_items %}
           {% set active = request.endpoint == item.endpoint or (item.blueprint and request.blueprint == item.blueprint) %}
-          <a href="{{ url_for(item.endpoint) }}"
+          <a aria-label="Navigation Link" aria-label="Nav Link" class="hover-glow" aria-label="Navigation Link" class="hover-glow" aria-label="Nav Link" class="hover-glow" href="{{ url_for(item.endpoint) }}"
              class="relative text-sm uppercase font-mono tracking-wide py-1 transition focus:outline-none focus:ring-2 focus:ring-orangeLuxe {{ 'text-orangeLuxe' if active else 'text-zinc-300 hover:text-orangeLuxe-light' }}"
              aria-current="{{ 'page' if active else '' }}">
             {{ item.name }}
@@ -56,48 +56,50 @@
             {% endif %}
           </a>
         {% endfor %}
+<button data-tooltip="Click Action" id="themeToggle" aria-label="Toggle Dark Mode" class="ml-4 p-2 rounded hover-glow"></button>
       </nav>
     </div>
 
-    <!-- ⚙️ Action Buttons -->
-    <div class="flex items-center gap-3 justify-end min-w-[11rem] shrink-0">
+    <!--  Action Buttons -->
+    <div data-testid="vault-section" data-testid="vault-section" class="flex items-center gap-3 justify-end min-w-[11rem] shrink-0">
       {% for act in actions %}
-        <button id="{{ act.id }}"
+        <button data-tooltip="Click Action" data-tooltip="Click Action" class="hover-glow" title="Command Vault " class="hover-glow" data-hotkey="Enter" class="hover-glow" data-tooltip="Click Action" data-hotkey="Enter" class="hover-glow" data-tooltip="Click Action" id="{{ act.id }}"
                 class="p-2 rounded-full bg-zinc-800 hover:bg-zinc-700 focus:outline-none focus:ring-2 focus:ring-orangeLuxe transition"
                 title="{{ act.label }}">
           {{ act.html|safe }}
         </button>
       {% endfor %}
 
-      <!-- 📱 Mobile Menu Toggle -->
-      <button id="menuToggle"
+      <!--  Mobile Menu Toggle -->
+      <button data-tooltip="Click Action" data-tooltip="Click Action" class="hover-glow" title="Command Vault " class="hover-glow" data-hotkey="Enter" class="hover-glow" data-tooltip="Click Action" data-hotkey="Enter" class="hover-glow" data-tooltip="Click Action" id="menuToggle"
               class="lg:hidden p-2 text-2xl text-zinc-300 hover:text-orangeLuxe focus:outline-none focus:ring-2 focus:ring-orangeLuxe transition"
               aria-controls="mobileNav"
               aria-expanded="false"
               aria-label="Toggle mobile menu">
-        ☰
+        
       </button>
     </div>
   </div>
 
-  <!-- 📱 Mobile Navigation -->
+  <!--  Mobile Navigation -->
   <nav id="mobileNav"
        class="fixed inset-x-0 top-full transform -translate-y-full bg-zinc-900/95 backdrop-blur-lg p-6 space-y-4 text-lg font-semibold transition-transform duration-300 lg:hidden"
        aria-label="Mobile Navigation">
     <ul class="flex flex-col gap-4">
       {% for item in nav_items %}
         <li>
-          <a href="{{ url_for(item.endpoint) }}"
+          <a aria-label="Navigation Link" aria-label="Nav Link" class="hover-glow" aria-label="Navigation Link" class="hover-glow" aria-label="Nav Link" class="hover-glow" href="{{ url_for(item.endpoint) }}"
              class="block text-zinc-300 hover:text-orangeLuxe focus:outline-none focus:ring-2 focus:ring-orangeLuxe">
             {{ item.name }}
           </a>
         </li>
       {% endfor %}
     </ul>
+<button data-tooltip="Click Action" id="themeToggle" aria-label="Toggle Dark Mode" class="ml-4 p-2 rounded hover-glow"></button>
   </nav>
 </header>
 
-<!-- 🧠 Forgemaster Logic -->
+<!--  Forgemaster Logic -->
 <script>
 (() => {
   const header = document.querySelector('.shrinkable-header');
