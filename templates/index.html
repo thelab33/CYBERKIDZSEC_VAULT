@@ -1,52 +1,67 @@
-{# templates/index.html #}
+{# Paste the full improved template content here #}
 {% extends "base.html" %}
 
-{% block title %}Home · CYBERKIDZSEC Vault{% endblock %}
+{% block title %}Home    CYBERKIDZSEC Vault{% endblock %}
 
 {% block head_extra %}
   {{ super() }}
   {% set extra_styles = [
-    'sections/vault_overview.css',
-    'sections/featured_reports.css',
-    'sections/report_grid.css',
-    'sections/filter_bar.css',
-    'sections/pagination.css',
-    'sections/sidebar_filters.css',
-    'sections/sidebar_cta.css',
-    'sections/empty_state.css',
-    'sections/report_charts_grid.css',
-    'sections/tags_section.css',
-    'sections/related_reports.css',
-    'sections/hacker_playground.css',
-    'components/hero.css',
-    'components/terminal_scan.css',
-    'components/hud_status.css'
+    'vault_overview.css',
+    'featured_reports.css',
+    'report_grid.css',
+    'filter_bar.css',
+    'pagination.css',
+    'sidebar_filters.css',
+    'sidebar_cta.css',
+    'empty_state.css',
+    'report_charts_grid.css',
+    'tags_section.css',
+    'related_reports.css',
+    'hacker_playground.css',
+    'hero.css',
+    'terminal_scan.css',
+    'hud_status.css'
   ] %}
   {% for sheet in extra_styles %}
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/' ~ sheet) }}" crossorigin />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/' ~ sheet) }}?v=1747450368" crossorigin />
   {% endfor %}
 {% endblock %}
 
 {% block content %}
-  {# 🌌 Console + Hero #}
-  <section class="overflow-hidden relative">
+ {#      Intro Layer: Console + Hero + Bug Tales #}
+  <section
+    id="intro-layer"
+    class="relative space-y-8 overflow-hidden pb-24 fade-in"
+    data-aos="fade-up"
+    x-data
+    x-intersect="$el.classList.add('fade-in')"
+    aria-label="Intro Layer">
     {% include "components/console.html" %}
     {% include "components/hero.html" %}
     {% include "components/bug_tales.html" %}
-    {% include "components/report_card_grid.html" %}
-    {% include "components/report_chart.html" %}
-    {% include "components/scroll_progress.html" %}
   </section>
 
-  {# 🛰️ Status Strip #}
-  <section id="vault-status" class="w-full bg-zinc-900/60 backdrop-blur py-3 shadow-lg" aria-live="polite">
-    <div class="max-w-7xl mx-auto text-center text-sm sm:text-base font-mono text-orange-400 uppercase tracking-wider animate-pulse">
-      Zero-Day Archive Updating · Stay Ghosted
-    </div>
+ {#         Animated Status Bar #}
+  <section
+    id="vault-status"
+    class="bg-zinc-900/60 backdrop-blur py-3 shadow-md text-orange-400 font-mono text-sm uppercase text-center tracking-wide animate-pulse fade-in"
+    data-aos="fade-up"
+    x-data
+    x-intersect="$el.classList.add('fade-in')"
+    role="status"
+    aria-live="polite"
+    aria-atomic="true">
+    Zero-Day Archive Updating    Stay Ghosted
   </section>
 
-  {# 🔐 XP & About Section #}
-  <section class="max-w-7xl mx-auto px-6 space-y-12">
+ {#      Overview Section #}
+  <section
+    id="overview"
+    class="max-w-7xl mx-auto px-6 space-y-10 pt-12 fade-in"
+    data-aos="fade-up"
+    x-data
+    x-intersect="$el.classList.add('fade-in')"
+    aria-label="Vault Overview and About">
     {% include "components/vault_overview.html" %}
     {% include "components/vault_banners.html" %}
     {% include "components/vault_xp_bar.html" %}
@@ -54,49 +69,64 @@
     {% include "components/about_section.html" %}
   </section>
 
-  {# 📂 Reports Grid + Filters #}
-  <section id="vault-feed" class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-4 gap-12">
+ {#      Feed Section #}
+  <section
+    id="vault-feed"
+    class="max-w-7xl mx-auto px-6 grid lg:grid-cols-4 gap-12 py-20 fade-in"
+    data-aos="fade-up"
+    x-data
+    x-intersect="$el.classList.add('fade-in')"
+    aria-label="Reports and Analytics">
     <aside class="space-y-8 lg:sticky lg:top-24" role="complementary">
       {% include "components/filter_bar.html" %}
       {% include "components/sidebar_filters.html" %}
       {% include "components/sidebar_cta.html" %}
     </aside>
 
-    <div class="lg:col-span-3 space-y-14" role="region" aria-labelledby="reports-heading">
-      <h2 id="reports-heading" class="sr-only">Reports & Analytics</h2>
+    <div
+      class="lg:col-span-3 space-y-14"
+      data-testid="vault-section"
+      role="region"
+      aria-labelledby="reports-heading">
+      <h2
+        id="reports-heading"
+        class="text-xl font-bold tracking-tight text-orangeLuxe"
+        data-aos="fade-up"
+        data-aos-delay="150">
+        Featured Reports
+      </h2>
+
       {% include "components/featured_reports.html" %}
       {% include "components/report_grid.html" %}
       {% include "components/empty_state.html" %}
       {% include "components/pagination.html" %}
+
+      <hr class="border-zinc-800" />
+
       {% include "components/report_charts_grid.html" %}
       {% include "components/tags_section.html" %}
       {% include "components/related_reports.html" %}
     </div>
   </section>
 
-  {# 🎮 Playground #}
-  <section class="max-w-7xl mx-auto px-6 py-20 text-center rounded-3xl border border-orangeLuxe/30 backdrop-blur-lg bg-gradient-to-br from-cyberNight via-cyberNightGlow to-cyberNightPhantom shadow-2xl">
+ {#      Hacker Playground #}
+  <section
+    class="max-w-7xl mx-auto px-6 py-20 rounded-2xl border border-orangeLuxe/30 bg-gradient-to-br from-cyberNight via-cyberNightGlow to-cyberNightPhantom backdrop-blur shadow-xl text-center space-y-10 fade-in"
+    data-aos="fade-up"
+    x-data
+    x-intersect="$el.classList.add('fade-in')"
+    aria-label="Hacker Playground">
     {% include "components/hacker_playground.html" %}
   </section>
 
-  {# 🧠 HUD Layer #}
-  <section class="fixed bottom-0 right-0 p-6 space-y-6 pointer-events-none z-[999]">
+ {#      HUD Layer #}
+  <section
+    class="fixed bottom-0 right-0 p-6 z-[90] pointer-events-none space-y-4 fade-in"
+    data-aos="fade-up"
+    x-data
+    x-intersect="$el.classList.add('fade-in')"
+    aria-label="Heads-up Display Layer">
     {% include "components/terminal_scan.html" %}
     {% include "components/hud_status.html" %}
   </section>
 {% endblock %}
-
-{% block scripts_extra %}
-  {{ super() }}
-  <script src="{{ url_for('static', filename='js/console.js') }}" defer></script>
-  <script src="{{ url_for('static', filename='js/hero_starfield_debug.js') }}" defer></script>
-  <script src="{{ url_for('static', filename='js/vault_overview.js') }}" defer></script>
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      if (window.PAGE_REPORTS?.length < 3) {
-        document.getElementById("vault-feed")?.classList.add("opacity-60");
-      }
-    });
-  </script>
-{% endblock %}
-
